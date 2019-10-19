@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <article class="note">
+
+        <section class="note-heading">
+            <div class="note-title">
+                <h1>{{ note.title }}</a></h1>
+                <p>{{ note.description }}</p>
+                <p>{{ note.tags }}</p>
+            </div>
+            <div class="note-metadata">
+                <p><span class="note-label">Author:</span> {{ note.author }}</p>
+                <p><span class="note-label">Category:</span> {{ note.category }}</p>
+                <p><span class="note-label">Level:</span> {{ note.level }}</p>
+                <p><span class="note-label">Filesize:</span> {{ note.filesize }}</p>
+                <p><span class="note-label">Last Modified:</span> {{ note.last_modified }}</p>
+            </div>
+        </section>
+
+        <section class="note-content">
+            <p><a href="{{ note.asset_link }}" target="_blank">Open PDF</a></p>
+            <p>Doc ID: {{ note.doc_id }}</p>
+		</section>
+
+    </article>
+
+{% endblock %}

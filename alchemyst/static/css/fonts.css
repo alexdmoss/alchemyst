@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Questrial';
+    src: url("/static/fonts/Questrial-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'News Cycle';
+    src: url("/static/fonts/NewsCycle-Regular.ttf") format("truetype");
+}

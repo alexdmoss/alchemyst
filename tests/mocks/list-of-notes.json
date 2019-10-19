@@ -1,0 +1,55 @@
+{
+    "entities": [
+        {
+            "asset_link": "/alicyclic-chemistry.pdf",
+            "category": "organic",
+            "title": "Alicyclic Chemistry",
+            "filesize": 162816,
+            "last_modified": "2019-10-16T21:53:07.339482",
+            "doc_id": 82,
+            "tags": [
+                "alicyclic",
+                "conformation",
+                "energetics",
+                "stereoselectivity",
+                "Baldwin",
+                "anomeric",
+                "reactivity"
+            ],
+            "author": "Alex Moss",
+            "description": "Basic notes on conformation, energetics, stereoselectivity and reactivity",
+            "name": "alicyclic-chemistry",
+            "level": "2nd Year Undergraduate"
+        },
+        {
+            "last_modified": "2019-10-16T21:53:07.339482",
+            "doc_id": 83,
+            "author": "Alex Moss",
+            "tags": [
+                "aromatic",
+                "heterocyclic",
+                "aromaticity",
+                "electrophilic",
+                "nucleophilic",
+                "radical",
+                "pyrroles",
+                "thiophenes",
+                "furans",
+                "isoxazoles",
+                "pyrazoles",
+                "isothiazoles",
+                "pyridines",
+                "quinolines",
+                "isoquinolines",
+                "indoles"
+            ],
+            "description": "Covers aromatic reaction types, then moves onto the Synthesis and Reaction Types of each class of Heterocyclic Compound. Mostly from the two primers on these topics",
+            "name": "aromatic-and-heterocyclic-chemistry",
+            "level": "2nd Year Undergraduate",
+            "asset_link": "/aromatic-and-heterocyclic-chemistry.pdf",
+            "title": "Aromatic & Heterocyclic Chemistry",
+            "category": "organic",
+            "filesize": 295936
+        }
+    ]
+}
