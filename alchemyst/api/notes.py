@@ -8,13 +8,25 @@ from alchemyst.api.datastore import query_by_kind
 from alchemyst.model.note import Note
 
 
-def get_notes():
-    if getenv('USE_MOCKS'):
-        with open('./tests/mocks/list-of-notes.json', 'r') as f:
+def get_notes(filter=""):
+    filter = _translate_filter(filter)
+    if getenv('USE_MOCKS') == 'True':
+        results = []
+        with open('./tests/mocks/full-dataset.json', 'r') as f:
             data = json.load(f)
-        results = data["entities"]
+        if filter:
+            for note in data['entities']:
+                for field in note:
+                    if note[field] == filter:
+                        results.append(note)
+                # results = [note for note in data['entities'] if x['category'] == category]
+        else:
+            results = data["entities"]
     else:
-        query = query_by_kind(kind="Note")
+        if filter:
+            query = query_by_kind(kind="Note", category=filter)
+        else:
+            query = query_by_kind(kind="Note")
         results = list(query.fetch())
     notes = [note_from_query(data) for data in results]
     return notes
@@ -55,3 +67,13 @@ def notes_from_dicts(notes):
 
 def _isoformat_config():
     return Config(type_hooks={datetime: datetime.fromisoformat})
+
+
+def _translate_filter(v):
+    if v == 'first-year':
+        v = '1st Year Undergraduate'
+    elif v == 'second-year':
+        v = '2nd Year Undergraduate'
+    elif v == 'third-year':
+        v = '3rd Year Undergraduate'
+    return v

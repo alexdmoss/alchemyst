@@ -2,10 +2,10 @@
 set -Eeuo pipefail
 
 if [[ -z ${IMAGE_NAME:-} ]]; then
-  IMAGE_NAME=anti-preempter
+  IMAGE_NAME=alchemyst
 fi 
 
-SRC_DIR=anti-preempter
+SRC_DIR=alchemyst
 
 function help() {
   echo -e "Usage: go <command>"
@@ -17,6 +17,7 @@ function help() {
   echo -e "    deploy               Deploys app to Kubernetes. Designed to run in Drone CI"
   echo -e "    watch-tests          Watch pytest run for faster feedback"
   echo -e "    push                 Push latest built docker image to Container Registry"
+  echo -e "    load-data            Load full dataset (upserts)"
   echo -e "    init                 Set up local virtual env"
   echo -e 
   exit 0
@@ -40,9 +41,12 @@ function run() {
 
   pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
 
-  export USE_MOCKS=1
+  export DATA_STORE_NAMESPACE=Alchemyst
+  export DATA_STORE_PROJECT=moss-work
   export FLASK_APP=alchemyst
   export FLASK_DEBUG=1
+  export USE_MOCKS=True
+
   pipenv run flask run
 
   popd > /dev/null
@@ -162,6 +166,29 @@ function deploy() {
 
 }
 
+function load-data() {
+
+  _console_msg "Running python:load_data ..." INFO true
+
+  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+
+  export DATA_STORE_NAMESPACE=Alchemyst
+  export DATA_STORE_PROJECT=moss-work
+
+  _console_msg "Converting exported CSV to JSON ..."
+
+  pipenv run python3 ./data_loader/convert_pdf_csv_to_json.py
+
+  _console_msg "Loading JSON into Datastore ..."
+  
+  pipenv run python3 ./data_loader/load_data.py
+
+  popd > /dev/null
+  
+  _console_msg "Execution complete" INFO true
+
+}
+
 function _assert_variables_set() {
 
   local error=0
@@ -211,7 +238,7 @@ function ctrl_c() {
 
 trap ctrl_c INT
 
-if [[ ${1:-} =~ ^(help|run|build|test|watch-tests|push|init|deploy)$ ]]; then
+if [[ ${1:-} =~ ^(help|run|build|test|watch-tests|push|init|deploy|load-data)$ ]]; then
   COMMAND=${1}
   shift
   $COMMAND "$@"

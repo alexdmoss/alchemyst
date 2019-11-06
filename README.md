@@ -21,6 +21,7 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [x] Basic UI
   - [x] Optional trailing slash in Flask
   - [x] Auto-reload in Flask
+  - [x] Buttons on left menu
 - [x] UI enhancements
   - [x] background image on #content
   - [x] social icons
@@ -32,26 +33,33 @@ I also wanted to preserve the old URL structure which - despite being really nas
   - [x] Better fonts
 - [x] Home Page
 - [x] About Page
-  - [ ] Needs some images
-- [ ] Contact Form (to my existing API)
+  - [x] Needs some images
 - [x] Links Page (simplify)
-- [ ] Data Loader
-- [ ] PDF Index Page
-- [ ] Organic
-- [ ] Inorganic
-- [ ] Physical
-- [ ] Tags page
-- [ ] Notes Detail Page
-  - [ ] Format Date
-  - [ ] Format Tags
-  - [ ] Format Filesize
+- [x] PDF Index Page
+  - [x] Better padding of table
+  - [x] Table sorting / filtering
+  - [x] Search form at top
+- [x] Data Loader
+- [x] Config file
+- [x] Refactor: data model separated out
+- [x] Organic
+- [x] Inorganic
+- [x] Physical
+- [x] Notes Detail Page
+  - [x] Format Date
+  - [x] Format Tags
+  - [x] Format Filesize
   - [x] Vertically middle the metadata
-- [ ] Notes as HTML
+- [x] Notes as HTML - read from storage
+- [x] Downloadable PDFs
+- [ ] Hide downloads under alchemyst.co.uk domain
+- [ ] Set tags & import into DataStore
+- [ ] Tags page
+- [ ] Convert existing notes into HTML and upload
 - [ ] Mobile Friendly
   - [ ] Nav bar to hamburger
   - [ ] Does Search work?
-- [x] Config file
-- [x] Refactor: data model separated out
+- [ ] Contact Form (to my existing API)
 - [ ] Search - Elastic?
 - [ ] Tracking usage - Analytics
 - [ ] Old URL redirection (separate repo?)
@@ -78,3 +86,11 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 - Ability to create new content through website - not needed, just me, static data now
 - Admin Section - no need for login any more
+
+---
+
+## Architecture
+
+I was originally going to run NGINX in front of it for redirects from old site, but the patterns are structured enough that this is quite easy to do with Flask's route decorators and manipulating the query parameters.
+
+Doesn't really need Cloud DataStore - this data is pretty much static - but I wanted to try it out!

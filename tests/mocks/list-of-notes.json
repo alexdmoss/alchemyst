@@ -5,7 +5,7 @@
             "category": "organic",
             "title": "Alicyclic Chemistry",
             "filesize": 162816,
-            "last_modified": "2019-10-16T21:53:07.339482",
+            "last_modified": "2003-12-09T01:14:07.339482",
             "doc_id": 82,
             "tags": [
                 "alicyclic",
@@ -22,7 +22,7 @@
             "level": "2nd Year Undergraduate"
         },
         {
-            "last_modified": "2019-10-16T21:53:07.339482",
+            "last_modified": "2003-12-09T01:33:07.339482",
             "doc_id": 83,
             "author": "Alex Moss",
             "tags": [
@@ -50,6 +50,50 @@
             "title": "Aromatic & Heterocyclic Chemistry",
             "category": "organic",
             "filesize": 295936
+        },
+        {
+            "asset_link": "/applications-of-statistical-mechanics.pdf",
+            "category": "physical",
+            "title": "Applications of Statistical Mechanics",
+            "filesize": 267264,
+            "last_modified": "2003-12-09T11:53:07.339482",
+            "doc_id": 99,
+            "tags": [
+                "mechanics",
+                "equilibrium constants",
+                "two-level systems",
+                "partition function",
+                "heat capacities",
+                "transition state theory",
+                "absolute gas-phase entropies",
+                "interacting systems",
+                "debye",
+                "einstein",
+                "helmholtz"
+            ],
+            "author": "Alex Moss",
+            "description": "Starts with basic revision of Statistical Mechanics, then moves on to 2-Level Systems, Equilibrium Constants, etc (the more common exam questions!)",
+            "name": "applications-of-statistical-mechanics",
+            "level": "3rd Year Undergraduate"
+        },
+        {
+            "name": "advanced-solid-state",
+            "title": "",
+            "asset_link": "/advanced-solid-state.pdf",
+            "category": "inorganic",
+            "filesize": 295936,
+            "last_modified": "2003-12-09T01:53:07.339482",
+            "doc_id": 75,
+            "tags": [
+                "synthesis",
+                "intercalation",
+                "Ruddlesden-Popper",
+                "superconductors",
+                "zeolites"
+            ],
+            "author": "Alex Moss",
+            "description": "Note that this only covers the topics I chose to study for - namely Synthesis, Intercalation, Ruddlesden-Popper Phases, Superconductors and Zeolites",
+            "level": "3rd Year Undergraduate"
         }
     ]
 }

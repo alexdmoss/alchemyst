@@ -8,20 +8,33 @@
             <div class="note-title">
                 <h1>{{ note.title }}</a></h1>
                 <p>{{ note.description }}</p>
-                <p>{{ note.tags }}</p>
+                <ul>
+                    {% for tag in note.tags %}
+                    <li><a href="/tags/{{ tag}}">{{ tag }}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="note-metadata">
                 <p><span class="note-label">Author:</span> {{ note.author }}</p>
                 <p><span class="note-label">Category:</span> {{ note.category }}</p>
                 <p><span class="note-label">Level:</span> {{ note.level }}</p>
-                <p><span class="note-label">Filesize:</span> {{ note.filesize }}</p>
-                <p><span class="note-label">Last Modified:</span> {{ note.last_modified }}</p>
+                <p><span class="note-label">Filesize:</span> {{ (note.filesize / 1024) | round | int }}Kb</p>
+                <p><span class="note-label">Last Modified:</span> {{ note.last_modified.strftime('%d %B %Y') }}</p>
             </div>
         </section>
 
         <section class="note-content">
-            <p><a href="{{ note.asset_link }}" target="_blank">Open PDF</a></p>
-            <p>Doc ID: {{ note.doc_id }}</p>
+            <div class="centered">
+                <a href="{{ note.asset_link }}" target="_blank">
+                    <button>
+                        <i class="fas fa-download"></i>
+                        &nbsp;&nbsp;Download PDF&nbsp;&nbsp;                        
+                        <i class="fas fa-download"></i>    
+                    </button>
+                </a>
+            </div>
+            <hr />
+            <p>{{ note.doc_id | display_document | safe }}</p>
 		</section>
 
     </article>
