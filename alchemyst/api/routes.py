@@ -23,10 +23,15 @@ def notes_by_category(category):
     return jsonify(notes)
 
 
-@app.route("/api/note/<note_name>")
-def note(note_name):
-    app.logger.info(f"Fetching note {note_name}")
-    note = next((i for i in get_notes() if i.name == note_name), None)
+@app.route("/api/note/<note>")
+def note(note_id):
+    app.logger.info(f"Fetching note {note_id}")
+    # note_id could be id (int) or name (str)
+    try:
+        note_id = int(note_id)
+        note = next((i for i in get_notes() if i.doc_id == note_id), None)
+    except ValueError:
+        note = next((i for i in get_notes() if i.name == note_id), None)
     if note is None:
         abort(404)
     else:

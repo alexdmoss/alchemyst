@@ -1,7 +1,8 @@
 import yaml
+import requests
 from datetime import datetime
 
-from flask import render_template, request, redirect
+from flask import render_template, request, Response
 from alchemyst import app
 
 from alchemyst.ui.note import note_view
@@ -80,4 +81,19 @@ def display_note(note_name):
 
 @app.route('/pdf/<category>/<pdf_file>', methods=['GET'])
 def download_pdf(category, pdf_file):
-    return redirect(f'https://storage.googleapis.com/{bucket}/pdfs/{category}/{pdf_file}')
+    resp = requests.request(
+        method=request.method,
+        url=request.url.replace(request.host_url, f'https://storage.googleapis.com/{bucket}/'),
+        headers={key: value for (key, value) in request.headers if key != 'Host'},
+        data=request.get_data(),
+        cookies=request.cookies,
+        allow_redirects=False)
+
+    excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
+    headers = [(name, value) for (name, value) in resp.raw.headers.items()
+               if name.lower() not in excluded_headers]
+
+    response = Response(resp.content, resp.status_code, headers)
+    return response
+
+    # return redirect(f'https://storage.googleapis.com/{bucket}/pdfs/{category}/{pdf_file}')

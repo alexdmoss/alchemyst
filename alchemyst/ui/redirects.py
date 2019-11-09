@@ -6,6 +6,10 @@ Once requests to any old URLs dry up, it can be safely removed.
 from flask import redirect, url_for, request
 from alchemyst import app
 
+from alchemyst.ui.note import note_view
+from alchemyst.api.routes import note
+from alchemyst.api.notes import note_from_dict
+
 
 @app.route('/index.php', methods=['GET'])
 def redir_index():
@@ -28,27 +32,31 @@ def redir_pdfs():
 
     doc_id = request.args.get('id')
     group = request.args.get('group')
-    category = request.args.get('value').lower()
+    category = request.args.get('value')
 
-    if doc_id:
-        note_name = get_note_name_from_id(doc_id)
-        return redirect(url_for('display_note_by_id', note_name))
-    else:
-        if group == "category":
-            if category:
-                return redirect(url_for('display_notes_by_category', category))
+    valid_groups = ['category', 'level']
+
+    if doc_id is not None:
+        note_name = _get_note_name_from_id(doc_id)
+        return redirect(url_for('display_note', note_name=note_name))
+    elif group in valid_groups and category is not None:
+        if group == 'category':
+            return redirect(url_for('display_notes_by_category', category=category.lower()))
+        elif group == 'level':
+            if category == '1':
+                return redirect(url_for('display_notes_by_category', category='first-year'))
+            elif category == '2':
+                return redirect(url_for('display_notes_by_category', category='second-year'))
+            elif category == '3':
+                return redirect(url_for('display_notes_by_category', category='third-year'))
             else:
                 return redirect(url_for('display_notes'))
-        elif group == "level":
-            if category == '1':
-                return redirect(url_for('display_notes_by_category', 'first-year'))
-            elif category == '2':
-                return redirect(url_for('display_notes_by_category', 'second-year'))
-            elif category == '3':
-                return redirect(url_for('display_notes_by_category', 'third-year'))
-        else:
-            return redirect(url_for('display_notes'))
+    else:
+        return redirect(url_for('display_notes'))
 
 
-def get_note_name_from_id(id):
-    print('hmmmmm')
+def _get_note_name_from_id(id):
+    note_as_dict = note(id).get_json()
+    note_obj = note_from_dict(note_as_dict)
+    view = note_view(note_obj)
+    return view.name
