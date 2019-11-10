@@ -12,6 +12,7 @@
     --shadow-color: #000;
 
     --button-color: #cccdfb;
+    --button-disabled-color: #434684;
 
     --header-bg-color: #434684;
     --header-font-color: #eee;
@@ -686,4 +687,172 @@ footer p a {
     font-size: 1.05rem;
     letter-spacing: 0.03rem;
     line-height: 2rem;
+}
+
+
+/****************** Contact ******************/
+
+.contact-form {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid var(--border-color);
+}
+
+#contacts p.form-rule {
+    width: 100%;
+    display: block;
+    float: left;
+    font-size: 0.0001rem;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#contacts p.form-label {
+    width: 15%;
+    display: block;
+    float: left;
+    padding: 0.7rem;
+    margin: 0;
+    line-height: 2rem;
+}
+@media screen and (max-width: 930px) {
+    #contacts p.form-label {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 450px) {
+    #contacts p.form-label {
+        width: 100%;
+    }
+}
+
+#contacts p.form-field {
+    width: 35%;
+    display: block;
+    float: left;
+    padding: 0.7rem;
+    margin: 0;
+    line-height: 1rem;
+}
+@media screen and (max-width: 930px) {
+    #contacts p.form-field {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 450px) {
+    #contacts p.form-field {
+        width: 100%;
+    }
+}
+
+#contacts p.form-area {
+    width: 85%;
+    display: block;
+    float: left;
+    padding: 0.7rem;
+    margin: 0;
+}
+@media screen and (max-width: 930px) {
+    #contacts p.form-area {
+        width: 100%;
+    }
+}
+
+#contacts p.form-submit {
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 0.7rem;
+    margin: 0;
+    text-align: center;
+    /* margin-left: 15%; */
+}
+
+#contacts input {
+    border: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 2rem;
+}
+
+#contacts textarea {
+    height: 12rem;
+    width: 100%;
+    line-height: 2rem;
+    border: 0;
+}
+
+#contacts input[type="submit"] {
+    width: 18rem;
+}
+
+
+/*** Forms ***/
+
+input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    font-family: 'News Cycle', 'Arial', 'sans-serif';
+    font-size: 0.9rem;
+    background-color: transparent;
+    color: var(--font-color);
+}
+
+input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 1px var(--border-color);
+    background-color: var(--header-font-color);
+    border: 1px solid var(--border-color);
+}
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+    font-family: 'Questrial', 'Arial', 'sans-serif';
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 800;
+    height: 4rem;
+    letter-spacing: 0.2rem;
+    line-height: 4rem;
+    padding: 0 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+    -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+    -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+    background-color: var(--button-color);
+    color: var(--link-color);
+    border: 2px solid var(--border-color) !important;
+    box-shadow: 1px 1px 6px 0 var(--font-color);
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover,
+input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus,
+input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+    background-color: var(--border-color);
+    color: var(--shadow-color);
+}
+
+input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"].disabled, input[type="reset"]:disabled, input[type="button"].disabled, input[type="button"]:disabled {
+    color: var(--button-disabled-color) !important;
+    border-color: var(--button-disabled-color) !important;
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+}
+input[type="submit"].disabled:before, input[type="submit"]:disabled:before, input[type="reset"].disabled:before, input[type="reset"]:disabled:before, input[type="button"].disabled:before, input[type="button"]:disabled:before {
+    color: var(--button-disabled-color) !important;
+}
+input[type="submit"].disabled:after, input[type="submit"]:disabled:after, input[type="reset"].disabled:after, input[type="reset"]:disabled:after, input[type="button"].disabled:after, input[type="button"]:disabled:after {
+    color: var(--button-disabled-color) !important;
 }

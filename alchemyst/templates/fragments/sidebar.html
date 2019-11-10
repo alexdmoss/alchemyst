@@ -1,31 +1,32 @@
-    <div id="sidebar">
+<div id="sidebar">
 
-        <section id="intro">
-    
-            <a href="/about"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="{{ layout.name }}" title="{{ layout.name }}" /></a>
+    <section id="intro">
 
-            <p>{{ description }}</p>
+        <a href="/about"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="{{ layout.name }}"
+                title="{{ layout.name }}" /></a>
 
-        </section>
+        <p>{{ description }}</p>
 
-        <section id="social">
-    
-                <a href="https://github.com/alexdmoss/alchemyst"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/alexdmoss"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/alexdmoss/"><i class="fab fa-linkedin"></i></a>
+    </section>
 
-        </section>
+    <section id="social">
 
-        <section id="categories">
+        <a href="https://github.com/alexdmoss/alchemyst"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/alexdmoss"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/alexdmoss/"><i class="fab fa-linkedin"></i></a>
 
-            <a href="/notes/inorganic">Inorganic</a></button>
-            <a class="button" href="/notes/organic">Organic</a>
-            <a class="button" href="/notes/physical">Physical</a>
+    </section>
 
-            <form id="search" name="search" action="/search" method="GET">
-                <input type="text" name="q" value="" placeholder="Search ..." />
-            </form>
-            
-        </section>
-            
-    </div>
+    <section id="categories">
+
+        <a class="button" href="/notes/inorganic">Inorganic</a></button>
+        <a class="button" href="/notes/organic">Organic</a>
+        <a class="button" href="/notes/physical">Physical</a>
+
+        <form id="search" name="search" action="/search" method="GET">
+            <input type="text" name="q" value="" placeholder="Search ..." />
+        </form>
+
+    </section>
+
+</div>

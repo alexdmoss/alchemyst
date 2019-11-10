@@ -28,7 +28,7 @@ def index():
     return render_template('index.html', title='Home', layout=layout)
 
 
-@app.route('/contact', methods=['GET'])
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html', title='Contact', layout=layout)
 

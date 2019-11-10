@@ -52,14 +52,15 @@ I also wanted to preserve the old URL structure which - despite being really nas
   - [x] Vertically middle the metadata
 - [x] Notes as HTML - read from storage
 - [x] Downloadable PDFs
+- [x] Contact Form (to my existing API)
 - [ ] Hide downloads under alchemyst.co.uk domain
 - [ ] Set tags & import into DataStore
 - [ ] Tags page
 - [ ] Convert existing notes into HTML and upload
+- [ ] UI doesn't work when wide (Desktop)
 - [ ] Mobile Friendly
   - [ ] Nav bar to hamburger
   - [ ] Does Search work?
-- [ ] Contact Form (to my existing API)
 - [ ] Search - Elastic?
 - [ ] Tracking usage - Analytics
 - [ ] Old URL redirection (separate repo?)
@@ -73,6 +74,10 @@ I also wanted to preserve the old URL structure which - despite being really nas
   - [x] sizes="16x16" href="/images/favicon-16x16.png"
   - [x] "/site.webmanifest"
   - [ ] "/safari-pinned-tab.svg" color="#5bbad5"
+
+## Tests
+
+- [ ] Contact Form relies on CORS - can only test once promoted
 
 ## Copy from the Cat
 
