@@ -760,6 +760,15 @@ sup {
 sub {
     bottom: -0.25em;
 }
+
+.copy {
+    border: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+}
+
 /****************** Contact ******************/
 
 .contact-form {
