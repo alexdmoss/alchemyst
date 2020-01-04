@@ -683,13 +683,83 @@ footer p a {
     font-weight: 800;
 }
 
-.note-content p {
-    font-size: 1.05rem;
+.document {
+    font-family: 'News Cycle', Arial, sans-serif;
+    line-height: 1.5rem;
     letter-spacing: 0.03rem;
-    line-height: 2rem;
 }
 
+.document h1, .document h2, .document h3, .document h4, .document h5 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.document h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.05rem;
+}
+.document h2 {
+    font-size: 1.4rem;
+}
+.document h3 {
+    font-size: 1.2rem;
+}
+.document h4 {
+    font-size: 1rem;
+    text-align: left;
+}
+.document h5 {
+    font-size: 0.9rem;
+    text-align: left;
+}
+.document p {
+    font-size: 1rem;
+}
 
+.document img {
+    width: 50%;
+    height: auto;
+    max-width: 800px;
+}
+
+.document table {
+    text-align: center;
+    border: 1px solid var(--font-color);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.document th, .document td {
+    text-align: left;
+    border: 1px solid var(--font-color);
+    padding: 0.5rem;
+}
+.document th {
+    font-weight: bold;
+}
+.document ul {
+    list-style: circle;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.document ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
 /****************** Contact ******************/
 
 .contact-form {
