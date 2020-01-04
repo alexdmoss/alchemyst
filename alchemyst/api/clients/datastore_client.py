@@ -1,5 +1,5 @@
 from google.cloud import datastore
-import os
+from os import getenv
 
 
 def query(kind, filter_key="", filter_val=""):
@@ -9,8 +9,13 @@ def query(kind, filter_key="", filter_val=""):
     return query
 
 
+def get(kind, id):
+    key = _datastore_client().key(kind, id)
+    return _datastore_client().get(key)
+
+
 def _datastore_client():
     return datastore.Client(
-        namespace=os.getenv("DATA_STORE_NAMESPACE"),
-        project=os.getenv("DATA_STORE_PROJECT"),
+        namespace=getenv("DATA_STORE_NAMESPACE"),
+        project=getenv("DATA_STORE_PROJECT"),
     )

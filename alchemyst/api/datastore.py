@@ -1,4 +1,4 @@
-from alchemyst.api.clients.datastore_client import query
+from alchemyst.api.clients.datastore_client import query, get
 
 
 def query_by_kind(kind, category=""):
@@ -6,3 +6,7 @@ def query_by_kind(kind, category=""):
         return query(kind, "category", category)
     else:
         return query(kind)
+
+
+def get_entity(kind, id):
+    return get(kind, str(id))
