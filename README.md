@@ -56,7 +56,8 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [ ] Hide downloads under alchemyst.co.uk domain
 - [ ] Set tags & import into DataStore
 - [ ] Tags page
-- [ ] Convert existing notes into HTML and upload
+- [ ] Handle missing converted notes more gracefully
+- [ ] *Defer* Convert existing notes into HTML and upload
 - [ ] UI doesn't work when wide (Desktop)
 - [ ] Mobile Friendly
   - [ ] Nav bar to hamburger
@@ -64,9 +65,12 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [ ] Search - Elastic?
 - [ ] Tracking usage - Analytics
 - [ ] Old URL redirection (separate repo?)
-- [ ] Privacy Policy /privacy
+- [ ] Privacy Policy /privacy, also mention copyright
+- [ ] Back To Top link
 - [ ] Add a LICENSE file
 - [ ] 404 detection script?
+- [ ] gunicorn
+- [ ] caching - especially full document from datastore
 - [ ] SEO assets
   - [x] favicon.ico
   - [x] sizes="180x180" href="/images/apple-touch-icon.png"

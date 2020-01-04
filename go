@@ -45,7 +45,7 @@ function run() {
   export DATA_STORE_PROJECT=moss-work
   export FLASK_APP=alchemyst
   export FLASK_DEBUG=1
-  export USE_MOCKS=True
+  export USE_MOCKS=False
 
   pipenv run flask run
 
