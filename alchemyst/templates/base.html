@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  
-  {% include 'fragments/header.html' %}
 
-  <body>
+{% include 'fragments/header.html' %}
 
-    <div id="container">
+<body>
 
-      <div id="wrapper">
-      
-        {% include 'fragments/nav.html' %}
+  <div id="container">
+
+    <div id="wrapper">
+
+      {% include 'fragments/nav.html' %}
 
 
-        <div id="content">
+      <div id="content">
 
-          {% block content %}{% endblock %}
-
-        </div>
-
-        {% include 'fragments/sidebar.html' %}
+        {% block content %}{% endblock %}
 
       </div>
 
-    {% include 'fragments/footer.html' %}
+      {% include 'fragments/sidebar.html' %}
+
+      <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
 
     </div>
 
-  </body>
+    {% include 'fragments/footer.html' %}
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/backToTop.js') }}" type="text/javascript" async defer></script>
+
+</body>
 
 </html>
