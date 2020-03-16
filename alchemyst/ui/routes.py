@@ -43,6 +43,11 @@ def about():
     return render_template('about.html', title='About', layout=layout)
 
 
+@app.route('/privacy', methods=['GET'])
+def privacy():
+    return render_template('privacy.html', title='Privacy Notice', layout=layout)
+
+
 @app.route('/tags', methods=['GET'])
 def tags():
     return render_template('tags.html', title='Tags', layout=layout)
