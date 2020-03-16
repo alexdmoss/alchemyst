@@ -165,6 +165,7 @@ button:hover {
     padding-bottom: 30px; /* height of footer */
     width: 90rem;
     overflow: hidden;
+    float: left;
 }
 
 /****************** Header ******************/

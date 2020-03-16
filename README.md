@@ -60,14 +60,13 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [x] Add a LICENSE file
 - [x] Privacy Policy /privacy, also mention copyright
 - [x] Tracking usage - Analytics
-- [ ] UI doesn't work when wide (Desktop)
+- [x] UI doesn't work when wide (Desktop)
 - [ ] Mobile Friendly
   - [ ] Nav bar to hamburger
   - [ ] Does Search work?
 - [ ] Search
 - [ ] Old URL redirection (separate repo?)
 - [ ] gunicorn
-- [ ] Test coverage is shocking
 - [ ] SEO assets
   - [x] favicon.ico
   - [x] sizes="180x180" href="/images/apple-touch-icon.png"
@@ -78,6 +77,7 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ## Deferred
 
+- [ ] Test coverage is shocking
 - [ ] 404 detection script
 - [ ] Caching - especially full document from datastore
 - [ ] Metrics
