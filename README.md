@@ -59,12 +59,12 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [x] Back To Top link
 - [x] Add a LICENSE file
 - [x] Privacy Policy /privacy, also mention copyright
+- [x] Tracking usage - Analytics
 - [ ] UI doesn't work when wide (Desktop)
 - [ ] Mobile Friendly
   - [ ] Nav bar to hamburger
   - [ ] Does Search work?
 - [ ] Search
-- [ ] Tracking usage - Analytics
 - [ ] Old URL redirection (separate repo?)
 - [ ] gunicorn
 - [ ] Test coverage is shocking
