@@ -53,24 +53,21 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [x] Notes as HTML - read from storage
 - [x] Downloadable PDFs
 - [x] Contact Form (to my existing API)
-- [ ] Hide downloads under alchemyst.co.uk domain
-- [ ] Set tags & import into DataStore
-- [ ] Tags page
-- [ ] Handle missing converted notes more gracefully
-- [ ] *Defer* Convert existing notes into HTML and upload
+- [x] Hide downloads under alchemyst.co.uk domain
+- [x] Handle missing converted notes more gracefully
+- [x] About Page weird overflow of image
+- [x] Back To Top link
+- [x] Add a LICENSE file
+- [x] Privacy Policy /privacy, also mention copyright
 - [ ] UI doesn't work when wide (Desktop)
 - [ ] Mobile Friendly
   - [ ] Nav bar to hamburger
   - [ ] Does Search work?
-- [ ] Search - Elastic?
+- [ ] Search
 - [ ] Tracking usage - Analytics
 - [ ] Old URL redirection (separate repo?)
-- [ ] Privacy Policy /privacy, also mention copyright
-- [ ] Back To Top link
-- [ ] Add a LICENSE file
-- [ ] 404 detection script?
 - [ ] gunicorn
-- [ ] caching - especially full document from datastore
+- [ ] Test coverage is shocking
 - [ ] SEO assets
   - [x] favicon.ico
   - [x] sizes="180x180" href="/images/apple-touch-icon.png"
@@ -78,6 +75,14 @@ I also wanted to preserve the old URL structure which - despite being really nas
   - [x] sizes="16x16" href="/images/favicon-16x16.png"
   - [x] "/site.webmanifest"
   - [ ] "/safari-pinned-tab.svg" color="#5bbad5"
+
+## Deferred
+
+- [ ] 404 detection script
+- [ ] Caching - especially full document from datastore
+- [ ] Metrics
+- [ ] Tags page
+- [ ] *Defer* Convert existing notes into HTML and upload
 
 ## Tests
 
@@ -88,6 +93,16 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [ ] Healthcheck
 - [ ] Compression
 - [ ] Caching
+
+---
+
+## Running Locally
+
+```sh
+pipenv install --dev
+gcloud auth application-default login
+./go run
+```
 
 ---
 

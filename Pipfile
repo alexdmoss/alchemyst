@@ -3,20 +3,24 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[packages]
+flask = "*"
+google-cloud-datastore = "*"
+google-cloud-storage = "*"
+google-cloud = "*"
+pyyaml = "*"
+dacite = "*"
+
 [dev-packages]
 alchemyst = {editable = true,path = "."}
 pytest = "*"
 pytest-cov = "*"
 pytest-mock = "*"
 pytest-socket = "*"
-flask = "*"
+pytest-watch = "*"
 beautifulsoup4 = "*"
-
-[packages]
-flask = "*"
-google-cloud-datastore = "*"
-google-cloud-storage = "*"
-google-cloud = "*"
+flake8 = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.7"

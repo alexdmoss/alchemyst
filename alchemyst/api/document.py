@@ -14,7 +14,10 @@ def get_document(id):
     if doc.data is not None:
         return doc.data
     else:
-        return "<div class='centered'><div class='error'>Sorry, but this file was not found!</div></div>"
+        return '''<div class='centered'><div class='error'>
+        Sorry, but the HTML version wasn't found, or hasn't been converted yet.
+        You can still download it using the above link!
+        </div></div>'''
 
 
 def document_from_query(raw_data):

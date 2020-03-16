@@ -98,9 +98,23 @@ strong {
 .error {
     display: inline-block;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: var(--bg-color);
     width: 50%;
+    line-height: 1.5rem;
     color: var(--link-hover-color);
     border: 1px solid var(--link-hover-color);
+    padding: 1rem;
+}
+
+.info {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: var(--bg-color);
+    width: 50%;
+    line-height: 1.5rem;
+    border: 1px solid var(--link-color);
     padding: 1rem;
 }
 
@@ -240,8 +254,8 @@ header ul li a:hover, header ul li a:focus, header ul li a:active {
 /****************** Footer ******************/
 
 footer {
-    position: fixed;
-    /* position: absolute;  */ /* if want to place below content */
+    /* position: fixed; */ /* will float above content */
+    position: absolute; /* if want to place below content */
     bottom: 0;
     width: 100%;
     height: 30px;   /* Height of the footer */
@@ -412,6 +426,7 @@ footer p a {
 .main {
     padding: 2rem 2rem 1rem 2rem;
     position: relative;
+    height: 100%;
 }
 
 .main p {
@@ -868,6 +883,32 @@ sub {
     width: 18rem;
 }
 
+/****************** Back To Top ******************/
+
+
+#back-to-top {
+    bottom: 0.4rem;
+    display: none;
+    position: fixed;
+    right: 2.4rem;
+    z-index: 999;
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+    background: var(--bg-color);
+}
+@media screen and (max-width: 740px) {
+    #back-to-top {
+        right: 1.4rem;
+    }
+}
+
+#back-to-top.button-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+    opacity: .9;
+}
 
 /*** Forms ***/
 
