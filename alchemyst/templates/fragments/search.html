@@ -1,7 +1,3 @@
-<div class="searchbox">
-    <input data-search-input id="search-by" type="text" placeholder="Search ..." />
-</div>
-
 <script type="text/javascript" src="{{ url_for('static', filename='js/lunr.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/auto-complete.js') }}"></script>
 <script type="text/javascript">
@@ -12,3 +8,7 @@
 <!-- <form id="search" name="search" action="/search" method="GET">
     <input type="text" name="q" value="" placeholder="Search ..." />
 </form> -->
+
+<form id="search">
+    <input id="search-menu" type="text" name="q" placeholder="Search ..." />
+</form>

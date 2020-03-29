@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/lunr.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/auto-complete.js') }}"></script>
+<script type="text/javascript">
+    var baseurl = "http://127.0.0.1:5000";
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/search.js') }}"></script>
+
+
+<article class="main" id="tags">
+
+    <h1>Search the Notes</h1>
+
+    <p>This search option currently looks through the metadata of the various articles on this site - titles,
+        description, tags, etc. It does <strong>not</strong> look through the text within the articles in full (...
+        yet!). Sorry!</p>
+
+    <div class="centered">
+        <form id="search">
+            <input id="search-main" type="text" name="q" placeholder="Search ..." />
+        </form>
+    </div>
+
+    <div id="search-results">
+        <h2>Search Results</h2>
+        <ul id="results"></ul>
+    </div>
+
+</article>
+
+{% endblock %}
