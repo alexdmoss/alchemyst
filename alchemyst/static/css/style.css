@@ -277,8 +277,8 @@ header ul li a:hover, header ul li a:focus, header ul li a:active {
 /****************** Footer ******************/
 
 footer {
-    /* position: fixed; */ /* will float above content */
-    position: absolute; /* if want to place below content */
+    position: fixed; /* will float above content */
+    /* position: absolute; */ /* if want to place below content */
     bottom: 0;
     width: 100%;
     height: 30px;   /* Height of the footer */
@@ -846,19 +846,57 @@ sub {
 
 /****************** Search ******************/
 
-.visible {
-    display: block;
-}
 #search-results {
     display: none;
 }
+
+#search-popup {
+    display: none;
+    position: absolute;
+    top: 32rem;
+    left: 14.5rem;
+    border: 1px solid var(--border-color);
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    width: 25rem;
+    z-index: 99999;
+    background-color: white;
+}
+
 .search-result {
     text-align: left;
     margin-left: 2rem;
     margin-bottom: 0.7rem;
+    list-style: none;
 }
+
+.popup-result {
+    list-style: none;
+}
+
+.popup-result a {
+    border: none !important;
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    line-height: 1rem !important;
+    font-size: 0.9rem;
+}
+
 .search-result-description {
     font-size: 0.9rem;
+}
+
+.popup-result-description {
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /****************** Contact ******************/

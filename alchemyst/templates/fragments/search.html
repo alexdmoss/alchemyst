@@ -5,10 +5,10 @@
 </script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/search.js') }}"></script>
 
-<!-- <form id="search" name="search" action="/search" method="GET">
-    <input type="text" name="q" value="" placeholder="Search ..." />
-</form> -->
-
 <form id="search">
     <input id="search-menu" type="text" name="q" placeholder="Search ..." />
 </form>
+
+<div id="search-popup">
+    <ul id="results-popup"></ul>
+</div>

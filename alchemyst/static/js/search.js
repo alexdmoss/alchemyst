@@ -1,5 +1,6 @@
 var lunrIndex,
-    $results,
+    $resultsMain,
+    $resultsMenu,
     documents;
 
 function initLunr() {
@@ -56,12 +57,12 @@ function search(query) {
 /******************* Main Search Page *******************/
 
 function initUI() {
-    $results = $("#results");
+    $resultsMenu = $("#results-popup");
 
     $("#search-menu").keyup(function () {
 
         // empty previous results
-        $results.empty();
+        $resultsMenu.empty();
 
         // trigger search when at least two chars provided.
         var query = $(this).val();
@@ -69,23 +70,23 @@ function initUI() {
             return;
         }
 
-        var results = search(query);
+        var resultsMenu = search(query);
 
-        renderMenuResults(results);
+        renderMenuResults(resultsMenu);
     });
 }
 
-function renderMenuResults(results) {
+function renderMenuResults(resultsMenu) {
 
-    if (!results.length) {
+    if (!resultsMenu.length) {
         return;
     }
 
-    $('#search-results').show();
+    $('#search-popup').show();
 
-    // results.slice(0, 10).forEach to limit to 10 results
-    results.forEach(function (result) {
-        var $result = $("<li class='search-result'>");
+    // resultsMenu.slice(0, 10).forEach to limit to 10 results
+    resultsMenu.forEach(function (result) {
+        var $result = $("<li class='popup-result'>");
 
         // console.log(JSON.stringify(result))
         $result.append($("<a>", {
@@ -95,25 +96,28 @@ function renderMenuResults(results) {
             text: result.title
         }));
 
-        $result.append($("<span>", {
-            class: "search-result-description",
-            text: " - " + result.description
+        $result.append($("<br />"));
+        $result.append($("<p>", {
+            class: "popup-result-description",
+            text: result.description
         }));
+        // $result.append($("<hr />"));
 
-        $results.append($result);
+        $resultsMenu.append($result);
 
     });
+
 }
 
 /******************* Main Search Page *******************/
 
 function searchForm() {
-    $results = $("#results");
+    $resultsMain = $("#results-main");
 
     $("#search-main").keyup(function () {
 
         // empty previous results
-        $results.empty();
+        $resultsMain.empty();
 
         // trigger search when at least two chars provided.
         var query = $(this).val();
@@ -121,22 +125,22 @@ function searchForm() {
             return;
         }
 
-        var results = search(query);
+        var resultsMain = search(query);
 
-        renderMainResults(results);
+        renderMainResults(resultsMain);
     });
 }
 
-function renderMainResults(results) {
+function renderMainResults(resultsMain) {
 
-    if (!results.length) {
+    if (!resultsMain.length) {
         return;
     }
 
     $('#search-results').show();
 
     // results.slice(0, 10).forEach to limit to 10 results
-    results.forEach(function (result) {
+    resultsMain.forEach(function (result) {
         var $result = $("<li class='search-result'>");
 
         // console.log(JSON.stringify(result))
@@ -152,7 +156,7 @@ function renderMainResults(results) {
             text: " - " + result.description
         }));
 
-        $results.append($result);
+        $resultsMain.append($result);
 
     });
 }

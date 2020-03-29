@@ -2,41 +2,36 @@
 
 {% block content %}
 
-    <article class="main" id="notes">
-    
-        <h1>List of Chemistry Notes</h1>
+<article class="main" id="notes">
 
-        <div class="notes-list-filters">
-            Filter By:&nbsp;&nbsp;
-            {% if path != '/notes' %}<a href="/notes">All</a>{% else %}All{% endif %}
-            <span class="padded-beam">|</span>
-            {% if path != '/notes/inorganic' %}<a href="/notes/inorganic">Inorganic</a>{% else %}Inorganic{% endif %}
-            <span class="padded-beam">|</span>
-            {% if path != '/notes/organic' %}<a href="/notes/organic">Organic</a>{% else %}Organic{% endif %}
-            <span class="padded-beam">|</span>
-            {% if path != '/notes/physical' %}<a href="/notes/physical">Physical</a>{% else %}Physical{% endif %}
-            <span class="padded-beam">|</span>
-            {% if path != '/notes/first-year' %}<a href="/notes/first-year">1st Year</a>{% else %}1st Year{% endif %}
-            <span class="padded-beam">|</span>
-            {% if path != '/notes/second-year' %}<a href="/notes/second-year">2nd Year</a>{% else %}2nd Year{% endif %}
-            <span class="padded-beam">|</span>
-            {% if path != '/notes/third-year' %}<a href="/notes/third-year">3rd Year</a>{% else %}3rd Year{% endif %}
-        </div>
+    <h1>List of Chemistry Notes</h1>
 
-        <div class="notes-list-search">
-            <form id="search" name="search" action="/search" method="GET">
-                <input type="text" name="q" value="" placeholder="Search ..." />
-            </form>
-        </div>
+    <div class="notes-list-filters">
+        Filter By:&nbsp;&nbsp;
+        {% if path != '/notes' %}<a href="/notes">All</a>{% else %}All{% endif %}
+        <span class="padded-beam">|</span>
+        {% if path != '/notes/inorganic' %}<a href="/notes/inorganic">Inorganic</a>{% else %}Inorganic{% endif %}
+        <span class="padded-beam">|</span>
+        {% if path != '/notes/organic' %}<a href="/notes/organic">Organic</a>{% else %}Organic{% endif %}
+        <span class="padded-beam">|</span>
+        {% if path != '/notes/physical' %}<a href="/notes/physical">Physical</a>{% else %}Physical{% endif %}
+        <span class="padded-beam">|</span>
+        {% if path != '/notes/first-year' %}<a href="/notes/first-year">1st Year</a>{% else %}1st Year{% endif %}
+        <span class="padded-beam">|</span>
+        {% if path != '/notes/second-year' %}<a href="/notes/second-year">2nd Year</a>{% else %}2nd Year{% endif %}
+        <span class="padded-beam">|</span>
+        {% if path != '/notes/third-year' %}<a href="/notes/third-year">3rd Year</a>{% else %}3rd Year{% endif %}
+    </div>
 
-        {% for note in notes %}
-        <div class="notes-list-item">
-            <div class="notes-list-title"><a href="/note/{{ note.name }}"><i class="far fa-file-alt"></i>&nbsp;&nbsp;{{ note.title }} &raquo;</a></div>
-            <div class="notes-list-meta">{{ note.category | title }} - {{ note.level }}</div>
-            <div class="notes-list-desc">{{ note.description }}</div>
-        </div>
-        {% endfor %}
+    {% for note in notes %}
+    <div class="notes-list-item">
+        <div class="notes-list-title"><a href="/note/{{ note.name }}"><i
+                    class="far fa-file-alt"></i>&nbsp;&nbsp;{{ note.title }} &raquo;</a></div>
+        <div class="notes-list-meta">{{ note.category | title }} - {{ note.level }}</div>
+        <div class="notes-list-desc">{{ note.description }}</div>
+    </div>
+    {% endfor %}
 
-    </article>
+</article>
 
 {% endblock %}
