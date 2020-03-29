@@ -61,10 +61,8 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [x] Privacy Policy /privacy, also mention copyright
 - [x] Tracking usage - Analytics
 - [x] UI doesn't work when wide (Desktop)
-- [ ] Mobile Friendly
-  - [ ] Nav bar to hamburger
-  - [ ] Does Search work?
-- [ ] Search
+- [x] Search
+- [x] Mobile Friendly
 - [ ] Old URL redirection (separate repo?)
 - [ ] gunicorn
 - [ ] SEO assets
