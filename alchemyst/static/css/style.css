@@ -78,7 +78,15 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.1rem;
 }
 
 em {
@@ -89,6 +97,20 @@ strong {
     font-weight: 1000;
 }
 
+sup { 
+    font-size: 75%; 
+    line-height: 0; 
+    position: relative; 
+    vertical-align: baseline; 
+    top: -0.5em 
+}
+sub { 
+    font-size: 75%; 
+    line-height: 0; 
+    position: relative; 
+    vertical-align: baseline; 
+    top: 0.5em 
+}
 
 .centered {
     width: 100%;
@@ -699,10 +721,46 @@ footer p a {
     font-weight: 800;
 }
 
+
+.note-content h1, h2, h3, h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.note-content h1, h2 {
+    text-decoration: underline;
+    margin-top: 2rem;
+}
+
+.note-content h4 {
+    font-style: italic;
+}
+
+.note-content ul {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.note-content p {
+    font-size: 1.05rem;
+    letter-spacing: 0.03rem;
+}
+.note-content p.image {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.note-content p.caption {
+    margin: 0; margin-bottom: 1rem;
+    padding: 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
 .document {
     font-family: 'News Cycle', Arial, sans-serif;
     line-height: 1.5rem;
-    letter-spacing: 0.03rem;
 }
 
 .document h1, .document h2, .document h3, .document h4, .document h5 {

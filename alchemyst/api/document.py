@@ -6,8 +6,11 @@ from alchemyst.model.document import Document
 
 def get_document(id):
     if getenv('USE_MOCKS') == 'True':
-        with open(f'./tests/mocks/document.html', 'r') as f:
-            doc = f.read()
+        doc = f"Using Mocks - would be serving document ID: {id} from GCS"
+        with open(f'./data/docs/{id}.html', 'r') as f:
+            doc += f.read()
+        # with open('./tests/mocks/document.html', 'r') as f:
+        #     doc += f.read()
     else:
         raw_data = get_entity('Document', id)
         doc = document_from_query(raw_data)
