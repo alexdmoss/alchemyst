@@ -8,7 +8,7 @@ def test_header_footer_nav():
         assert response.status_code == 200
         assert "<title>Alchemyst :: " in response.get_data(as_text=True)
         assert "&copy;" in response.get_data(as_text=True)
-        assert '<a href="/contact">Contact</a>' in response.get_data(as_text=True)
+        assert '<a href="/contact">' in response.get_data(as_text=True)
 
 
 def test_home_page():
