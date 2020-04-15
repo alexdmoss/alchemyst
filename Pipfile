@@ -10,6 +10,7 @@ google-cloud-storage = "*"
 google-cloud = "*"
 pyyaml = "*"
 dacite = "*"
+gunicorn = "==20.*"
 
 [dev-packages]
 alchemyst = {editable = true,path = "."}
