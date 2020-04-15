@@ -16,62 +16,12 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ## To Do
 
-- [x] Basic framework
-- [x] Dockerfile
-- [x] Basic UI
-  - [x] Optional trailing slash in Flask
-  - [x] Auto-reload in Flask
-  - [x] Buttons on left menu
-- [x] UI enhancements
-  - [x] background image on #content
-  - [x] social icons
-  - [x] Shadow on nav links
-  - [x] Footer stays on screen
-  - [x] FA icons on nav links
-  - [x] animated underline of links in #content
-  - [x] Subtle shadow around #content
-  - [x] Better fonts
-- [x] Home Page
-- [x] About Page
-  - [x] Needs some images
-- [x] Links Page (simplify)
-- [x] PDF Index Page
-  - [x] Better padding of table
-  - [x] Table sorting / filtering
-  - [x] Search form at top
-- [x] Data Loader
-- [x] Config file
-- [x] Refactor: data model separated out
-- [x] Organic
-- [x] Inorganic
-- [x] Physical
-- [x] Notes Detail Page
-  - [x] Format Date
-  - [x] Format Tags
-  - [x] Format Filesize
-  - [x] Vertically middle the metadata
-- [x] Notes as HTML - read from storage
-- [x] Downloadable PDFs
-- [x] Contact Form (to my existing API)
-- [x] Hide downloads under alchemyst.co.uk domain
-- [x] Handle missing converted notes more gracefully
-- [x] About Page weird overflow of image
-- [x] Back To Top link
-- [x] Add a LICENSE file
-- [x] Privacy Policy /privacy, also mention copyright
-- [x] Tracking usage - Analytics
-- [x] UI doesn't work when wide (Desktop)
-- [x] Search
-- [x] Mobile Friendly
-- [ ] Old URL redirection (separate repo?)
-- [ ] gunicorn
+- [ ] Old URL redirection
+- [x] gunicorn
+- [x] Dockerise
 - [ ] SEO assets
-  - [x] favicon.ico
-  - [x] sizes="180x180" href="/images/apple-touch-icon.png"
-  - [x] sizes="32x32" href="/images/favicon-32x32.png"
-  - [x] sizes="16x16" href="/images/favicon-16x16.png"
-  - [x] "/site.webmanifest"
   - [ ] "/safari-pinned-tab.svg" color="#5bbad5"
+- [ ] CI
 
 ## Deferred
 

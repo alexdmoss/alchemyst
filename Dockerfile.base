@@ -1,0 +1,20 @@
+FROM python:3.7.7-alpine3.11
+
+RUN pip install --upgrade pip
+RUN pip install pipenv
+
+RUN adduser -D flask-app flask-app
+RUN mkdir /app
+RUN chown flask-app:flask-app /app
+RUN apk update --no-cache \
+    && apk upgrade \
+    && apk add gcc g++ musl-dev libffi-dev openssl-dev
+
+USER flask-app
+WORKDIR /app
+
+COPY --chown=flask-app:flask-app setup.py /app/setup.py
+COPY --chown=flask-app:flask-app Pipfile /app/Pipfile
+COPY --chown=flask-app:flask-app Pipfile.lock /app/Pipfile.lock
+
+RUN pipenv install

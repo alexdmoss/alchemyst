@@ -1,0 +1,7 @@
+FROM alchemyst-base:cached
+
+COPY --chown=flask-app:flask-app . /app/
+
+RUN pipenv install --dev
+
+CMD ["pipenv", "run", "pytest", "-v", "--cov=."]
