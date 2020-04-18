@@ -27,6 +27,11 @@ def redir_contact():
     return redirect(url_for('contact'))
 
 
+@app.route('/search.php', methods=['GET'])
+def redir_search():
+    return redirect(url_for('search'))
+
+
 @app.route('/pdfindex.php', methods=['GET'])
 def redir_pdfs():
 
