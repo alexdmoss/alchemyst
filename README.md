@@ -14,23 +14,15 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ---
 
-## To Do
-
-- [ ] Old URL redirection
-- [x] gunicorn
-- [x] Dockerise
-- [ ] SEO assets
-  - [ ] "/safari-pinned-tab.svg" color="#5bbad5"
-- [ ] CI
-
 ## Deferred
 
+- [ ] Something to check logs for 404s
+- [ ] Metrics
 - [ ] Test coverage is shocking
 - [ ] 404 detection script
 - [ ] Caching - especially full document from datastore
-- [ ] Metrics
 - [ ] Tags page
-- [ ] *Defer* Convert existing notes into HTML and upload
+- [ ] Convert existing notes into HTML and upload
 
 ## Tests
 

@@ -1,0 +1,31 @@
+---
+kind: pipeline
+name: alchemyst
+
+steps:
+- name: publish  
+  image: plugins/gcr
+  settings:
+    registry: eu.gcr.io
+    repo: moss-work/alchemyst
+    tags: ${DRONE_COMMIT_SHA}
+    json_key:
+      from_secret: MW_PUSH_CREDS
+  when:
+    event: push
+    branch: master
+
+- name: deploy
+  image: mosstech/drone-gke-deployer:latest
+  environment:
+    NAMESPACE: alchemyst
+    GCP_PROJECT_ID: moss-work
+    K8S_DEPLOYER_CREDS:
+      from_secret: MW_K8S_DEPLOYER
+    K8S_CLUSTER_NAME:
+      from_secret: MW_K8S_CLUSTER_NAME
+  commands:
+  - ./go deploy
+  when:
+    event: push
+    branch: master
