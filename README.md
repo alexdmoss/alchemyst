@@ -64,3 +64,4 @@ gcloud auth application-default login
 I was originally going to run NGINX in front of it for redirects from old site, but the patterns are structured enough that this is quite easy to do with Flask's route decorators and manipulating the query parameters.
 
 Doesn't really need Cloud DataStore - this data is pretty much static - but I wanted to try it out!
+
