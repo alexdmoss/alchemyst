@@ -1,4 +1,4 @@
-FROM alchemyst-base:cached
+FROM eu.gcr.io/moss-work/alchemyst-base:cached
 
 COPY --chown=flask-app:flask-app . /app/
 

@@ -39,6 +39,23 @@ function run() {
 
 }
 
+function build-base() {
+
+  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+
+  docker login 
+
+  _assert_variables_set CONTAINER_IMAGE GOOGLE_CREDS DRONE_COMMIT_SHA
+
+  docker pull ${CONTAINER_IMAGE}:latest
+  docker build -t ${CONTAINER_IMAGE}:${DRONE_COMMIT_SHA} -f Dockerfile.base .
+  docker tag ${CONTAINER_IMAGE} ${CONTAINER_IMAGE}:latest
+  docker push ${CONTAINER_IMAGE}:${DRONE_COMMIT_SHA}
+
+  popd > /dev/null
+
+}
+
 # NB: Dockerfile also runs these, so do not need to use in CI
 function test() {
 

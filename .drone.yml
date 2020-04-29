@@ -3,29 +3,67 @@ kind: pipeline
 name: alchemyst
 
 steps:
-- name: publish  
-  image: plugins/gcr
-  settings:
-    registry: eu.gcr.io
-    repo: moss-work/alchemyst
-    tags: ${DRONE_COMMIT_SHA}
-    json_key:
+# - name: publish-base-image 
+#   image: plugins/gcr
+#   settings:
+#     registry: eu.gcr.io
+#     repo: moss-work/alchemyst
+#     tags: ${DRONE_COMMIT_SHA}
+#     dockerfile: Dockerfile.base
+#     json_key:
+#       from_secret: MW_PUSH_CREDS
+#   when:
+#     event: push
+#     branch: master
+
+# - name: publish-test-image  
+#   image: plugins/gcr
+#   settings:
+#     registry: eu.gcr.io
+#     repo: moss-work/alchemyst
+#     tags: ${DRONE_COMMIT_SHA}
+#     dockerfile: Dockerfile.test
+#     json_key:
+#       from_secret: MW_PUSH_CREDS
+#   when:
+#     event: push
+#     branch: master
+
+# - name: publish-runtime  
+#   image: plugins/gcr
+#   settings:
+#     registry: eu.gcr.io
+#     repo: moss-work/alchemyst
+#     tags: ${DRONE_COMMIT_SHA}
+#     json_key:
+#       from_secret: MW_PUSH_CREDS
+#   when:
+#     event: push
+#     branch: master
+
+- name: build
+  image: mosstech/drone-gke-deployer:latest
+  environment:
+    GOOGLE_CREDS:
       from_secret: MW_PUSH_CREDS
+    CONTAINER_IMAGE: eu.gcr.io/moss-work/alchemyst-base:cached
+  commands:
+  - ./go build-base
   when:
     event: push
     branch: master
 
-- name: deploy
-  image: mosstech/drone-gke-deployer:latest
-  environment:
-    NAMESPACE: alchemyst
-    GCP_PROJECT_ID: moss-work
-    K8S_DEPLOYER_CREDS:
-      from_secret: MW_K8S_DEPLOYER
-    K8S_CLUSTER_NAME:
-      from_secret: MW_K8S_CLUSTER_NAME
-  commands:
-  - ./go deploy
-  when:
-    event: push
-    branch: master
+# - name: deploy
+#   image: mosstech/drone-gke-deployer:latest
+#   environment:
+#     NAMESPACE: alchemyst
+#     GCP_PROJECT_ID: moss-work
+#     K8S_DEPLOYER_CREDS:
+#       from_secret: MW_K8S_DEPLOYER
+#     K8S_CLUSTER_NAME:
+#       from_secret: MW_K8S_CLUSTER_NAME
+#   commands:
+#   - ./go deploy
+#   when:
+#     event: push
+#     branch: master
