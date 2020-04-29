@@ -15,6 +15,9 @@ steps:
   when:
     event: push
     branch: master
+    ref:
+      include:
+      - refs/tags/base*
 
 - name: publish-test-image  
   image: plugins/gcr

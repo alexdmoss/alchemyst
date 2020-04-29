@@ -26,8 +26,6 @@ urls = {
     'http://localhost:5000/pdfindex.php?id=76': 'http://localhost:5000/note/solid-state-electronics'
 }
 
-# TODO: still need to cover downloads!
-
 
 def test_redirect_urls():
     for origin, target in urls.items():

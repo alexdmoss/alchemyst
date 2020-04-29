@@ -17,7 +17,6 @@ alchemyst = {editable = true,path = "."}
 pytest = "*"
 pytest-cov = "*"
 pytest-mock = "*"
-pytest-socket = "*"
 pytest-watch = "*"
 beautifulsoup4 = "*"
 flake8 = "*"
