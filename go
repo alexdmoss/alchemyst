@@ -47,6 +47,9 @@ function build-base() {
 
   _assert_variables_set CONTAINER_IMAGE GOOGLE_CREDS DRONE_COMMIT_SHA
 
+  docker login -u _json_key -p "$(echo $GOOGLE_CREDENTIALS)" https://eu.gcr.io
+  trap "rm -f /root/.docker/config.json" EXIT
+
   docker pull ${CONTAINER_IMAGE}:latest
   docker build -t ${CONTAINER_IMAGE}:${DRONE_COMMIT_SHA} -f Dockerfile.base .
   docker tag ${CONTAINER_IMAGE} ${CONTAINER_IMAGE}:latest
