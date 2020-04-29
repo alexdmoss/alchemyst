@@ -16,7 +16,7 @@ function help() {
   echo -e "    deploy               Deploys app to Kubernetes. Designed to run in Drone CI"
   echo -e "    load-data            Load full dataset (upserts)"
   echo -e 
-  exit 0
+  exit 1
 }
 
 function run() {
@@ -178,7 +178,7 @@ function ctrl_c() {
 
 trap ctrl_c INT
 
-if [[ ${1:-} =~ ^(help|run|test|deploy|load-data)$ ]]; then
+if [[ ${1:-} =~ ^(help|run|test|deploy|build|build-base|load-data)$ ]]; then
   COMMAND=${1}
   shift
   $COMMAND "$@"
