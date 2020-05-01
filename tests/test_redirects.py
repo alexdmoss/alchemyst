@@ -1,6 +1,6 @@
 from alchemyst import app
 from alchemyst.ui.redirects import _get_note_name_from_id
-from fakes.fake_note import FakeNote
+from fakes.fake_note import FakePhysicalNote
 
 urls = {
     '/contact.php': '/contact',
@@ -49,11 +49,5 @@ def test_note_lookup(mocker):
     mocker.patch('alchemyst.ui.redirects.note')
     mocker.patch('alchemyst.ui.redirects.note_from_dict')
     note_view = mocker.patch('alchemyst.ui.redirects.note_view')
-    note_view.return_value = FakeNote()
-    
+    note_view.return_value = FakePhysicalNote()
     assert _get_note_name_from_id(99) == 'applications-of-statistical-mechanics'
-    # def _get_note_name_from_id(id):
-    #     note_as_dict = note(id).get_json()
-    # note_obj = note_from_dict(note_as_dict)
-    # view = note_view(note_obj)
-    # return view.name

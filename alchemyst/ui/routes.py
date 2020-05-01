@@ -80,7 +80,9 @@ def display_notes_by_category(category):
 def display_note(note_name):
     note_as_dict = note(note_name).get_json()
     note_obj = note_from_dict(note_as_dict)
+    print(note_obj)
     view = note_view(note_obj)
+    print(view)
     return render_template('note.html', note=view, title='Note', layout=layout)
 
 
