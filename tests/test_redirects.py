@@ -1,34 +1,59 @@
-import requests
+from alchemyst import app
+from alchemyst.ui.redirects import _get_note_name_from_id
+from fakes.fake_note import FakeNote
 
 urls = {
-    'http://localhost:5000/contact.php': 'http://localhost:5000/contact',
-    'http://localhost:5000/index.php?target=index': 'http://localhost:5000/home',
-    'http://localhost:5000/index.php?target=about&pagetitle=About%20the%20Alchemystry%20Site': 'http://localhost:5000/about',
-    'http://localhost:5000/index.php?target=links&pagetitle=Alchemystry%20Links': 'http://localhost:5000/links',
-    'http://localhost:5000/pdfindex.php': 'http://localhost:5000/notes',
-    'http://localhost:5000/pdfindex.php?group=level&value=1&pagetitle=Alchemystry%20-%201st%20Year%20Notes%20(PDF)': 'http://localhost:5000/notes/first-year',
-    'http://localhost:5000/pdfindex.php?group=all&value=&offset=0&index=0&orderby=title&direction=ASC': 'http://localhost:5000/notes',
-    'http://localhost:5000/pdfindex.php?group=all&value=&offset=50&index=50&orderby=title&direction=ASC': 'http://localhost:5000/notes',
-    'http://localhost:5000/pdfindex.php?group=all&value=&orderby=category&direction=asc': 'http://localhost:5000/notes',
-    'http://localhost:5000/pdfindex.php?group=all&value=&orderby=category&direction=desc': 'http://localhost:5000/notes',
-    'http://localhost:5000/pdfindex.php?group=category&value=Organic&pagetitle=Alchemystry%20-%20Organic%20Notes%20(PDF)': 'http://localhost:5000/notes/organic',
-    'http://localhost:5000/pdfindex.php?group=category&value=Inorganic&pagetitle=Alchemystry%20-%20Inorganic%20Notes%20(PDF)': 'http://localhost:5000/notes/inorganic',
-    'http://localhost:5000/pdfindex.php?group=category&value=Physical&pagetitle=Alchemystry%20-%20Physical%20Notes%20(PDF)': 'http://localhost:5000/notes/physical',
-    'http://localhost:5000/pdfindex.php?group=all&pagetitle=Alchemystry%20-%20All%20the%20Notes%20(PDF)': 'http://localhost:5000/notes',
-    'http://localhost:5000/search.php?search_string=alicyclic&search_submit=Go&boolean_type=AND': 'http://localhost:5000/search',
-    'http://localhost:5000/pdfindex.php?id=75': 'http://localhost:5000/note/advanced-solid-state',
-    'http://localhost:5000/pdfindex.php?id=99': 'http://localhost:5000/note/applications-of-statistical-mechanics',
-    'http://localhost:5000/pdfindex.php?id=84': 'http://localhost:5000/note/chromium-iron-and-cobalt-in-synthesis',
-    'http://localhost:5000/pdfindex.php?id=93': 'http://localhost:5000/note/protecting-groups-and-carbohydrates',
-    'http://localhost:5000/pdfindex.php?id=81': 'http://localhost:5000/note/x-ray-diffraction',
-    'http://localhost:5000/pdfindex.php?id=61': 'http://localhost:5000/note/descriptive-p-block-chemistry',
-    'http://localhost:5000/pdfindex.php?id=88': 'http://localhost:5000/note/organoelements',
-    'http://localhost:5000/pdfindex.php?id=76': 'http://localhost:5000/note/solid-state-electronics'
+    '/contact.php': '/contact',
+    '/index.php?target=index': '/home',
+    '/index.php?target=about&pagetitle=About%20the%20Alchemystry%20Site': '/about',
+    '/index.php?target=links&pagetitle=Alchemystry%20Links': '/links',
+    '/pdfindex.php': '/notes',
+    '/pdfindex.php?group=level&value=1&pagetitle=Alchemystry%20-%201st%20Year%20Notes%20(PDF)': '/notes/first-year',
+    '/pdfindex.php?group=level&value=2&pagetitle=Alchemystry%20-%202nd%20Year%20Notes%20(PDF)': '/notes/second-year',
+    '/pdfindex.php?group=level&value=3&pagetitle=Alchemystry%20-%203rd%20Year%20Notes%20(PDF)': '/notes/third-year',
+    '/pdfindex.php?group=level&value=nope&pagetitle=NOPE': '/notes',
+    '/pdfindex.php?group=all&value=&offset=0&index=0&orderby=title&direction=ASC': '/notes',
+    '/pdfindex.php?group=all&value=&offset=50&index=50&orderby=title&direction=ASC': '/notes',
+    '/pdfindex.php?group=all&value=&orderby=category&direction=asc': '/notes',
+    '/pdfindex.php?group=all&value=&orderby=category&direction=desc': '/notes',
+    '/pdfindex.php?group=category&value=Organic&pagetitle=Alchemystry%20-%20Organic%20Notes%20(PDF)': '/notes/organic',
+    '/pdfindex.php?group=category&value=Inorganic&pagetitle=Alchemystry%20-%20Inorganic%20Notes%20(PDF)': '/notes/inorganic',
+    '/pdfindex.php?group=category&value=Physical&pagetitle=Alchemystry%20-%20Physical%20Notes%20(PDF)': '/notes/physical',
+    '/pdfindex.php?group=all&pagetitle=Alchemystry%20-%20All%20the%20Notes%20(PDF)': '/notes',
+    '/pdfindex.php?group=bad&pagetitle=whatever': '/notes',
+    '/search.php?search_string=alicyclic&search_submit=Go&boolean_type=AND': '/search',
+    '/pdfindex.php?id=75': '/note/advanced-solid-state',
+    '/pdfindex.php?id=84': '/note/chromium-iron-and-cobalt-in-synthesis',
 }
 
 
-def test_redirect_urls():
+def test_redirect_urls(mocker):
+    mock_note_lookup = mocker.patch('alchemyst.ui.redirects._get_note_name_from_id')
+    notes = {
+        "/pdfindex.php?id=75": "advanced-solid-state",
+        '/pdfindex.php?id=84': 'chromium-iron-and-cobalt-in-synthesis',
+    }
+
     for origin, target in urls.items():
-        response = requests.head(origin)
-        assert response.status_code == 302
-        assert response.headers['Location'] == target
+        mock_note_lookup(origin)
+        if 'id=' in origin:
+            mock_note_lookup.return_value = notes[origin]
+        with app.test_request_context(origin, method='GET'):
+            request = app.dispatch_request()
+            response = app.make_response(request)
+            assert response.status_code == 302
+            assert response.headers['Location'] == target
+
+
+def test_note_lookup(mocker):
+    mocker.patch('alchemyst.ui.redirects.note')
+    mocker.patch('alchemyst.ui.redirects.note_from_dict')
+    note_view = mocker.patch('alchemyst.ui.redirects.note_view')
+    note_view.return_value = FakeNote()
+    
+    assert _get_note_name_from_id(99) == 'applications-of-statistical-mechanics'
+    # def _get_note_name_from_id(id):
+    #     note_as_dict = note(id).get_json()
+    # note_obj = note_from_dict(note_as_dict)
+    # view = note_view(note_obj)
+    # return view.name

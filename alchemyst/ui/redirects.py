@@ -39,12 +39,10 @@ def redir_pdfs():
     group = request.args.get('group')
     category = request.args.get('value')
 
-    valid_groups = ['category', 'level']
-
     if doc_id is not None:
         note_name = _get_note_name_from_id(doc_id)
         return redirect(url_for('display_note', note_name=note_name))
-    elif group in valid_groups and category is not None:
+    else:
         if group == 'category':
             return redirect(url_for('display_notes_by_category', category=category.lower()))
         elif group == 'level':
@@ -56,12 +54,13 @@ def redir_pdfs():
                 return redirect(url_for('display_notes_by_category', category='third-year'))
             else:
                 return redirect(url_for('display_notes'))
-    else:
-        return redirect(url_for('display_notes'))
+        else:
+            return redirect(url_for('display_notes'))
 
 
 def _get_note_name_from_id(id):
     note_as_dict = note(id).get_json()
     note_obj = note_from_dict(note_as_dict)
     view = note_view(note_obj)
+    print(view)
     return view.name
