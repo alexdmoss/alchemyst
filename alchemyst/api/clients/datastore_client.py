@@ -1,8 +1,6 @@
 from google.cloud import datastore
 from os import getenv
 
-from alchemyst import app
-
 
 def query(kind, filter_key="", filter_val=""):
     query = _datastore_client().query(kind=kind)

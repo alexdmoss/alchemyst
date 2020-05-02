@@ -15,6 +15,11 @@ spec:
       containers:
         - name: alchemyst
           image: alchemyst:SET_BY_CI
+          env:
+          - name: DATA_STORE_NAMESPACE
+            value: "Alchemyst"
+          - name: DATA_STORE_PROJECT
+            value: "moss-work"
           ports:
             - name: http
               containerPort: 5000
