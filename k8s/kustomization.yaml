@@ -7,7 +7,6 @@ commonLabels:
   app: alchemyst
 
 resources:
-- certificate.yaml
 - deployment.yaml
 - ingress.yaml
 - pdb.yaml
