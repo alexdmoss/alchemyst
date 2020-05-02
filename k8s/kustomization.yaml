@@ -12,3 +12,4 @@ resources:
 - ingress.yaml
 - pdb.yaml
 - service.yaml
+- serviceaccount.yaml
