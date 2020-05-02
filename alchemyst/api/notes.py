@@ -19,7 +19,6 @@ def get_notes(filter=""):
                 for field in note:
                     if note[field] == filter:
                         results.append(note)
-                # results = [note for note in data['entities'] if x['category'] == category]
         else:
             results = data["entities"]
     else:

@@ -11,6 +11,7 @@ def notes():
     notes = {
         "notes": get_notes()
     }
+    app.logger.debug(notes)
     return jsonify(notes)
 
 
