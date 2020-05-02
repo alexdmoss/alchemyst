@@ -6,7 +6,6 @@ from alchemyst import app
 
 def query(kind, filter_key="", filter_val=""):
     query = _datastore_client().query(kind=kind)
-    app.logger.debug(query)
     if filter_key and filter_val:
         query.add_filter(filter_key, '=', filter_val)
     return query
