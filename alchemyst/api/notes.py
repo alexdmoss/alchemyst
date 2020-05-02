@@ -6,6 +6,7 @@ import json
 
 from alchemyst.api.datastore import query_by_kind
 from alchemyst.model.note import Note
+from alchemyst import app
 
 
 def get_notes(filter=""):
@@ -27,6 +28,7 @@ def get_notes(filter=""):
         else:
             query = query_by_kind(kind="Note")
         results = list(query.fetch())
+    app.logger.debug(results)
     notes = [note_from_query(data) for data in results]
     return notes
 
