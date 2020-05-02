@@ -29,11 +29,10 @@ spec:
       restartPolicy: Always
       affinity:
         podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                      - alchemyst
-              topologyKey: "kubernetes.io/hostname"
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchLabels:
+                  app: alchemyst
+              topologyKey: failure-domain.beta.kubernetes.io/zone
+            weight: 100
