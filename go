@@ -86,7 +86,7 @@ function deploy() {
   
   kustomize build . | kubectl apply -f -
 
-  kubectl rollout status -w deployment/alchemyst
+  kubectl rollout status deploy/alchemyst -w -n ${NAMESPACE}
 
   popd >/dev/null
 
