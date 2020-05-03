@@ -22,7 +22,6 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## To Do
 
-- [ ] Healthcheck / Readiness Probe
 - [ ] Compression
 - [ ] Caching
 

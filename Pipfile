@@ -12,6 +12,7 @@ pyyaml = "*"
 dacite = "*"
 gunicorn = "==20.*"
 prometheus-flask-exporter = "*"
+healthcheck = "*"
 
 [dev-packages]
 alchemyst = {editable = true,path = "."}

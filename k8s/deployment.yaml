@@ -21,8 +21,22 @@ spec:
           - name: DATA_STORE_PROJECT
             value: "moss-work"
           ports:
-            - name: http
-              containerPort: 5000
+          - name: http
+            containerPort: 5000
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 1
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 1
           workingDir: /app
           resources:
             requests:
