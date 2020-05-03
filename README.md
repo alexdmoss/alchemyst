@@ -22,15 +22,13 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## To Do
 
-- [ ] Figure out where logs have gone! ... or repair Elastic
-- [ ] Metrics in Prometheus would be nice - https://pypi.org/project/flask-prometheus-metrics/
-- [ ] Traefik sidecar?
 - [ ] Expose to internet
 - [ ] Contact form does not work - hard to test until exposed properly
 
 ## Deferred
 
 - [ ] Something to check logs for 404s
+- [ ] Traefik sidecar?
 - [ ] Metrics on Datastore and GCS
 - [ ] Test coverage is shocking
 - [ ] Caching - especially full document from datastore
@@ -55,6 +53,7 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 pipenv install --dev
 gcloud auth application-default login
 ./go run
+# or ./go run-wsgi if want to run in gunicorn
 ```
 
 ---
