@@ -70,21 +70,6 @@ def download_arrow():
     return redirect(url_for('static', filename='images/download_arrow.gif'))
 
 
-@app.route('/favicon.ico', methods=['GET'])
-def legacy_favicon():
-    return redirect(url_for('static', filename='images/favicon.ico'))
-
-
-@app.route('/apple-touch-icon-precomposed.png', methods=['GET'])
-def apple_icon_precomposed():
-    return redirect(url_for('static', filename='images/apple-touch-icon.png'))
-
-
-@app.route('/apple-touch-icon.png', methods=['GET'])
-def apple_icon():
-    return redirect(url_for('static', filename='images/apple-touch-icon.png'))
-
-
 def _get_note_name_from_id(id):
     note_as_dict = note(id).get_json()
     note_obj = note_from_dict(note_as_dict)

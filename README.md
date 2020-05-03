@@ -22,8 +22,9 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## To Do
 
-- [ ] Not working without www
-- [ ] Contact form does not work - hard to test until exposed properly
+- [ ] Healthcheck / Readiness Probe
+- [ ] Compression
+- [ ] Caching
 
 ## Deferred
 
@@ -38,13 +39,7 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## Tests
 
-- [ ] Contact Form relies on CORS - can only test once promoted
-
-## Copy from the Cat
-
-- [ ] Healthcheck
-- [ ] Compression
-- [ ] Caching
+- [ ] Browser tests
 
 ---
 

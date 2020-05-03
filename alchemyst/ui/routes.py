@@ -2,7 +2,7 @@ import yaml
 import requests
 from datetime import datetime
 
-from flask import render_template, request, Response
+from flask import render_template, request, Response, send_from_directory
 from alchemyst import app
 
 from alchemyst.ui.note import note_view
@@ -104,4 +104,10 @@ def download_pdf(category, pdf_file):
     response = Response(resp.content, resp.status_code, headers)
     return response
 
-    # return redirect(f'https://storage.googleapis.com/{bucket}/pdfs/{category}/{pdf_file}')
+
+@app.route('/robots.txt')
+@app.route('/favicon.ico')
+@app.route('/apple-touch-icon-precomposed.png')
+@app.route('/apple-touch-icon.png')
+def static_from_root():
+    return send_from_directory("static", request.path[1:])
