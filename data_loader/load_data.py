@@ -19,7 +19,7 @@ def main():
 
 
 def read_data():
-    with open('./data/pdf.json', 'r') as f:
+    with open('./pdf.json', 'r') as f:
         data = json.load(f)
     results = data["entities"]
     notes = [note_from_query(data) for data in results]

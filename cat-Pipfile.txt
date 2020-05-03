@@ -1,9 +1,0 @@
-
-rope = "*"
-pytest-timeout = "*"
-pytest-env = "*"
-pytest-tldr = "*"
-
-six = "*"
-protobuf = "*"
-stringcase = "*"

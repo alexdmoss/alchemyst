@@ -3,8 +3,8 @@ import json
 from datetime import datetime
 from collections import OrderedDict
 
-csv_file = open('./data/pdf.csv', 'r')
-json_file = open('./data/pdf.json', 'w')
+csv_file = open('./pdf.csv', 'r')
+json_file = open('./pdf.json', 'w')
 
 
 json_file.write('{\n"entities": [\n')

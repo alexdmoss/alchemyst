@@ -22,9 +22,9 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## To Do
 
+- [ ] 1st/2nd/3rd year note listing not working
 - [ ] Center content on wide screens
 - [ ] Pad the top menu more on wide screens
-- [ ] 1st/2nd/3rd year note listing not working
 
 ## Deferred
 
@@ -32,13 +32,9 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 - [ ] Traefik sidecar?
 - [ ] Metrics on Datastore and GCS
 - [ ] Test coverage is shocking
-- [ ] Caching - especially full document from datastore
 - [ ] Tags page
 - [ ] Convert existing notes into HTML and upload
 - [ ] May need to restore the recaptcha
-
-## Tests
-
 - [ ] Browser tests
 
 ---
@@ -54,14 +50,36 @@ gcloud auth application-default login
 
 ---
 
-## Removed Sections
-
-- Ability to create new content through website - not needed, just me, static data now
-- Admin Section - no need for login any more
-
----
-
 ## Architecture
+
+### Model
+
+#### Entry
+
+```json
+{
+    "name": <str>,
+    "title": <str>,
+    "author": <str>,
+    "category": <str>,
+    "tags": <list>,
+    "description": <str>,
+    "level": <str>,
+    "filesize": <int>,
+    "asset_link": <str>,
+    "doc_id": <int>,
+    "last_modified": <utc-date>
+}
+```
+
+#### Document
+
+```json
+{
+    "id": <generated>,
+    "document": ,
+}
+```
 
 ### Redirects
 
