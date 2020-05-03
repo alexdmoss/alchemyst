@@ -13,6 +13,8 @@ dacite = "*"
 gunicorn = "==20.*"
 prometheus-flask-exporter = "*"
 healthcheck = "*"
+flask-compress = "*"
+flask-caching = "*"
 
 [dev-packages]
 alchemyst = {editable = true,path = "."}

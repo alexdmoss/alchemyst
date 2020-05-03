@@ -74,5 +74,4 @@ def _get_note_name_from_id(id):
     note_as_dict = note(id).get_json()
     note_obj = note_from_dict(note_as_dict)
     view = note_view(note_obj)
-    print(view)
     return view.name

@@ -22,8 +22,9 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## To Do
 
-- [ ] Compression
-- [ ] Caching
+- [ ] Center content on wide screens
+- [ ] Pad the top menu more on wide screens
+- [ ] 1st/2nd/3rd year note listing not working
 
 ## Deferred
 

@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 
 from flask import render_template, request, Response, send_from_directory
-from alchemyst import app
+from alchemyst import app, cache
 
 from alchemyst.ui.note import note_view
 from alchemyst.api.routes import note, notes, notes_by_category
@@ -60,6 +60,7 @@ def search():
 
 
 @app.route('/notes', methods=['GET'])
+@cache.cached()
 def display_notes():
     url_path = request.path
     notes_as_dict = notes().get_json()
@@ -69,6 +70,7 @@ def display_notes():
 
 
 @app.route('/notes/<category>', methods=['GET'])
+@cache.cached()
 def display_notes_by_category(category):
     url_path = request.path
     notes_as_dict = notes_by_category(category).get_json()
@@ -78,16 +80,16 @@ def display_notes_by_category(category):
 
 
 @app.route('/note/<note_name>', methods=['GET'])
+@cache.cached()
 def display_note(note_name):
     note_as_dict = note(note_name).get_json()
     note_obj = note_from_dict(note_as_dict)
-    print(note_obj)
     view = note_view(note_obj)
-    print(view)
     return render_template('note.html', note=view, title='Note', layout=layout)
 
 
 @app.route('/pdf/<category>/<pdf_file>', methods=['GET'])
+@cache.cached()
 def download_pdf(category, pdf_file):
     resp = requests.request(
         method=request.method,

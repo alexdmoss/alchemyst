@@ -1,11 +1,12 @@
 from flask import abort
 from flask import jsonify
 
-from alchemyst import app
+from alchemyst import app, cache
 from alchemyst.api.notes import get_notes
 
 
 @app.route("/api/notes")
+@cache.cached()
 def notes():
     app.logger.info("Fetching list of notes")
     notes = {
@@ -15,6 +16,7 @@ def notes():
 
 
 @app.route("/api/notes/<category>")
+@cache.cached()
 def notes_by_category(category):
     app.logger.info(f"Fetching list of notes with category: {category}")
     notes = {
@@ -24,6 +26,7 @@ def notes_by_category(category):
 
 
 @app.route("/api/note/<note>")
+@cache.cached()
 def note(note_id):
     app.logger.info(f"Fetching note {note_id}")
     # note_id could be id (int) or name (str)
