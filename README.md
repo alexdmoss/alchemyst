@@ -22,7 +22,7 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 
 ## To Do
 
-- [ ] Expose to internet
+- [ ] Not working without www
 - [ ] Contact form does not work - hard to test until exposed properly
 
 ## Deferred
@@ -34,6 +34,7 @@ Dockerfiles are split up due to the *really* long time it takes to install the g
 - [ ] Caching - especially full document from datastore
 - [ ] Tags page
 - [ ] Convert existing notes into HTML and upload
+- [ ] May need to restore the recaptcha
 
 ## Tests
 
