@@ -10,6 +10,7 @@ from alchemyst.api.routes import note, notes, notes_by_category
 from alchemyst.api.notes import note_from_dict, notes_from_dicts
 from alchemyst.api.document import get_document
 
+
 with open('app-config.yaml') as app_cfg_file:
     app_cfg = yaml.load(app_cfg_file, Loader=yaml.FullLoader)
     layout = app_cfg['layout']

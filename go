@@ -39,6 +39,27 @@ function run() {
 
 }
 
+function run-wsgi() {
+
+  _console_msg "Running python:main ..." INFO true
+
+  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+
+  export DATA_STORE_NAMESPACE=Alchemyst
+  export DATA_STORE_PROJECT=moss-work
+  export FLASK_APP=alchemyst
+  ### Needed if we go above 1 worker - see README
+  # export prometheus_multiproc_dir=/tmp
+  # export METRICS_PORT=9120
+
+  pipenv run gunicorn --log-config=logging.conf --config=gunicorn_config.py alchemyst:app
+
+  popd > /dev/null
+  
+  _console_msg "Execution complete" INFO true
+
+}
+
 
 # NB: Dockerfile also runs these, so do not need to use in CI
 function test() {
@@ -164,7 +185,7 @@ function ctrl_c() {
 
 trap ctrl_c INT
 
-if [[ ${1:-} =~ ^(help|run|test|deploy|load-data)$ ]]; then
+if [[ ${1:-} =~ ^(help|run|run-wsgi|test|deploy|load-data)$ ]]; then
   COMMAND=${1}
   shift
   $COMMAND "$@"

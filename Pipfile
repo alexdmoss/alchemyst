@@ -11,6 +11,7 @@ google-cloud = "*"
 pyyaml = "*"
 dacite = "*"
 gunicorn = "==20.*"
+prometheus-flask-exporter = "*"
 
 [dev-packages]
 alchemyst = {editable = true,path = "."}
