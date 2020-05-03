@@ -13,11 +13,9 @@ steps:
     json_key:
       from_secret: MW_PUSH_CREDS
   when:
-    event: push
-    branch: master
-    ref:
+    event:
       include:
-      - refs/tags/base*
+      - tag
 
 - name: publish-test-image  
   image: plugins/gcr

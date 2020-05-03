@@ -16,7 +16,7 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ## Usage
 
-Dockerfiles are split up due to the *really* long time it takes to install the grpcio pip module without wheels on alpine. To get the base image to rebuild it needs a git tag with `base*` for the [CI](https:/cloud.drone.io) to pick up, as it seems to lack globbing on file paths in the repo, which is a bit tedious.
+Dockerfiles are split up due to the *really* long time it takes to install the grpcio pip module without wheels on alpine. To get the base image to rebuild it needs a git tag with `git tag base* && git push origin --tags` for the [CI](https:/cloud.drone.io) to pick up, as it seems to lack globbing on file paths in the repo, which is a bit tedious.
 
 ---
 
