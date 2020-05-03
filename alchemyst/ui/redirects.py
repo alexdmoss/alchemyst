@@ -11,6 +11,12 @@ from alchemyst.api.routes import note
 from alchemyst.api.notes import note_from_dict
 
 
+@app.route('/alchemystry/<path:filename>', methods=['GET'])
+def redir_alchemystry(filename):
+    new_path = request.path.replace("/alchemystry", "")
+    return redirect(new_path)
+
+
 @app.route('/index.php', methods=['GET'])
 def redir_index():
     target = request.args.get('target')
@@ -56,6 +62,27 @@ def redir_pdfs():
                 return redirect(url_for('display_notes'))
         else:
             return redirect(url_for('display_notes'))
+
+
+# 404 suppression - it annoys me!
+@app.route('/images/download_arrow.gif', methods=['GET'])
+def download_arrow():
+    return redirect(url_for('static', filename='images/download_arrow.gif'))
+
+
+@app.route('/favicon.ico', methods=['GET'])
+def legacy_favicon():
+    return redirect(url_for('static', filename='images/favicon.ico'))
+
+
+@app.route('/apple-touch-icon-precomposed.png', methods=['GET'])
+def apple_icon_precomposed():
+    return redirect(url_for('static', filename='images/apple-touch-icon.png'))
+
+
+@app.route('/apple-touch-icon.png', methods=['GET'])
+def apple_icon():
+    return redirect(url_for('static', filename='images/apple-touch-icon.png'))
 
 
 def _get_note_name_from_id(id):
