@@ -40,6 +40,7 @@ def create_app():
     configure_compression(_app)
     configure_json(_app)
     configure_healthcheck(_app)
+    configure_metrics(_app)
     if getenv('USE_MOCKS') == 'True':
         _app.logger.info('Exporting USE_MOCKS - Mock Data ENABLED')
     return _app
