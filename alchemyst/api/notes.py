@@ -6,6 +6,7 @@ import json
 
 from alchemyst.api.datastore import query_by_kind
 from alchemyst.model.note import Note
+from alchemyst import app
 
 
 def get_notes(filter=""):
@@ -23,7 +24,13 @@ def get_notes(filter=""):
             results = data["entities"]
     else:
         if filter:
-            query = query_by_kind(kind="Note", category=filter)
+            filter_type = _identify_filter_type(filter)
+            if filter_type == "category":
+                query = query_by_kind(kind="Note", category=filter)
+            elif filter_type == "level":
+                query = query_by_kind(kind="Note", level=filter)
+            else:
+                query = query_by_kind(kind="Note")
         else:
             query = query_by_kind(kind="Note")
         results = list(query.fetch())
@@ -66,6 +73,15 @@ def notes_from_dicts(notes):
 
 def _isoformat_config():
     return Config(type_hooks={datetime: datetime.fromisoformat})
+
+
+def _identify_filter_type(f):
+    if f in ["organic", "inorganic", "physical"]:
+        return "category"
+    if f in ["1st Year Undergraduate", "2nd Year Undergraduate", "3rd Year Undergraduate"]:
+        return "level"
+    app.logger.error(f"Failed to identify filter type - {f} does not appear to be a category or a level")
+    return None
 
 
 def _translate_filter(v):
