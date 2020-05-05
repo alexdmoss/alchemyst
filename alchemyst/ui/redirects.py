@@ -14,28 +14,28 @@ from alchemyst.api.notes import note_from_dict
 @app.route('/alchemystry/<path:filename>', methods=['GET'])
 def redir_alchemystry(filename):
     new_path = request.path.replace("/alchemystry", "")
-    return redirect(new_path)
+    return redirect(new_path, code=301)
 
 
 @app.route('/index.php', methods=['GET'])
 def redir_index():
     target = request.args.get('target')
     if target == 'about':
-        return redirect(url_for('about'))
+        return redirect(url_for('about'), code=301)
     elif target == 'links':
-        return redirect(url_for('links'))
+        return redirect(url_for('links'), code=301)
     else:
-        return redirect(url_for('index'))
+        return redirect(url_for('index'), code=301)
 
 
 @app.route('/contact.php', methods=['GET'])
 def redir_contact():
-    return redirect(url_for('contact'))
+    return redirect(url_for('contact'), code=301)
 
 
 @app.route('/search.php', methods=['GET'])
 def redir_search():
-    return redirect(url_for('search'))
+    return redirect(url_for('search'), code=301)
 
 
 @app.route('/pdfindex.php', methods=['GET'])
@@ -50,24 +50,24 @@ def redir_pdfs():
         return redirect(url_for('display_note', note_name=note_name))
     else:
         if group == 'category':
-            return redirect(url_for('display_notes_by_category', category=category.lower()))
+            return redirect(url_for('display_notes_by_category', category=category.lower()), code=301)
         elif group == 'level':
             if category == '1':
-                return redirect(url_for('display_notes_by_category', category='first-year'))
+                return redirect(url_for('display_notes_by_category', category='first-year'), code=301)
             elif category == '2':
-                return redirect(url_for('display_notes_by_category', category='second-year'))
+                return redirect(url_for('display_notes_by_category', category='second-year'), code=301)
             elif category == '3':
-                return redirect(url_for('display_notes_by_category', category='third-year'))
+                return redirect(url_for('display_notes_by_category', category='third-year'), code=301)
             else:
-                return redirect(url_for('display_notes'))
+                return redirect(url_for('display_notes'), code=301)
         else:
-            return redirect(url_for('display_notes'))
+            return redirect(url_for('display_notes'), code=301)
 
 
 # 404 suppression - it annoys me!
 @app.route('/images/download_arrow.gif', methods=['GET'])
 def download_arrow():
-    return redirect(url_for('static', filename='images/download_arrow.gif'))
+    return redirect(url_for('static', filename='images/download_arrow.gif'), code=301)
 
 
 def _get_note_name_from_id(id):
