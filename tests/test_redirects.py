@@ -41,7 +41,7 @@ def test_redirect_urls(mocker):
         with app.test_request_context(origin, method='GET'):
             request = app.dispatch_request()
             response = app.make_response(request)
-            assert response.status_code == 302
+            assert response.status_code == 301
             assert response.headers['Location'] == target
 
 
