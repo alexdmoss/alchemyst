@@ -47,7 +47,7 @@ def redir_pdfs():
 
     if doc_id is not None:
         note_name = _get_note_name_from_id(doc_id)
-        return redirect(url_for('display_note', note_name=note_name))
+        return redirect(url_for('display_note', note_name=note_name), code=301)
     else:
         if group == 'category':
             return redirect(url_for('display_notes_by_category', category=category.lower()), code=301)
