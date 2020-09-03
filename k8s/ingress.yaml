@@ -11,6 +11,7 @@ spec:
     - secretName: alchemyst-tls
       hosts:
         - alchemyst.co.uk
+        - www.alchemyst.co.uk
   rules:
     - host: alchemyst.co.uk
       http:
