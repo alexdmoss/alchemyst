@@ -103,6 +103,8 @@ function deploy() {
 
   _console_msg "Applying Kubernetes yaml"
 
+  kubectl apply -f namespace.yaml
+  
   kustomize edit set image alchemyst=eu.gcr.io/${GCP_PROJECT_ID}/alchemyst:${DRONE_COMMIT_SHA}
   
   kustomize build . | kubectl apply -f -
