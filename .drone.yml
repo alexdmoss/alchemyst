@@ -4,15 +4,14 @@ name: alchemyst
 
 steps:
 - name: publish-base-image 
-  image: plugins/gcr
+  image: plugins/docker
   settings:
-    registry: eu.gcr.io
-    repo:
-      from_secret: MW_GCR_IMAGE_BASE
+    username: mosstech
+    password:
+      from_secret: DOCKER_REGISTRY_PASS
+    repo: mosstech/alchemyst-base
     tags: cached
     dockerfile: Dockerfile.base
-    json_key:
-      from_secret: MW_PUSH_CREDS
   when:
     event:
       include:
