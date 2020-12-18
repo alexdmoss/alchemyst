@@ -38,6 +38,11 @@ spec:
             periodSeconds: 5
             timeoutSeconds: 1
           workingDir: /app
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            runAsGroup: 1000
+            allowPrivilegeEscalation: false
           resources:
             requests:
               cpu: 10m
