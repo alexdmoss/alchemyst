@@ -7,7 +7,8 @@ steps:
   image: plugins/gcr
   settings:
     registry: eu.gcr.io
-    repo: moss-work/alchemyst-base
+    repo:
+      from_secret: MW_GCR_IMAGE_BASE
     tags: cached
     dockerfile: Dockerfile.base
     json_key:
@@ -21,7 +22,8 @@ steps:
   image: plugins/gcr
   settings:
     registry: eu.gcr.io
-    repo: moss-work/alchemyst-test
+    repo:
+      from_secret: MW_GCR_IMAGE_TEST
     tags: ${DRONE_COMMIT_SHA}
     dockerfile: Dockerfile.test
     json_key:
@@ -34,7 +36,8 @@ steps:
   image: plugins/gcr
   settings:
     registry: eu.gcr.io
-    repo: moss-work/alchemyst
+    repo:
+      from_secret: MW_GCR_IMAGE
     tags: ${DRONE_COMMIT_SHA}
     json_key:
       from_secret: MW_PUSH_CREDS
@@ -46,7 +49,8 @@ steps:
   image: mosstech/drone-gke-deployer:latest
   environment:
     NAMESPACE: alchemyst
-    GCP_PROJECT_ID: moss-work
+    GCP_PROJECT_ID:
+      from_secret: MW_GCP_PROJECT
     K8S_DEPLOYER_CREDS:
       from_secret: MW_K8S_DEPLOYER
     K8S_CLUSTER_NAME:
