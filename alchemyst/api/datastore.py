@@ -11,4 +11,4 @@ def query_by_kind(kind, category="", level=""):
 
 
 def get_entity(kind, id):
-    return get(kind, str(id))
+    return get(kind, id)
