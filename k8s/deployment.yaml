@@ -19,7 +19,7 @@ spec:
           - name: DATA_STORE_NAMESPACE
             value: "Alchemyst"
           - name: DATA_STORE_PROJECT
-            value: "moss-work"
+            value: $GCP_PROJECT_ID
           ports:
           - name: http
             containerPort: 5000

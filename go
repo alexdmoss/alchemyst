@@ -23,10 +23,12 @@ function run() {
 
   _console_msg "Running python:main ..." INFO true
 
+  _assert_variables_set GCP_PROJECT_ID
+
   pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
-  export DATA_STORE_PROJECT=moss-work
+  export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
   export FLASK_APP=alchemyst
   export FLASK_DEBUG=1
   export USE_MOCKS=False
@@ -41,12 +43,14 @@ function run() {
 
 function run-wsgi() {
 
+  _assert_variables_set GCP_PROJECT_ID
+
   _console_msg "Running python:main ..." INFO true
 
   pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
-  export DATA_STORE_PROJECT=moss-work
+  export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
   export FLASK_APP=alchemyst
   ### Needed if we go above 1 worker - see README
   # export prometheus_multiproc_dir=/tmp
@@ -107,7 +111,7 @@ function deploy() {
   
   kustomize edit set image alchemyst=eu.gcr.io/${GCP_PROJECT_ID}/alchemyst:${DRONE_COMMIT_SHA}
   
-  kustomize build . | kubectl apply -f -
+  kustomize build . | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
 
   kubectl rollout status deploy/alchemyst -w -n ${NAMESPACE}
 
@@ -117,16 +121,18 @@ function deploy() {
 
 function load-data() {
 
+  _assert_variables_set GCP_PROJECT_ID
+
   _console_msg "Running python:load_data ..." INFO true
 
   pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
-  export DATA_STORE_PROJECT=moss-work
+  export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
 
-  _console_msg "Converting exported CSV to JSON ..."
+  # _console_msg "Converting exported CSV to JSON ..."
 
-  pipenv run python3 ./data_loader/convert_pdf_csv_to_json.py
+  # pipenv run python3 ./data_loader/convert_pdf_csv_to_json.py
 
   _console_msg "Loading JSON into Datastore ..."
   
