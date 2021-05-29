@@ -5,7 +5,6 @@ if [[ -z ${IMAGE_NAME:-} ]]; then
   IMAGE_NAME=alchemyst
 fi 
 
-SRC_DIR=alchemyst
 
 function help() {
   echo -e "Usage: go <command>"
@@ -25,7 +24,7 @@ function run() {
 
   _assert_variables_set GCP_PROJECT_ID
 
-  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+  pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
   export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
@@ -47,7 +46,7 @@ function run-wsgi() {
 
   _console_msg "Running python:main ..." INFO true
 
-  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+  pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
   export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
@@ -68,7 +67,7 @@ function run-wsgi() {
 # NB: Dockerfile also runs these, so do not need to use in CI
 function test() {
 
-  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+  pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 
   if [[ ${CI_JOB_TOKEN:-} != "" ]]; then
     pip install pipenv==2018.10.13
@@ -90,30 +89,22 @@ function test() {
 
 }
 
+
 function deploy() {
 
-  _assert_variables_set GCP_PROJECT_ID NAMESPACE
+  _assert_variables_set IMAGE_NAME
 
-  pushd $(dirname $BASH_SOURCE[0])/k8s/ >/dev/null
-
-  if [[ ${DRONE:-} == "true" ]]; then
-    _assert_variables_set K8S_DEPLOYER_CREDS K8S_CLUSTER_NAME
-    _console_msg "-> Authenticating with GCloud"
-    echo "${K8S_DEPLOYER_CREDS}" | gcloud auth activate-service-account --key-file -
-    region=$(gcloud container clusters list --project=${GCP_PROJECT_ID} --filter "NAME=${K8S_CLUSTER_NAME}" --format "value(zone)")
-    _console_msg "-> Authenticating to cluster ${K8S_CLUSTER_NAME} in project ${GCP_PROJECT_ID} in ${region}"
-    gcloud container clusters get-credentials ${K8S_CLUSTER_NAME} --project=${GCP_PROJECT_ID} --region=${region}
-  fi
+  pushd "$(dirname "${BASH_SOURCE[0]}")"/k8s/ >/dev/null
 
   _console_msg "Applying Kubernetes yaml"
 
   kubectl apply -f namespace.yaml
   
-  kustomize edit set image alchemyst=eu.gcr.io/${GCP_PROJECT_ID}/alchemyst:${DRONE_COMMIT_SHA}
+  kustomize edit set image alchemyst="${IMAGE_NAME}"
   
   kustomize build . | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
 
-  kubectl rollout status deploy/alchemyst -w -n ${NAMESPACE}
+  kubectl rollout status deploy/alchemyst -w -n alchemyst
 
   popd >/dev/null
 
@@ -125,7 +116,7 @@ function load-data() {
 
   _console_msg "Running python:load_data ..." INFO true
 
-  pushd "$(dirname $BASH_SOURCE[0])" > /dev/null
+  pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
   export DATA_STORE_PROJECT=${GCP_PROJECT_ID}

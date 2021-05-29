@@ -1,7 +1,0 @@
-FROM mosstech/alchemyst-base:cached
-
-COPY --chown=flask-app:flask-app . /app/
-
-RUN pipenv install --dev
-
-RUN pipenv run pytest -v
