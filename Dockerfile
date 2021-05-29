@@ -25,8 +25,8 @@ RUN /usr/local/bin/pytest -v --cov-report=term-missing --cov=.
 # ---------------------------------------------------------------------
 
 FROM python:$PYTHON_VERSION
-RUN addgroup --gid=1000 flask-app
-RUN adduser --uid=1000 --ingroup=flask-app flask-app
+RUN groupadd --gid=1000 flask-app
+RUN useradd --uid=1000 --gid=1000 flask-app
 RUN mkdir /app
 COPY --from=runtime --chown=flask-app:flask-app /app/alchemyst /app/alchemyst
 COPY --from=runtime --chown=flask-app:flask-app /app/app-config.yaml /app/
