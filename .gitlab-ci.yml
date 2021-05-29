@@ -9,6 +9,8 @@ variables:
 
 build:
   stage: build
+  only:
+  - master
   image: mosstech/gcloud-and-docker:324.0.0
   variables:
     DOCKER_HOST: tcp://docker:2375/
@@ -25,6 +27,8 @@ build:
 
 deploy:
   stage: deploy
+  only:
+  - master
   image: mosstech/ci-tools:latest
   before_script:
   - echo "${GOOGLE_CREDENTIALS}" | gcloud auth activate-service-account --key-file -
