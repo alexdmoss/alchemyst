@@ -13,7 +13,7 @@ function help() {
   echo -e "    run                  Run locally from source"
   echo -e "    test                 Run local unit tests and linting"
   echo -e "    deploy               Deploys app to Kubernetes. Designed to run in Drone CI"
-  echo -e "    load-data            Load full dataset (upserts)"
+  echo -e "    bootstrap            Sets up accounts and loads full dataset (upserts)"
   echo -e 
   exit 1
 }
@@ -110,24 +110,22 @@ function deploy() {
 
 }
 
-function load-data() {
+function bootstrap() {
 
   _assert_variables_set GCP_PROJECT_ID
 
-  _console_msg "Running python:load_data ..." INFO true
 
   pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 
   export DATA_STORE_NAMESPACE=Alchemyst
   export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
 
-  # _console_msg "Converting exported CSV to JSON ..."
+  _console_msg "Setting up permissions ..."
+  #./bootstrap/bootstrap.sh
 
-  # pipenv run python3 ./data_loader/convert_pdf_csv_to_json.py
-
-  _console_msg "Loading JSON into Datastore ..."
-  
-  pipenv run python3 ./data_loader/load_data.py
+  _console_msg "Loading JSON into Datastore ..."  
+  # pipenv run python3 ./bootstrap/load_notes.py
+  pipenv run python3 ./bootstrap/documents/load_document.py
 
   popd > /dev/null
   
@@ -184,7 +182,7 @@ function ctrl_c() {
 
 trap ctrl_c INT
 
-if [[ ${1:-} =~ ^(help|run|run-wsgi|test|deploy|load-data)$ ]]; then
+if [[ ${1:-} =~ ^(help|run|run-wsgi|test|deploy|bootstrap)$ ]]; then
   COMMAND=${1}
   shift
   $COMMAND "$@"

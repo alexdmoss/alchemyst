@@ -19,3 +19,5 @@ gcloud iam service-accounts add-iam-policy-binding \
   --role roles/iam.workloadIdentityUser \
   --member "serviceAccount:${GCP_PROJECT_ID}.svc.id.goog[alchemyst/alchemyst]" \
   alchemyst@${GCP_PROJECT_ID}.iam.gserviceaccount.com
+
+echo "NB: You must also enable Datastore for the project"

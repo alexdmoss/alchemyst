@@ -9,7 +9,7 @@ def main():
 
     client = _datastore_client()
 
-    documents = glob.glob("./*.html")
+    documents = glob.glob("./bootstrap/documents/*.html")
 
     for document in documents:
     
