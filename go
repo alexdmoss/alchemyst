@@ -121,10 +121,10 @@ function bootstrap() {
   export DATA_STORE_PROJECT=${GCP_PROJECT_ID}
 
   _console_msg "Setting up permissions ..."
-  #./bootstrap/bootstrap.sh
+  ./bootstrap/bootstrap.sh
 
   _console_msg "Loading JSON into Datastore ..."  
-  # pipenv run python3 ./bootstrap/load_notes.py
+  pipenv run python3 ./bootstrap/load_notes.py
   pipenv run python3 ./bootstrap/documents/load_document.py
 
   popd > /dev/null
