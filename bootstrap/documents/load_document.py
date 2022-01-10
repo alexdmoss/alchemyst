@@ -12,10 +12,10 @@ def main():
     documents = glob.glob("./bootstrap/documents/*.html")
 
     for document in documents:
-    
+
         filename = os.path.basename(document)
         doc_id = os.path.splitext(filename)[0]
-    
+
         with open(document, 'r') as f:
             file_contents = f.read()
             doc = Document(

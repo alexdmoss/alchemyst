@@ -34,8 +34,7 @@ def get_notes(filter=""):
         else:
             query = query_by_kind(kind="Note")
         results = list(query.fetch())
-    notes = [note_from_query(data) for data in results]
-    return notes
+    return [note_from_query(data) for data in results]
 
 
 def note_from_query(raw_data):

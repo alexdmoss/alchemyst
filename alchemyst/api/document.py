@@ -31,8 +31,6 @@ def document_from_query(raw_data):
 def get_key(key, raw_data):
     try:
         data = raw_data[key]
-    except KeyError:
-        data = None
-    except TypeError:
+    except (KeyError, TypeError):
         data = None
     return data

@@ -23,6 +23,7 @@ pytest-cov = "*"
 pytest-mock = "*"
 pytest-watch = "*"
 pytest-socket = "*"
+pytest-timeout = "*"
 beautifulsoup4 = "*"
 flake8 = "*"
 

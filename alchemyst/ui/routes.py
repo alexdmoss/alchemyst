@@ -103,8 +103,7 @@ def download_pdf(category, pdf_file):
     headers = [(name, value) for (name, value) in resp.raw.headers.items()
                if name.lower() not in excluded_headers]
 
-    response = Response(resp.content, resp.status_code, headers)
-    return response
+    return Response(resp.content, resp.status_code, headers)
 
 
 @app.route('/robots.txt')
