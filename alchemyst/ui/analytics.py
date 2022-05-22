@@ -9,10 +9,10 @@ import requests
 from alchemyst import app
 
 
-def _proxy_url(http_url: str):
+def _proxy_url(http_url: str, http_method: str):
     # https://stackoverflow.com/questions/6656363/proxying-to-another-web-service-with-flask
     resp = requests.request(
-        method=request.method,
+        method=http_method,
         url=http_url,
         headers={key: value for (key, value) in request.headers if key != 'Host'},
         data=request.get_data(),
@@ -27,9 +27,9 @@ def _proxy_url(http_url: str):
 
 @app.route('/api/event')
 def proxy_plausible_api():
-    return _proxy_url(http_url="https://plausible.alexos.dev/api/event")
+    return _proxy_url(http_url="https://plausible.alexos.dev/api/event", method="POST")
 
 
 @app.route('/js/visits.js')
 def proxy_plausible_js():
-    return _proxy_url(http_url="https://plausible.alexos.dev/js/plausible.outbound-links.js")
+    return _proxy_url(http_url="https://plausible.alexos.dev/js/plausible.outbound-links.js", method="GET")
