@@ -48,4 +48,4 @@ def create_app():
 
 app = create_app()
 
-from alchemyst.ui import routes, errors, redirects, analytics
+from alchemyst.ui import routes, errors, redirects
