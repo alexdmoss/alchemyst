@@ -202,7 +202,7 @@ function ctrl_c() {
 
 trap ctrl_c INT
 
-if [[ ${1:-} =~ ^(help|run|run-wsgi|test|deploy|bootstrap)$ ]]; then
+if [[ ${1:-} =~ ^(help|run|run-wsgi|test|deploy-frontend|deploy-backend|bootstrap)$ ]]; then
   COMMAND=${1}
   shift
   $COMMAND "$@"
