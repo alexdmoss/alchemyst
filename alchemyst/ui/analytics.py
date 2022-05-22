@@ -27,9 +27,9 @@ def _proxy_url(http_url: str, http_method: str):
 
 @app.route('/api/event')
 def proxy_plausible_api():
-    return _proxy_url(http_url="https://plausible.alexos.dev/api/event", method="POST")
+    return _proxy_url(http_url="https://plausible.alexos.dev/api/event", http_method="POST")
 
 
 @app.route('/js/visits.js')
 def proxy_plausible_js():
-    return _proxy_url(http_url="https://plausible.alexos.dev/js/plausible.outbound-links.js", method="GET")
+    return _proxy_url(http_url="https://plausible.alexos.dev/js/plausible.outbound-links.js", http_method="GET")
