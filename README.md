@@ -14,14 +14,9 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ---
 
-## Usage
-
-Dockerfiles are split up due to the *really* long time it takes to install the grpcio pip module without wheels on alpine. To get the base image to rebuild it needs a git tag with `git tag base* && git push origin --tags` for the [CI](https:/cloud.drone.io) to pick up, as it seems to lack globbing on file paths in the repo, which is a bit tedious.
-
----
-
 ## To Do
 
+- [ ] Take advantage of the fact there is nginx now - metrics + proxy/cache assets
 - [ ] 1st/2nd/3rd year note listing not working
 - [ ] Center content on wide screens
 - [ ] Pad the top menu more on wide screens
@@ -119,5 +114,3 @@ export METRICS_PORT=9120
 ```
 
 (specifically, it is the need to set the `prometheus_multiproc_dir` that turns off the python metrics - it gives somewhere to save the metric state)
-
-
