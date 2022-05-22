@@ -39,7 +39,7 @@ build-frontend:
   - .build
   variables:
     IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-frontend:${CI_COMMIT_SHA}
-    DOCKERFILE: nginx.Dockerfile
+    DOCKERFILE: frontend.Dockerfile
 
 build-backend:
   stage: build
