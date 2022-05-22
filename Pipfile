@@ -15,6 +15,7 @@ prometheus-flask-exporter = "*"
 healthcheck = "*"
 flask-compress = "*"
 flask-caching = "*"
+requests = "*"
 
 [dev-packages]
 alchemyst = {editable = true,path = "."}
