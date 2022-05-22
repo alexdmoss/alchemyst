@@ -90,7 +90,7 @@ function test() {
 }
 
 
-function deploy() {
+function deploy-frontend() {
 
   _assert_variables_set IMAGE_NAME
 
@@ -98,13 +98,33 @@ function deploy() {
 
   _console_msg "Applying Kubernetes yaml"
 
-  kubectl apply -f namespace.yaml
+  kustomize build base/ | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
   
-  kustomize edit set image alchemyst="${IMAGE_NAME}"
-  
+  cd frontend/
+  kustomize edit set image alchemyst-frontend="${IMAGE_NAME}"
   kustomize build . | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
 
-  kubectl rollout status deploy/alchemyst -w -n alchemyst
+  kubectl rollout status deploy/alchemyst-frontend -w -n alchemyst --timeout=60s
+
+  popd >/dev/null
+
+}
+
+function deploy-backend() {
+
+  _assert_variables_set IMAGE_NAME
+
+  pushd "$(dirname "${BASH_SOURCE[0]}")"/k8s/ >/dev/null
+
+  _console_msg "Applying Kubernetes yaml"
+
+  kustomize build base/ | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
+  
+  cd backend/
+  kustomize edit set image alchemyst-backend="${IMAGE_NAME}"
+  kustomize build . | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
+
+  kubectl rollout status deploy/alchemyst-backend -w -n alchemyst --timeout=60s
 
   popd >/dev/null
 

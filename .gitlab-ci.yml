@@ -2,13 +2,11 @@ stages:
 - build
 - deploy
 
+# ---------------- Variables ---------------- #
 
-variables:
-  IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst:${CI_COMMIT_SHA}
+# ---------------- Templates ---------------- #
 
-
-build:
-  stage: build
+.build:
   only:
   - master
   image: mosstech/gcloud-and-docker:324.0.0
@@ -24,9 +22,7 @@ build:
     - docker build -t "${IMAGE_NAME}" -f "${DOCKERFILE}" .
     - docker push "${IMAGE_NAME}"
 
-
-deploy:
-  stage: deploy
+.deploy:
   only:
   - master
   image: mosstech/ci-tools:latest
@@ -34,5 +30,43 @@ deploy:
   - echo "${GOOGLE_CREDENTIALS}" | gcloud auth activate-service-account --key-file -
   - region=$(gcloud container clusters list --project=${GCP_PROJECT_ID} --filter "NAME=${CLUSTER_NAME}" --format "value(zone)")
   - gcloud container clusters get-credentials ${CLUSTER_NAME} --project=${GCP_PROJECT_ID} --region=${region}
+
+# ------------------ Stages ----------------- #
+
+build-frontend:
+  stage: build
+  extends:
+  - .build
+  variables:
+    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-frontend:${CI_COMMIT_SHA}
+    DOCKERFILE: nginx.Dockerfile
+
+build-backend:
+  stage: build
+  extends:
+  - .build
+  variables:
+    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-backend:${CI_COMMIT_SHA}
+    DOCKERFILE: backend.Dockerfile
+
+deploy-frontend:
+  stage: deploy
+  needs:
+  - build-frontend
+  extends:
+  - .deploy
+  variables:
+    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-frontend:${CI_COMMIT_SHA}
   script:
-    - ./go deploy
+    - ./go deploy-frontend
+
+deploy-backend:
+  stage: deploy
+  needs:
+  - build-backend
+  extends:
+  - .deploy
+  variables:
+    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-backend:${CI_COMMIT_SHA}
+  script:
+    - ./go deploy-backend

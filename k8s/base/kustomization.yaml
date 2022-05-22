@@ -7,9 +7,5 @@ commonLabels:
   app: alchemyst
 
 resources:
-- deployment.yaml
-- ingress.yaml
-- pdb.yaml
-- service.yaml
-- serviceaccount.yaml
-- servicemonitor.yaml
+- namespace.yaml
+- service-account.yaml

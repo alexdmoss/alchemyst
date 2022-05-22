@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: alchemyst
+  name: alchemyst-backend
 spec:
   replicas: 2
   strategy:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: alchemyst
-          image: alchemyst:SET_BY_CI
+          image: alchemyst-backend:SET_BY_CI
           env:
           - name: DATA_STORE_NAMESPACE
             value: "Alchemyst"
