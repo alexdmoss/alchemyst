@@ -1,4 +1,5 @@
 stages:
+- test
 - build
 - deploy
 
@@ -27,6 +28,22 @@ stages:
   - gcloud container clusters get-credentials ${CLUSTER_NAME} --project=${GCP_PROJECT_ID} --region=${region}
 
 # ------------------ Stages ----------------- #
+
+test:
+  stage: test
+  image: python:3.9-slim-bullseye
+  before_script:
+    - pip install --upgrade pip
+    - pip install pipenv --no-cache-dir
+    - pipenv install --dev
+  script:
+    - pipenv run flake8 ./alchemyst  --format junit-xml --output-file=./flake_out_report.xml
+    - pipenv run pytest --cov --cov-report term-missing --cov-report xml:./coverage_out_report.xml --junitxml=./test_out_report.xml
+  coverage: '/TOTAL.*\s+(\d+%)$/'
+  artifacts:
+    when: always
+    reports:
+      junit: ./*_out_report.xml
 
 build-frontend:
   stage: build
