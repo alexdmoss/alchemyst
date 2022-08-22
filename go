@@ -144,6 +144,9 @@ function bootstrap() {
   ./bootstrap/bootstrap.sh
 
   _console_msg "Loading JSON into Datastore ..."  
+
+  pipenv install --dev
+
   pipenv run python3 ./bootstrap/load_notes.py
   pipenv run python3 ./bootstrap/documents/load_document.py
 
