@@ -1,4 +1,5 @@
 stages:
+- bootstrap
 - test
 - build
 - deploy
@@ -28,6 +29,15 @@ stages:
   - gcloud container clusters get-credentials ${CLUSTER_NAME} --project=${GCP_PROJECT_ID} --region=${region}
 
 # ------------------ Stages ----------------- #
+
+bootstrap:
+  stage: bootstrap
+  rules:
+  - if: '$CI_PIPELINE_SOURCE == "trigger" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  extends:
+  - .deploy
+  script:
+    - ./go bootstrap
 
 test:
   stage: test
