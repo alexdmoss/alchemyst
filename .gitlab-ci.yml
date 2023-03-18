@@ -33,7 +33,11 @@ stages:
 bootstrap:
   stage: bootstrap
   rules:
-  - if: '$CI_PIPELINE_SOURCE == "trigger" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  - if: '$CI_PIPELINE_SOURCE == "pipeline" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    changes:
+    - go
+    - bootstrap/**
   image: mosstech/ci-tools:latest
   before_script:
   - echo "${GOOGLE_CREDENTIALS}" | gcloud auth activate-service-account --key-file -

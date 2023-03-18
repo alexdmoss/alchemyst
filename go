@@ -104,7 +104,7 @@ function deploy-frontend() {
   kustomize edit set image alchemyst-frontend="${IMAGE_NAME}"
   kustomize build . | envsubst "\$GCP_PROJECT_ID" | kubectl apply -f -
 
-  kubectl rollout status deploy/alchemyst-frontend -w -n alchemyst --timeout=60s
+  kubectl rollout status deploy/alchemyst-frontend -w -n alchemyst --timeout=120s
 
   popd >/dev/null
 
