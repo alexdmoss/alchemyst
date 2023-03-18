@@ -197,8 +197,8 @@ function _console_msg() {
 }
 
 function ctrl_c() {
-    if [ ! -z ${PID:-} ]; then
-        kill ${PID}
+    if [ -n "${PID:-}" ]; then
+        kill "${PID}"
     fi
     exit 1
 }
@@ -211,5 +211,4 @@ if [[ ${1:-} =~ ^(help|run|run-wsgi|test|deploy-frontend|deploy-backend|bootstra
   $COMMAND "$@"
 else
   help
-  exit 1
 fi
