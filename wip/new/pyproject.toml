@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "new"
+version = "0.1.0"
+description = ""
+authors = ["Alex M <alex@mosstech.io>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+pdftotree = "^0.5.0"
+aspose-words-cloud = "^22.6.0"
+pycryptodome = "^3.14.1"
+pdfminer = "^20191125"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
