@@ -46,12 +46,3 @@ spec:
               memory: 100Mi
       serviceAccountName: alchemyst
       restartPolicy: Always
-      affinity:
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app: alchemyst
-              topologyKey: "kubernetes.io/hostname"
-            weight: 100

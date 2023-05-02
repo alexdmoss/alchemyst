@@ -12,16 +12,6 @@ spec:
       maxUnavailable: 50%
   template:
     spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                      - alchemyst-frontend
-              topologyKey: "kubernetes.io/hostname"
       containers:
       - name: alchemyst-frontend
         image: alchemyst-frontend:SET_BY_CI
