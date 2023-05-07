@@ -38,11 +38,16 @@ spec:
             runAsUser: 1000
             runAsGroup: 1000
             allowPrivilegeEscalation: false
+          # autopilot minimums
           resources:
             requests:
-              cpu: 10m
-              memory: 100Mi
+              cpu: 250m
+              memory: 512Mi
             limits:
-              memory: 100Mi
+              cpu: 250m
+              memory: 512Mi
       serviceAccountName: alchemyst
       restartPolicy: Always
+      nodeSelector:
+        cloud.google.com/gke-spot: "true"
+      terminationGracePeriodSeconds: 25
