@@ -8,19 +8,13 @@ stages:
 .build:
   only:
   - master
-  image: mosstech/gcloud-and-docker:424.0.0
-  services:
-    - docker:dind
-  variables:
-    DOCKER_HOST: tcp://docker:2375/
-    DOCKER_DRIVER: overlay2
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
   before_script:
-  - until docker info >/dev/null; do sleep 1; echo "Waiting for docker startup"; done
-  - echo "${GOOGLE_CREDENTIALS}" | gcloud auth activate-service-account --key-file -
-  - gcloud auth configure-docker --quiet
+    - mkdir -p /kaniko/.docker
   script:
-    - docker build -t "${IMAGE_NAME}" -f "${DOCKERFILE}" .
-    - docker push "${IMAGE_NAME}"
+    - /kaniko/executor --context "${CI_PROJECT_DIR}" --dockerfile "${CI_PROJECT_DIR}/${DOCKERFILE}" --destination "${IMAGE_NAME}"
 
 .deploy:
   only:
