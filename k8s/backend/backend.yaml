@@ -41,11 +41,11 @@ spec:
           # autopilot minimums
           resources:
             requests:
-              cpu: 250m
-              memory: 512Mi
+              cpu: 50m
+              memory: 150Mi
             limits:
-              cpu: 250m
-              memory: 512Mi
+              cpu: 100m
+              memory: 150Mi
       serviceAccountName: alchemyst
       restartPolicy: Always
       nodeSelector:
