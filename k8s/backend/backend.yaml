@@ -33,6 +33,9 @@ spec:
             periodSeconds: 5
             timeoutSeconds: 1
           workingDir: /app
+          volumeMounts:
+          - mountPath: /tmp
+            name: tmp-volume
           securityContext:
             runAsNonRoot: true
             runAsUser: 1000
@@ -51,3 +54,6 @@ spec:
       nodeSelector:
         cloud.google.com/gke-spot: "true"
       terminationGracePeriodSeconds: 25
+      volumes:
+      - name: tmp-volume
+        emptyDir: {}
