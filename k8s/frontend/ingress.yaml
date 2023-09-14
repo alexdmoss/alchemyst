@@ -1,36 +1,17 @@
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1beta1
 metadata:
   name: alchemyst
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
-  tls:
-    - secretName: alchemyst-tls
-      hosts:
-        - alchemyst.co.uk
-        - www.alchemyst.co.uk
+  parentRefs:
+  - kind: Gateway
+    name: shared-gateway
+    namespace: ingress
+  hostnames:
+  - alchemyst.co.uk
+  - www.alchemyst.co.uk
   rules:
-    - host: alchemyst.co.uk
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: alchemyst-frontend
-                port:
-                  name: http
-    - host: www.alchemyst.co.uk
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: alchemyst-frontend
-                port:
-                  name: http
+  - backendRefs:
+    - name: alchemyst-frontend
+      port: 8080
