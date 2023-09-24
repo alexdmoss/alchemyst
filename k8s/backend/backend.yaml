@@ -11,10 +11,10 @@ spec:
       maxSurge: "50%"
       maxUnavailable: "50%"
   template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
     spec:
-      metadata:
-        annotations:
-          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
       containers:
         - name: alchemyst
           image: alchemyst-backend:SET_BY_CI
