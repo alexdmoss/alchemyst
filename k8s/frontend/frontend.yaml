@@ -12,6 +12,9 @@ spec:
       maxUnavailable: 50%
   template:
     spec:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
       containers:
       - name: alchemyst-frontend
         image: alchemyst-frontend:SET_BY_CI
