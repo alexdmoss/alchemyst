@@ -70,7 +70,7 @@ function test() {
   pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 
   if [[ ${CI_JOB_TOKEN:-} != "" ]]; then
-    pip install pipenv==2018.10.13
+    pip install pipenv
   fi
 
   pipenv install --dev

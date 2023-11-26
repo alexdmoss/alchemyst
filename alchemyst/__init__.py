@@ -3,7 +3,6 @@ from os import getenv
 from flask import Flask
 # see README if setting gunicorn workers > 1
 from prometheus_flask_exporter.multiprocess import PrometheusMetrics
-from healthcheck import HealthCheck
 from flask_compress import Compress
 from flask_caching import Cache
 
@@ -18,10 +17,6 @@ def configure_cache(_app):
 def configure_compression(_app):
     _app.config['COMPRESS_MIMETYPES'] = ['text/html', 'text/css', 'text/xml', 'application/json', 'application/javascript', 'application/pdf']
     Compress(_app)
-
-
-def configure_healthcheck(_app):
-    health = HealthCheck(_app, "/healthz")
 
 
 def configure_json(_app):
@@ -39,7 +34,6 @@ def create_app():
     configure_cache(_app)
     configure_compression(_app)
     configure_json(_app)
-    configure_healthcheck(_app)
     configure_metrics(_app)
     if getenv('USE_MOCKS') == 'True':
         _app.logger.info('Exporting USE_MOCKS - Mock Data ENABLED')

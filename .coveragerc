@@ -1,7 +1,12 @@
 [run]
 source = .
 branch = True
-omit = setup.py,gunicorn_config.py,*/api/clients/*.py,tests/*.py,**__init__.py
+omit =
+    setup.py
+    gunicorn_config.py
+    tests/**
+    */api/clients/**
+    */__init__.py
 
 [report]
-fail_under = 5
+fail_under = 60
