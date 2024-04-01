@@ -5,7 +5,7 @@ description = ""
 authors = ["Alex M <alex@mosstech.io>"]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.11"
+python = ">=3.9"
 pdftotree = "^0.5.0"
 aspose-words-cloud = "^22.6.0"
 pycryptodome = "^3.14.1"
