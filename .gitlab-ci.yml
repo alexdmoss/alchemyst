@@ -53,7 +53,7 @@ build-frontend:
   extends:
   - .build
   variables:
-    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-frontend:${CI_COMMIT_SHA}
+    IMAGE_NAME: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend:${CI_COMMIT_SHA}
     DOCKERFILE: frontend.Dockerfile
 
 build-backend:
@@ -61,7 +61,7 @@ build-backend:
   extends:
   - .build
   variables:
-    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-backend:${CI_COMMIT_SHA}
+    IMAGE_NAME: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend:${CI_COMMIT_SHA}
     DOCKERFILE: backend.Dockerfile
 
 deploy-frontend:
@@ -71,7 +71,7 @@ deploy-frontend:
   extends:
   - .deploy
   variables:
-    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-frontend:${CI_COMMIT_SHA}
+    IMAGE_NAME: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend:${CI_COMMIT_SHA}
   script:
     - ./go deploy-frontend
 
@@ -82,6 +82,6 @@ deploy-backend:
   extends:
   - .deploy
   variables:
-    IMAGE_NAME: eu.gcr.io/${GCP_PROJECT_ID}/alchemyst-backend:${CI_COMMIT_SHA}
+    IMAGE_NAME: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend:${CI_COMMIT_SHA}
   script:
     - ./go deploy-backend
