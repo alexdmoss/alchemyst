@@ -38,8 +38,8 @@
 # from shutil import copyfile
 
 # # Please get your Client ID and Secret from https://dashboard.aspose.cloud.
-# client_id='b835008e-7faf-4e75-ab73-d2a4b0bfa9b0'
-# client_secret='9e2d0eae4d3e1e0fd04a616da317c3bb'
+# client_id=''
+# client_secret=''
 
 # words_api = asposewordscloud.WordsApi(client_id,client_secret)
 # words_api.api_client.configuration.host='https://api.aspose.cloud'
