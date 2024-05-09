@@ -1,942 +1,817 @@
-    <style type="text/css">
-        @import url(https://themes.googleusercontent.com/fonts/css?kit=SHJk2CZThnuTXOvq3WlzwLpbaDmv7z6nKiz_at3-V8U);
-
-        ol.lst-kix_list_1-3 {
-            list-style-type: none
-        }
-
-        ol.lst-kix_list_1-4 {
-            list-style-type: none
-        }
-
-        ol.lst-kix_list_1-5 {
-            list-style-type: none
-        }
-
-        ol.lst-kix_list_1-6 {
-            list-style-type: none
-        }
-
-        ol.lst-kix_list_1-0 {
-            list-style-type: none
-        }
-
-        .lst-kix_list_1-4>li {
-            counter-increment: lst-ctn-kix_list_1-4
-        }
-
-        ol.lst-kix_list_1-1 {
-            list-style-type: none
-        }
-
-        ol.lst-kix_list_1-2 {
-            list-style-type: none
-        }
-
-        ol.lst-kix_list_1-6.start {
-            counter-reset: lst-ctn-kix_list_1-6 0
-        }
-
-        .lst-kix_list_1-1>li {
-            counter-increment: lst-ctn-kix_list_1-1
-        }
-
-        ol.lst-kix_list_1-3.start {
-            counter-reset: lst-ctn-kix_list_1-3 0
-        }
-
-        ol.lst-kix_list_1-2.start {
-            counter-reset: lst-ctn-kix_list_1-2 0
-        }
-
-        ol.lst-kix_list_1-8.start {
-            counter-reset: lst-ctn-kix_list_1-8 0
-        }
-
-        .lst-kix_list_1-0>li:before {
-            content: "(" counter(lst-ctn-kix_list_1-0, lower-roman) ") "
-        }
-
-        ol.lst-kix_list_1-5.start {
-            counter-reset: lst-ctn-kix_list_1-5 0
-        }
-
-        ol.lst-kix_list_1-7 {
-            list-style-type: none
-        }
-
-        .lst-kix_list_1-1>li:before {
-            content: "" counter(lst-ctn-kix_list_1-1, lower-latin) ". "
-        }
-
-        .lst-kix_list_1-2>li:before {
-            content: "" counter(lst-ctn-kix_list_1-2, lower-roman) ". "
-        }
-
-        .lst-kix_list_1-7>li {
-            counter-increment: lst-ctn-kix_list_1-7
-        }
-
-        ol.lst-kix_list_1-8 {
-            list-style-type: none
-        }
-
-        .lst-kix_list_1-3>li:before {
-            content: "" counter(lst-ctn-kix_list_1-3, decimal) ". "
-        }
-
-        .lst-kix_list_1-4>li:before {
-            content: "" counter(lst-ctn-kix_list_1-4, lower-latin) ". "
-        }
-
-        ol.lst-kix_list_1-0.start {
-            counter-reset: lst-ctn-kix_list_1-0 0
-        }
-
-        .lst-kix_list_1-0>li {
-            counter-increment: lst-ctn-kix_list_1-0
-        }
-
-        .lst-kix_list_1-6>li {
-            counter-increment: lst-ctn-kix_list_1-6
-        }
-
-        .lst-kix_list_1-7>li:before {
-            content: "" counter(lst-ctn-kix_list_1-7, lower-latin) ". "
-        }
-
-        .lst-kix_list_1-3>li {
-            counter-increment: lst-ctn-kix_list_1-3
-        }
-
-        .lst-kix_list_1-5>li:before {
-            content: "" counter(lst-ctn-kix_list_1-5, lower-roman) ". "
-        }
-
-        .lst-kix_list_1-6>li:before {
-            content: "" counter(lst-ctn-kix_list_1-6, decimal) ". "
-        }
-
-        ol.lst-kix_list_1-7.start {
-            counter-reset: lst-ctn-kix_list_1-7 0
-        }
-
-        .lst-kix_list_1-2>li {
-            counter-increment: lst-ctn-kix_list_1-2
-        }
-
-        .lst-kix_list_1-5>li {
-            counter-increment: lst-ctn-kix_list_1-5
-        }
-
-        .lst-kix_list_1-8>li {
-            counter-increment: lst-ctn-kix_list_1-8
-        }
-
-        ol.lst-kix_list_1-4.start {
-            counter-reset: lst-ctn-kix_list_1-4 0
-        }
-
-        .lst-kix_list_1-8>li:before {
-            content: "" counter(lst-ctn-kix_list_1-8, lower-roman) ". "
-        }
-
-        ol.lst-kix_list_1-1.start {
-            counter-reset: lst-ctn-kix_list_1-1 0
-        }
-
-        ol {
-            margin: 0;
-            padding: 0
-        }
-
-        table td,
-        table th {
-            padding: 0
-        }
-
-        .c23 {
-            border-right-style: solid;
-            padding: 0pt 5.4pt 0pt 5.4pt;
-            border-bottom-color: #000000;
-            border-top-width: 1pt;
-            border-right-width: 1pt;
-            border-left-color: #000000;
-            vertical-align: middle;
-            border-right-color: #000000;
-            border-left-width: 1pt;
-            border-top-style: solid;
-            border-left-style: solid;
-            border-bottom-width: 1pt;
-            width: 182.6pt;
-            border-top-color: #000000;
-            border-bottom-style: solid
-        }
-
-        .c1 {
-            border-right-style: solid;
-            padding: 0pt 5.4pt 0pt 5.4pt;
-            border-bottom-color: #000000;
-            border-top-width: 1pt;
-            border-right-width: 1pt;
-            border-left-color: #000000;
-            vertical-align: middle;
-            border-right-color: #000000;
-            border-left-width: 1pt;
-            border-top-style: solid;
-            border-left-style: solid;
-            border-bottom-width: 1pt;
-            width: 60.9pt;
-            border-top-color: #000000;
-            border-bottom-style: solid
-        }
-
-        .c21 {
-            border-right-style: solid;
-            padding: 0pt 5.4pt 0pt 5.4pt;
-            border-bottom-color: #000000;
-            border-top-width: 1pt;
-            border-right-width: 1pt;
-            border-left-color: #000000;
-            vertical-align: middle;
-            border-right-color: #000000;
-            border-left-width: 1pt;
-            border-top-style: solid;
-            border-left-style: solid;
-            border-bottom-width: 1pt;
-            width: 182.7pt;
-            border-top-color: #000000;
-            border-bottom-style: solid
-        }
-
-        .c10 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c8 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 16pt;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c2 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: justify;
-            height: 11pt
-        }
-
-        .c11 {
-            margin-left: 108pt;
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .c0 {
-            color: #000000;
-            font-weight: 400;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c16 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .c4 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: center
-        }
-
-        .c5 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: justify
-        }
-
-        .c22 {
-            margin-left: -5.4pt;
-            border-spacing: 0;
-            border-collapse: collapse;
-            margin-right: auto
-        }
-
-        .c13 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.15;
-            text-align: left
-        }
-
-        .c15 {
-            -webkit-text-decoration-skip: none;
-            text-decoration: underline;
-            text-decoration-skip-ink: none
-        }
-
-        .c18 {
-            background-color: #ffffff;
-            max-width: 415.3pt;
-            padding: 72pt 90pt 72pt 90pt
-        }
-
-        .c20 {
-            font-family: "Noto Sans Symbols";
-            font-weight: 400
-        }
-
-        .c19 {
-            margin-left: 72pt;
-            text-indent: 36pt
-        }
-
-        .c3 {
-            vertical-align: baseline;
-            font-weight: 700
-        }
-
-        .c12 {
-            height: 11pt
-        }
-
-        .c9 {
-            height: 0pt
-        }
-
-        .c14 {
-            vertical-align: super
-        }
-
-        .c24 {
-            vertical-align: sub
-        }
-
-        .c7 {
-            font-style: italic
-        }
-
-        .c6 {
-            vertical-align: baseline
-        }
-
-        .c17 {
-            font-size: 16pt
-        }
-
-        .title {
-            padding-top: 24pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 36pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .subtitle {
-            padding-top: 18pt;
-            color: #666666;
-            font-size: 24pt;
-            padding-bottom: 4pt;
-            font-family: "Georgia";
-            line-height: 1.0;
-            page-break-after: avoid;
-            font-style: italic;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        li {
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        p {
-            margin: 0;
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        h1 {
-            padding-top: 24pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 24pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h2 {
-            padding-top: 18pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 18pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h3 {
-            padding-top: 14pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 14pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h4 {
-            padding-top: 12pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 12pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h5 {
-            padding-top: 11pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 11pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h6 {
-            padding-top: 10pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 10pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-    </style>
-
-    <p class="c4"><span class="c15 c3 c17">Alicyclic Chemistry Notes</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">More complicated due to the many available conformations. Different conformations may
-            show different stereoselectivity. Need conformational bias to allow existing stereocentres to allow the
-            creation of new ones (i.e. asymmetric induction).</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c4"><span class="c15 c3 c7">Conformation</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Cyclopropane, cyclobutane, cyclopentane &ndash; almost planar (dependent on
-            substituents).</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c7 c6">Cyclopropane </span><span class="c6">has eclipsing CH</span><span
-            class="c24">2</span><span class="c6">&nbsp;units, and sp</span><span class="c14">2</span><span
-            class="c0">&nbsp;character at the carbons.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c7 c6">Cyclobutane</span><span class="c0">&nbsp;puckers &ndash;</span><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 78.00px; height: 46.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image22.png"
-                style="width: 78.00px; height: 46.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Non-planar geometry reduces torsional strain (Baeyer strain). Equatorial Br&rsquo;s
-            are more stable.</span></p>
-    <p class="c5"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 87.00px; height: 65.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image28.png"
-                style="width: 87.00px; height: 65.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c7 c6">Cyclopentane &ndash;</span></p>
-    <p class="c5"><span class="c0">Envelope conformation favoured to minimise eclipsing interactions (Pfitzer
-            Strain).</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c7 c6">Cyclohexane &ndash;</span><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 166.00px; height: 68.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image26.png"
-                style="width: 166.00px; height: 68.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Three forms, of which chair is the most stable (eclipsing).</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 137.93px; height: 53.27px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image12.png"
-                style="width: 137.93px; height: 53.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Twisted boat is flexible, so there is a large positive entropy gain. The energy
-            profile looks like this:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 188.13px; height: 92.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image11.png"
-                style="width: 188.13px; height: 92.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 146.27px; height: 91.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image19.png"
-                style="width: 146.27px; height: 91.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c7 c6">Decalins &ndash;</span></p>
-    <p class="c5"><span class="c0">The trans decalin is fixed, with a &ldquo;flat&rdquo; C skeleton an ax,ax bridge
-            substituents:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 203.53px; height: 136.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image16.png"
-                style="width: 203.53px; height: 136.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">The cis decalin is a flexible, curved molecule with ax,eq bridge substituents.</span>
-    </p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c4 c12"><span class="c0"></span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c2"><span class="c10 c6"></span></p>
-    <p class="c4"><span class="c15 c3 c7">Energetics</span></p>
-    <p class="c5"><span class="c6">Angle (Baeyer) Strain &ndash; due to angles not being 109</span><span
-            class="c14">o</span><span class="c0">, i.e. when 3/4 membered rings, or when double bonds present. Both lead
-            to decrease in angle. 8-10 membered rings increase bond angle.</span></p>
-    <p class="c5"><span class="c0">Torsional (Pitzer) Strain &ndash; can&rsquo;t rotate, so functional groups interact.
-            Hence, not planar (less eclipsing).</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">This interaction is very significant in determining mechanisms and syntheses. For
-            example,</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 188.13px; height: 94.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image18.png"
-                style="width: 188.13px; height: 94.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Also, for similar reasons, a tertiary butyl group or similar alkyl is always
-            equatorially placed, to avoid these bad interactions.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Increase in ring size increases negative entropy of Activation for the reaction.
-            Thus, forming C = 3/4 is irreversible and favoured thermodynamically, but the activation energy is often too
-            high due to Baeyer Strain. However, rings are typically 6 membered due to kinetic factors (and prevents
-            larger ring formation).</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c4"><span class="c15 c3 c7">Stereoselectivity</span></p>
-    <p class="c5"><span class="c3 c7">Baldwin&rsquo;s Rules</span></p>
-    <p class="c5"><span class="c0">Guidelines for predicting the relative facility of ring-forming reactions.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Ring closure reactions can be characterised in terms of three parameters:</span></p>
-    <p class="c16 c19"><span
-            class="c0">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trig</span>
-    </p>
-    <p class="c11"><span class="c0">(a)
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)</span>
-    </p>
-    <p class="c5"><span class="c0">a) represents the number of atoms in the ring being formed.</span></p>
-    <p class="c5"><span class="c0">b) indicates that the breaking bond ends up outside the final ring &ndash; exocyclic,
-            cf. endo:</span></p>
-    <p class="c16"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 229.13px; height: 107.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image14.png"
-                style="width: 229.13px; height: 107.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c16"><span class="c6">c) denotes the geometry of the atom being attacked (*) &ndash; trigonal
-            (sp</span><span class="c14">2</span><span class="c0">) in this case, cf. tet and dig.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">The following rules can then be applied to suggest the favoured or disfavoured nature
-            of ring closure, based on the stereoelectronic requirements of the transition state:</span></p>
-    <p class="c2"><span class="c0"></span></p><a id="t.081cc5315bdc8316fe03664f571fee2e22f9a07f"></a><a id="t.0"></a>
-    <table class="c22">
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="2">
-                <p class="c4"><span class="c3">Ring Size</span></p>
-            </td>
-            <td class="c23" colspan="3" rowspan="1">
-                <p class="c4"><span class="c3">Exo</span></p>
-            </td>
-            <td class="c21" colspan="3" rowspan="1">
-                <p class="c4"><span class="c3">Endo</span></p>
-            </td>
-        </tr>
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c7 c6">tet (sp</span><span class="c14 c7">3</span><span
-                        class="c7 c6">)</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c7 c6">trig (sp</span><span class="c14 c7">2</span><span
-                        class="c7 c6">)</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c7 c6">dig (sp)</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c7 c6">tet (sp</span><span class="c14 c7">3</span><span
-                        class="c7 c6">)</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c7 c6">trig (sp</span><span class="c14 c7">2</span><span
-                        class="c6 c7">)</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c7 c6">dig (sp)</span></p>
-            </td>
-        </tr>
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c3">3</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4 c12"><span class="c0"></span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-        </tr>
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c3">4</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4 c12"><span class="c0"></span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-        </tr>
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c3">5</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-        </tr>
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c3">6</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#128500;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-        </tr>
-        <tr class="c9">
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c3">7</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4 c12"><span class="c0"></span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-            <td class="c1" colspan="1" rowspan="1">
-                <p class="c4"><span class="c0">&#10003;</span></p>
-            </td>
-        </tr>
-    </table>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">So 5-endo-trig is disfavoured:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 85.00px; height: 64.73px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image24.png"
-                style="width: 85.00px; height: 64.73px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span><span
-            class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 97.47px; height: 58.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image20.png"
-                style="width: 97.47px; height: 58.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c6">The system is flat and little overlap is possible between the nitrogen lone pair and
-            the LUMO (</span><span class="c20 c6">&pi;*</span><span class="c6">) of the sp</span><span
-            class="c14">2</span><span class="c0">&nbsp;carbon being attacked.</span></p>
-    <p class="c4 c12"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">While 5-exo-trig is favoured:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 94.93px; height: 70.67px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image23.png"
-                style="width: 94.93px; height: 70.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span><span
-            class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 104.07px; height: 75.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image25.png"
-                style="width: 104.07px; height: 75.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c6">Good overlap between the nitrogen lone pair and </span><span
-            class="c6 c20">&pi;</span><span class="c0">* orbital of the carbonyl group is possible.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c3 c7">The Anomeric Effect </span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 396.00px; height: 58.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image27.png"
-                style="width: 396.00px; height: 58.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c4"><span class="c0">(more on this in Stereoelectronics Notes)</span></p>
-    <p class="c4 c12"><span class="c0"></span></p>
-    <p class="c4"><span class="c3 c7 c15">Reactivity</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Steric environment effects according to formation of a transition state which
-            involves an increase or decrease in bulk at the site of reaction.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Maintaining sterically desirable arrangements, e.g. antiperiplanar for base
-            elimination.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c15 c7 c6">Hydrolysis &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 326.13px; height: 60.67px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image29.png"
-                style="width: 326.13px; height: 60.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">This is faster when equatorial, i.e. less compressed site.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c15 c7 c6">Acetolysis of OTs:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 297.00px; height: 75.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image30.png"
-                style="width: 297.00px; height: 75.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Decrease in compression in Transition State due to trigonal arrangement. Faster when
-            axial. This is due to:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 129.07px; height: 71.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image31.png"
-                style="width: 129.07px; height: 71.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Decrease in bulk at rate determining step, so faster when axial.</span></p>
-    <p class="c5"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 80.07px; height: 136.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image8.png"
-                style="width: 80.07px; height: 136.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c3 c7">Cyclopropanes</span></p>
-    <p class="c5"><span class="c0">The classic method of synthesis for these is the Simmons-Smith Reaction:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 201.20px; height: 70.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image32.png"
-                style="width: 201.20px; height: 70.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c6">Another method involves the formation of a carbene (see Reactive Intermediates
-            Tutorial):</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 169.87px; height: 54.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image33.png"
-                style="width: 169.87px; height: 54.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c4 c12"><span class="c0"></span></p>
-    <p class="c5"><span class="c3 c7">Cyclobutanes</span><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 168.00px; height: 53.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image15.png"
-                style="width: 168.00px; height: 53.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Heating these leads to the formation of ethene, while photochemical excitation of
-            ethene molecules gives the cyclobutane.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Can also form from intramolecular Claisen Condensation (see cyclopentanes).</span>
-    </p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c3 c7">Cyclopentanes</span></p>
-    <p class="c5"><span class="c0">These are kinetically much more favourable to form than the smaller rings.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Typical formation reactions are the Dieckmann Condensation (an intramolecular Claisen
-            Condensation):</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 395.00px; height: 56.87px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image1.png"
-                style="width: 395.00px; height: 56.87px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Also the Acyloin Condensation:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.87px; height: 62.53px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image2.png"
-                style="width: 359.87px; height: 62.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">The Thorpe Reaction is also useful.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 396.00px; height: 77.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image3.png"
-                style="width: 396.00px; height: 77.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">These can all be extended to six-membered rings by using a longer starting material.
-            The Thorpe Reaction is also applicable to even larger rings.</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c4"><span class="c15 c3 c7">Other Alicyclic Reactions</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c15 c7 c6">Elimination</span><span class="c0">&nbsp;&ndash; must be
-            antiperiplanar.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 283.00px; height: 175.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image4.png"
-                style="width: 283.00px; height: 175.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c15 c7 c6">Transannular Reaction &ndash;</span></p>
-    <p class="c5"><span class="c0">Occurs for C = 8-11.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 103.13px; height: 125.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image5.png"
-                style="width: 103.13px; height: 125.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c15 c7 c6">Cycloaddition &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 307.00px; height: 79.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image6.png"
-                style="width: 307.00px; height: 79.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c6">This includes the Diels-Alder Reactions:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 215.13px; height: 74.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image7.png"
-                style="width: 215.13px; height: 74.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">(More on these in the Pericyclics Tutorial).</span></p>
-    <p class="c2"><span class="c0"></span></p>
-    <p class="c5"><span class="c15 c7 c6">Demjanov &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 313.00px; height: 70.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image9.png"
-                style="width: 313.00px; height: 70.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c15 c7 c6">Contraction &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 255.93px; height: 54.27px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image10.png"
-                style="width: 255.93px; height: 54.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c15 c7 c6">Favorskii &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 411.00px; height: 61.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image13.png"
-                style="width: 411.00px; height: 61.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c15 c7 c6">Robinson Ring Annelation &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 60.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image17.png"
-                style="width: 369.00px; height: 60.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c15 c7 c6">Reactions with Decalins &ndash;</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 301.00px; height: 244.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image21.png"
-                style="width: 301.00px; height: 244.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
+<style type="text/css">
+    @import url(https://themes.googleusercontent.com/fonts/css?kit=SHJk2CZThnuTXOvq3WlzwLpbaDmv7z6nKiz_at3-V8U);
+
+    ol.lst-kix_list_1-3 {
+        list-style-type: none
+    }
+
+    ol.lst-kix_list_1-4 {
+        list-style-type: none
+    }
+
+    ol.lst-kix_list_1-5 {
+        list-style-type: none
+    }
+
+    ol.lst-kix_list_1-6 {
+        list-style-type: none
+    }
+
+    ol.lst-kix_list_1-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_list_1-4>li {
+        counter-increment: lst-ctn-kix_list_1-4
+    }
+
+    ol.lst-kix_list_1-1 {
+        list-style-type: none
+    }
+
+    ol.lst-kix_list_1-2 {
+        list-style-type: none
+    }
+
+    ol.lst-kix_list_1-6.start {
+        counter-reset: lst-ctn-kix_list_1-6 0
+    }
+
+    .lst-kix_list_1-1>li {
+        counter-increment: lst-ctn-kix_list_1-1
+    }
+
+    ol.lst-kix_list_1-3.start {
+        counter-reset: lst-ctn-kix_list_1-3 0
+    }
+
+    ol.lst-kix_list_1-2.start {
+        counter-reset: lst-ctn-kix_list_1-2 0
+    }
+
+    ol.lst-kix_list_1-8.start {
+        counter-reset: lst-ctn-kix_list_1-8 0
+    }
+
+    .lst-kix_list_1-0>li:before {
+        content: "(" counter(lst-ctn-kix_list_1-0, lower-roman) ") "
+    }
+
+    ol.lst-kix_list_1-5.start {
+        counter-reset: lst-ctn-kix_list_1-5 0
+    }
+
+    ol.lst-kix_list_1-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_list_1-1>li:before {
+        content: "" counter(lst-ctn-kix_list_1-1, lower-latin) ". "
+    }
+
+    .lst-kix_list_1-2>li:before {
+        content: "" counter(lst-ctn-kix_list_1-2, lower-roman) ". "
+    }
+
+    .lst-kix_list_1-7>li {
+        counter-increment: lst-ctn-kix_list_1-7
+    }
+
+    ol.lst-kix_list_1-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_list_1-3>li:before {
+        content: "" counter(lst-ctn-kix_list_1-3, decimal) ". "
+    }
+
+    .lst-kix_list_1-4>li:before {
+        content: "" counter(lst-ctn-kix_list_1-4, lower-latin) ". "
+    }
+
+    ol.lst-kix_list_1-0.start {
+        counter-reset: lst-ctn-kix_list_1-0 0
+    }
+
+    .lst-kix_list_1-0>li {
+        counter-increment: lst-ctn-kix_list_1-0
+    }
+
+    .lst-kix_list_1-6>li {
+        counter-increment: lst-ctn-kix_list_1-6
+    }
+
+    .lst-kix_list_1-7>li:before {
+        content: "" counter(lst-ctn-kix_list_1-7, lower-latin) ". "
+    }
+
+    .lst-kix_list_1-3>li {
+        counter-increment: lst-ctn-kix_list_1-3
+    }
+
+    .lst-kix_list_1-5>li:before {
+        content: "" counter(lst-ctn-kix_list_1-5, lower-roman) ". "
+    }
+
+    .lst-kix_list_1-6>li:before {
+        content: "" counter(lst-ctn-kix_list_1-6, decimal) ". "
+    }
+
+    ol.lst-kix_list_1-7.start {
+        counter-reset: lst-ctn-kix_list_1-7 0
+    }
+
+    .lst-kix_list_1-2>li {
+        counter-increment: lst-ctn-kix_list_1-2
+    }
+
+    .lst-kix_list_1-5>li {
+        counter-increment: lst-ctn-kix_list_1-5
+    }
+
+    .lst-kix_list_1-8>li {
+        counter-increment: lst-ctn-kix_list_1-8
+    }
+
+    ol.lst-kix_list_1-4.start {
+        counter-reset: lst-ctn-kix_list_1-4 0
+    }
+
+    .lst-kix_list_1-8>li:before {
+        content: "" counter(lst-ctn-kix_list_1-8, lower-roman) ". "
+    }
+
+    ol.lst-kix_list_1-1.start {
+        counter-reset: lst-ctn-kix_list_1-1 0
+    }
+
+    ol {
+        margin: 0;
+        padding: 0
+    }
+
+    table td,
+    table th {
+        padding: 0
+    }
+
+    .c23 {
+        border-right-style: solid;
+        padding: 0pt 5.4pt 0pt 5.4pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: middle;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 182.6pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c1 {
+        border-right-style: solid;
+        padding: 0pt 5.4pt 0pt 5.4pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: middle;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 60.9pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c21 {
+        border-right-style: solid;
+        padding: 0pt 5.4pt 0pt 5.4pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: middle;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 182.7pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c10 {
+        -webkit-text-decoration-skip: none;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c8 {
+        -webkit-text-decoration-skip: none;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-size: 16pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c2 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: justify;
+        height: 11pt
+    }
+
+    .c11 {
+        margin-left: 108pt;
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c0 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c16 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c4 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
+
+    .c5 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+
+    .c22 {
+        margin-left: -5.4pt;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin-right: auto
+    }
+
+    .c13 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        text-align: left
+    }
+
+    .c15 {
+        -webkit-text-decoration-skip: none;
+        text-decoration: underline;
+        text-decoration-skip-ink: none
+    }
+
+    .c18 {
+        background-color: #ffffff;
+        max-width: 415.3pt;
+        padding: 72pt 90pt 72pt 90pt
+    }
+
+    .c20 {
+        font-family: "Noto Sans Symbols";
+        font-weight: 400
+    }
+
+    .c19 {
+        margin-left: 72pt;
+        text-indent: 36pt
+    }
+
+    .c3 {
+        vertical-align: baseline;
+        font-weight: 700
+    }
+
+    .c12 {
+        height: 11pt
+    }
+
+    .c9 {
+        height: 0pt
+    }
+
+    .c14 {
+        vertical-align: super
+    }
+
+    .c24 {
+        vertical-align: sub
+    }
+
+    .c7 {
+        font-style: italic
+    }
+
+    .c6 {
+        vertical-align: baseline
+    }
+
+    .c17 {
+        font-size: 16pt
+    }
+</style>
+
+<p class="c4"><span class="c15 c3 c17">Alicyclic Chemistry Notes</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">More complicated due to the many available conformations. Different conformations may
+        show different stereoselectivity. Need conformational bias to allow existing stereocentres to allow the
+        creation of new ones (i.e. asymmetric induction).</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c4"><span class="c15 c3 c7">Conformation</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Cyclopropane, cyclobutane, cyclopentane &ndash; almost planar (dependent on
+        substituents).</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c7 c6">Cyclopropane </span><span class="c6">has eclipsing CH</span><span
+        class="c24">2</span><span class="c6">&nbsp;units, and sp</span><span class="c14">2</span><span
+        class="c0">&nbsp;character at the carbons.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c7 c6">Cyclobutane</span><span class="c0">&nbsp;puckers &ndash;</span><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 78.00px; height: 46.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image22.png"
+            style="width: 78.00px; height: 46.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Non-planar geometry reduces torsional strain (Baeyer strain). Equatorial Br&rsquo;s
+        are more stable.</span></p>
+<p class="c5"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 87.00px; height: 65.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image28.png"
+            style="width: 87.00px; height: 65.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c7 c6">Cyclopentane &ndash;</span></p>
+<p class="c5"><span class="c0">Envelope conformation favoured to minimise eclipsing interactions (Pfitzer
+        Strain).</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c7 c6">Cyclohexane &ndash;</span><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 166.00px; height: 68.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image26.png"
+            style="width: 166.00px; height: 68.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Three forms, of which chair is the most stable (eclipsing).</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 137.93px; height: 53.27px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image12.png"
+            style="width: 137.93px; height: 53.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Twisted boat is flexible, so there is a large positive entropy gain. The energy
+        profile looks like this:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 188.13px; height: 92.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image11.png"
+            style="width: 188.13px; height: 92.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 146.27px; height: 91.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image19.png"
+            style="width: 146.27px; height: 91.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c7 c6">Decalins &ndash;</span></p>
+<p class="c5"><span class="c0">The trans decalin is fixed, with a &ldquo;flat&rdquo; C skeleton an ax,ax bridge
+        substituents:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 203.53px; height: 136.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image16.png"
+            style="width: 203.53px; height: 136.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">The cis decalin is a flexible, curved molecule with ax,eq bridge substituents.</span>
+</p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c4 c12"><span class="c0"></span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c2"><span class="c10 c6"></span></p>
+<p class="c4"><span class="c15 c3 c7">Energetics</span></p>
+<p class="c5"><span class="c6">Angle (Baeyer) Strain &ndash; due to angles not being 109</span><span
+        class="c14">o</span><span class="c0">, i.e. when 3/4 membered rings, or when double bonds present. Both lead
+        to decrease in angle. 8-10 membered rings increase bond angle.</span></p>
+<p class="c5"><span class="c0">Torsional (Pitzer) Strain &ndash; can&rsquo;t rotate, so functional groups interact.
+        Hence, not planar (less eclipsing).</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">This interaction is very significant in determining mechanisms and syntheses. For
+        example,</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 188.13px; height: 94.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image18.png"
+            style="width: 188.13px; height: 94.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Also, for similar reasons, a tertiary butyl group or similar alkyl is always
+        equatorially placed, to avoid these bad interactions.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Increase in ring size increases negative entropy of Activation for the reaction.
+        Thus, forming C = 3/4 is irreversible and favoured thermodynamically, but the activation energy is often too
+        high due to Baeyer Strain. However, rings are typically 6 membered due to kinetic factors (and prevents
+        larger ring formation).</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c4"><span class="c15 c3 c7">Stereoselectivity</span></p>
+<p class="c5"><span class="c3 c7">Baldwin&rsquo;s Rules</span></p>
+<p class="c5"><span class="c0">Guidelines for predicting the relative facility of ring-forming reactions.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Ring closure reactions can be characterised in terms of three parameters:</span></p>
+<p class="c16 c19"><span
+        class="c0">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trig</span>
+</p>
+<p class="c11"><span class="c0">(a)
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)</span>
+</p>
+<p class="c5"><span class="c0">a) represents the number of atoms in the ring being formed.</span></p>
+<p class="c5"><span class="c0">b) indicates that the breaking bond ends up outside the final ring &ndash; exocyclic,
+        cf. endo:</span></p>
+<p class="c16"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 229.13px; height: 107.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image14.png"
+            style="width: 229.13px; height: 107.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c16"><span class="c6">c) denotes the geometry of the atom being attacked (*) &ndash; trigonal
+        (sp</span><span class="c14">2</span><span class="c0">) in this case, cf. tet and dig.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">The following rules can then be applied to suggest the favoured or disfavoured nature
+        of ring closure, based on the stereoelectronic requirements of the transition state:</span></p>
+<p class="c2"><span class="c0"></span></p><a id="t.081cc5315bdc8316fe03664f571fee2e22f9a07f"></a><a id="t.0"></a>
+<table class="c22">
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="2">
+            <p class="c4"><span class="c3">Ring Size</span></p>
+        </td>
+        <td class="c23" colspan="3" rowspan="1">
+            <p class="c4"><span class="c3">Exo</span></p>
+        </td>
+        <td class="c21" colspan="3" rowspan="1">
+            <p class="c4"><span class="c3">Endo</span></p>
+        </td>
+    </tr>
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c7 c6">tet (sp</span><span class="c14 c7">3</span><span class="c7 c6">)</span>
+            </p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c7 c6">trig (sp</span><span class="c14 c7">2</span><span class="c7 c6">)</span>
+            </p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c7 c6">dig (sp)</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c7 c6">tet (sp</span><span class="c14 c7">3</span><span class="c7 c6">)</span>
+            </p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c7 c6">trig (sp</span><span class="c14 c7">2</span><span class="c6 c7">)</span>
+            </p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c7 c6">dig (sp)</span></p>
+        </td>
+    </tr>
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c3">3</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4 c12"><span class="c0"></span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+    </tr>
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c3">4</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4 c12"><span class="c0"></span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+    </tr>
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c3">5</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+    </tr>
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c3">6</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#128500;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+    </tr>
+    <tr class="c9">
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c3">7</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4 c12"><span class="c0"></span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+            <p class="c4"><span class="c0">&#10003;</span></p>
+        </td>
+    </tr>
+</table>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">So 5-endo-trig is disfavoured:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 85.00px; height: 64.73px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image24.png"
+            style="width: 85.00px; height: 64.73px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span><span
+        class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 97.47px; height: 58.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image20.png"
+            style="width: 97.47px; height: 58.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c6">The system is flat and little overlap is possible between the nitrogen lone pair and
+        the LUMO (</span><span class="c20 c6">&pi;*</span><span class="c6">) of the sp</span><span
+        class="c14">2</span><span class="c0">&nbsp;carbon being attacked.</span></p>
+<p class="c4 c12"><span class="c0"></span></p>
+<p class="c5"><span class="c0">While 5-exo-trig is favoured:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 94.93px; height: 70.67px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image23.png"
+            style="width: 94.93px; height: 70.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span><span
+        class="c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 104.07px; height: 75.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image25.png"
+            style="width: 104.07px; height: 75.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c6">Good overlap between the nitrogen lone pair and </span><span
+        class="c6 c20">&pi;</span><span class="c0">* orbital of the carbonyl group is possible.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c3 c7">The Anomeric Effect </span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 396.00px; height: 58.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image27.png"
+            style="width: 396.00px; height: 58.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c4"><span class="c0">(more on this in Stereoelectronics Notes)</span></p>
+<p class="c4 c12"><span class="c0"></span></p>
+<p class="c4"><span class="c3 c7 c15">Reactivity</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Steric environment effects according to formation of a transition state which
+        involves an increase or decrease in bulk at the site of reaction.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Maintaining sterically desirable arrangements, e.g. antiperiplanar for base
+        elimination.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c15 c7 c6">Hydrolysis &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 326.13px; height: 60.67px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image29.png"
+            style="width: 326.13px; height: 60.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">This is faster when equatorial, i.e. less compressed site.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c15 c7 c6">Acetolysis of OTs:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 297.00px; height: 75.40px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image30.png"
+            style="width: 297.00px; height: 75.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Decrease in compression in Transition State due to trigonal arrangement. Faster when
+        axial. This is due to:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 129.07px; height: 71.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image31.png"
+            style="width: 129.07px; height: 71.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Decrease in bulk at rate determining step, so faster when axial.</span></p>
+<p class="c5"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 80.07px; height: 136.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image8.png"
+            style="width: 80.07px; height: 136.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c3 c7">Cyclopropanes</span></p>
+<p class="c5"><span class="c0">The classic method of synthesis for these is the Simmons-Smith Reaction:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 201.20px; height: 70.80px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image32.png"
+            style="width: 201.20px; height: 70.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c6">Another method involves the formation of a carbene (see Reactive Intermediates
+        Tutorial):</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 169.87px; height: 54.93px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image33.png"
+            style="width: 169.87px; height: 54.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c4 c12"><span class="c0"></span></p>
+<p class="c5"><span class="c3 c7">Cyclobutanes</span><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 168.00px; height: 53.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image15.png"
+            style="width: 168.00px; height: 53.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Heating these leads to the formation of ethene, while photochemical excitation of
+        ethene molecules gives the cyclobutane.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Can also form from intramolecular Claisen Condensation (see cyclopentanes).</span>
+</p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c3 c7">Cyclopentanes</span></p>
+<p class="c5"><span class="c0">These are kinetically much more favourable to form than the smaller rings.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Typical formation reactions are the Dieckmann Condensation (an intramolecular Claisen
+        Condensation):</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 395.00px; height: 56.87px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image1.png"
+            style="width: 395.00px; height: 56.87px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Also the Acyloin Condensation:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.87px; height: 62.53px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image2.png"
+            style="width: 359.87px; height: 62.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">The Thorpe Reaction is also useful.</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 396.00px; height: 77.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image3.png"
+            style="width: 396.00px; height: 77.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">These can all be extended to six-membered rings by using a longer starting material.
+        The Thorpe Reaction is also applicable to even larger rings.</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c4"><span class="c15 c3 c7">Other Alicyclic Reactions</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c15 c7 c6">Elimination</span><span class="c0">&nbsp;&ndash; must be
+        antiperiplanar.</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 283.00px; height: 175.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image4.png"
+            style="width: 283.00px; height: 175.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c15 c7 c6">Transannular Reaction &ndash;</span></p>
+<p class="c5"><span class="c0">Occurs for C = 8-11.</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 103.13px; height: 125.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image5.png"
+            style="width: 103.13px; height: 125.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c15 c7 c6">Cycloaddition &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 307.00px; height: 79.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image6.png"
+            style="width: 307.00px; height: 79.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c6">This includes the Diels-Alder Reactions:</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 215.13px; height: 74.40px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image7.png"
+            style="width: 215.13px; height: 74.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">(More on these in the Pericyclics Tutorial).</span></p>
+<p class="c2"><span class="c0"></span></p>
+<p class="c5"><span class="c15 c7 c6">Demjanov &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 313.00px; height: 70.07px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image9.png"
+            style="width: 313.00px; height: 70.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c15 c7 c6">Contraction &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 255.93px; height: 54.27px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image10.png"
+            style="width: 255.93px; height: 54.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c15 c7 c6">Favorskii &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 411.00px; height: 61.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image13.png"
+            style="width: 411.00px; height: 61.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c15 c7 c6">Robinson Ring Annelation &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 60.80px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image17.png"
+            style="width: 369.00px; height: 60.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c15 c7 c6">Reactions with Decalins &ndash;</span></p>
+<p class="c4"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 301.00px; height: 244.80px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/alicyclic/image21.png"
+            style="width: 301.00px; height: 244.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>

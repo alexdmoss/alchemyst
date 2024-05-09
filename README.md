@@ -17,11 +17,10 @@ I also wanted to preserve the old URL structure which - despite being really nas
 ## To Do
 
 - [ ] Some special characters not displaying properly - I think --> type arrows
-- [ ] See if can simplify CSS / fix changes in heading
+- [ ] Check all PDFs vs HTML Documents side-by-side for issues
 - [ ] Can LLM summarise for me?
-- [ ] Take advantage of the fact there is nginx now - metrics + proxy/cache assets
-- [ ] Center content on wide screens
-- [ ] Pad the top menu more on wide screens
+- [ ] Add summary/html notes themselves to the search
+- [ ] Review appearance on wider screens
 - [ ] Something to check logs for 404s
 - [ ] Metrics on Datastore and GCS
 - [ ] Test coverage is shocking

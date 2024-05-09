@@ -1,629 +1,564 @@
-
-    <style type="text/css">
+<style type="text/css">
         @import url(https://themes.googleusercontent.com/fonts/css?kit=SHJk2CZThnuTXOvq3WlzwLpbaDmv7z6nKiz_at3-V8U);
 
         ol {
-            margin: 0;
-            padding: 0
+                margin: 0;
+                padding: 0
         }
 
         table td,
         table th {
-            padding: 0
+                padding: 0
         }
 
         .c2 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            vertical-align: baseline;
-            text-decoration-skip-ink: none;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
+                -webkit-text-decoration-skip: none;
+                color: #000000;
+                font-weight: 400;
+                text-decoration: underline;
+                vertical-align: baseline;
+                text-decoration-skip-ink: none;
+                font-size: 11pt;
+                font-family: "Arial";
+                font-style: normal
         }
 
         .c13 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 16pt;
-            font-family: "Arial";
-            font-style: normal
+                -webkit-text-decoration-skip: none;
+                color: #000000;
+                font-weight: 400;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                font-size: 16pt;
+                font-family: "Arial";
+                font-style: normal
         }
 
         .c1 {
-            color: #000000;
-            font-weight: 400;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
+                color: #000000;
+                font-weight: 400;
+                text-decoration: none;
+                vertical-align: baseline;
+                font-size: 11pt;
+                font-family: "Arial";
+                font-style: normal
         }
 
         .c11 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: left
+                padding-top: 0pt;
+                padding-bottom: 0pt;
+                line-height: 1.0;
+                orphans: 2;
+                widows: 2;
+                text-align: left
         }
 
         .c4 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: center
+                padding-top: 0pt;
+                padding-bottom: 0pt;
+                line-height: 1.0;
+                orphans: 2;
+                widows: 2;
+                text-align: center
         }
 
         .c0 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: justify
+                padding-top: 0pt;
+                padding-bottom: 0pt;
+                line-height: 1.0;
+                orphans: 2;
+                widows: 2;
+                text-align: justify
         }
 
         .c5 {
-            vertical-align: baseline;
-            text-decoration-skip-ink: none;
-            -webkit-text-decoration-skip: none;
-            font-style: italic;
-            text-decoration: underline
+                vertical-align: baseline;
+                text-decoration-skip-ink: none;
+                -webkit-text-decoration-skip: none;
+                font-style: italic;
+                text-decoration: underline
         }
 
         .c15 {
-            -webkit-text-decoration-skip: none;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 16pt
+                -webkit-text-decoration-skip: none;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                font-size: 16pt
         }
 
         .c10 {
-            background-color: #ffffff;
-            max-width: 415.3pt;
-            padding: 72pt 90pt 72pt 90pt
+                background-color: #ffffff;
+                max-width: 415.3pt;
+                padding: 72pt 90pt 72pt 90pt
         }
 
         .c8 {
-            font-family: "Noto Sans Symbols";
-            font-weight: 400
+                font-family: "Noto Sans Symbols";
+                font-weight: 400
         }
 
         .c9 {
-            font-style: italic
+                font-style: italic
         }
 
         .c7 {
-            font-weight: 700
+                font-weight: 700
         }
 
         .c6 {
-            vertical-align: baseline
+                vertical-align: baseline
         }
 
         .c12 {
-            vertical-align: sub
+                vertical-align: sub
         }
 
         .c3 {
-            height: 11pt
+                height: 11pt
         }
 
         .c14 {
-            vertical-align: super
+                vertical-align: super
         }
+</style>
 
-        .title {
-            padding-top: 24pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 36pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .subtitle {
-            padding-top: 18pt;
-            color: #666666;
-            font-size: 24pt;
-            padding-bottom: 4pt;
-            font-family: "Georgia";
-            line-height: 1.0;
-            page-break-after: avoid;
-            font-style: italic;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        li {
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        p {
-            margin: 0;
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        h1 {
-            padding-top: 24pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 24pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h2 {
-            padding-top: 18pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 18pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h3 {
-            padding-top: 14pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 14pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h4 {
-            padding-top: 12pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 12pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h5 {
-            padding-top: 11pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 11pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h6 {
-            padding-top: 10pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 10pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-    </style>
-
-    <p class="c4"><span class="c7 c6 c15">Rearrangements Notes</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c9 c7 c6">Mechanistic Aspects of Rearrangements</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Nature of the Rearrangement</span></p>
-    <p class="c0"><span class="c6">It can vary from being truly stepwise to migration occurring in concert with initial
-            ionisation. These two situations can be considered as intramolecular analogues of S</span><span
-            class="c12">N</span><span class="c14">1</span><span class="c6">&nbsp;and S</span><span
-            class="c12">N</span><span class="c14">2</span><span class="c1">&nbsp;respectively. Hence, it has profound
-            stereochemical implications at both the migration origin and the terminus if the centres are chiral. With
-            non-racemic substrates, the generation of a free carbocation at either the migration terminus or origin will
-            result in loss of stereochemical integrity at that centre, whereas a concerted migration with no
-            intermediate will result in inversion of the absolute stereochemistry at the terminus.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Migratory Aptitude</span></p>
-    <p class="c0"><span class="c1">This is the ease with which any particular group will undergo nucleophilic
-            1,2-shifts. It is related to electron donating capacity, but such values are not quantifiable as a single
-            group will show different aptitudes for different reactions/conditions.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">Note that in some instances, for example the Beckmann Rearrangement, only one group
-            ever migrates regardless of the aptitude, simply because of stereoelectronic requirements for the reaction.
-            Likewise, in for example the pinacol rearrangement, the most stable cation controls the reaction pathway, as
-            opposed to the migrating group.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">A wide range of other factors, such as steric and conformational effects, play subtle
-            roles in determining whether a particular migration is favoured. Generally however, aryl groups migrate more
-            readily than alkyl groups, and within the aryl series, e-donating substituents increase the propensity for
-            migration. However, the position of hydrogen within this framework is highly unpredictable.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Neighbouring Group Participation (Anchimeric Assistance)</span></p>
-    <p class="c0"><span class="c1">This is where a substituent is capable of stabilising an adjacent carbocation by
-            acting as an intramolecular nucleophile. More details in the Stereoelectronics Notes.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Non-classical Carbonium Ions</span></p>
-    <p class="c0"><span class="c6">While alkyl groups do not usually undergo </span><span
-            class="c8 c6">&sigma;</span><span class="c6">-participation in acyclic or unstrained ring systems, there is
-            much evidence to suggest that this does occur in strained rings. The species formed contain a two-electron,
-            three-centre bond and are known as &ldquo;non-classical carbonium ions&rdquo;. The most studied system in
-            which </span><span class="c8 c6">&sigma;</span><span class="c1">-participation is envisaged to occur is the
-            2-norbornyl system. It has been found that solvolysis of optically pure norbornyl 2-exo-brosylate in acetic
-            acid gave a racemic exo-acetate as the sole product with no endo-material. Furthermore, it occurred 250
-            times faster.</span></p>
-    <p class="c0"><span class="c1"><br>These results were interpreted as implying that the reaction of the exo-substrate
-            occurred solely via a non-classical carbonium ion, whilst the endo substrate reacted by initial formation of
-            a classical carbenium ion which then rearranged to the non-classical carbonium ion, but not before a small
-            amount had reacted with solvent, attack being sterically directed to the exo-face.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 402.93px; height: 202.73px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image11.png"
-                style="width: 402.93px; height: 202.73px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c9 c7 c6">Carbocation Induced Alkyl and Hydride Shifts</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Wagner-Meerwein Shifts</span></p>
-    <p class="c0"><span class="c1">These 1,2-alkyl shifts occur if it leads to the new carbocation being more stabilised
-            than the original. This is usually the case if the carbon adjacent to the positively charged centre is
-            secondary or tertiary. Subsequent elimination will then occur. Saytzeff&rsquo;s Rule is obeyed to give the
-            most substituted alkene.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">1,2-alkyl shifts have a rigorous stereochemical requirement for the bond at the
-            migration origin to lie very close to the axis of the vacant p-orbital of the carbocationic centre. Whilst
-            acyclic systems can usually adopt the correct conformation for this alignment, this option may not be open
-            to cyclic systems.</span></p>
-    <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 554.00px; height: 171.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image13.png"
-                style="width: 554.00px; height: 171.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Pinacol Rearrangement</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c6">Treatment of 1,2 diols with acid, which converts them to carbonyls. The reaction can
-            also occur on </span><span class="c8 c6">&beta;</span><span class="c1">-aminoalcohols, halohydrins, epoxides
-            and allylic alcohols.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">It proceeds via a 1,2 alkyl shift, and the overall reaction is:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 339.20px; height: 54.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image12.png"
-                style="width: 339.20px; height: 54.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">Control can be exerted by conditions, e.g.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 66.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image15.png"
-                style="width: 370.00px; height: 66.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Tiffeneau-Demjanov Reaction</span></p>
-    <p class="c0"><span class="c6">Similar to the pinacol rearrangement, but via a </span><span
-            class="c8 c6">&beta;</span><span class="c1">-amino alcohol derivative. This specific reaction leads to one
-            carbon ring expansion, and is very useful for homologating cyclic ketones to give products containing 4-8
-            carbon atoms in the ring.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 366.00px; height: 68.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image14.png"
-                style="width: 366.00px; height: 68.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.20px; height: 134.47px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image17.png"
-                style="width: 352.20px; height: 134.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">This type of reaction can also occur with other suitable leaving groups, e.g.
-            bromohydrins.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Dienone-Phenol Rearrangement</span></p>
-    <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 557.00px; height: 119.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image16.png"
-                style="width: 557.00px; height: 119.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Hydride Shifts</span></p>
-    <p class="c0"><span class="c1">Less common than alkyl shifts, as the latter usually confers steric relief. 1,2-H
-            shifts are typically seen where steric requirements override this control.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">Particular examples include transannular hydride migrations, where H&rsquo;s move
-            over large distances in medium (C8-11) rings. This is possible as with these rings the H&rsquo;s can
-            actually be quite close to other parts of the ring, as shown:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 302.93px; height: 82.53px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image21.png"
-                style="width: 302.93px; height: 82.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">Such shifts were first noted when the acid catalysed opening of medium ring epoxides
-            was found to give only small amounts of the desired trans-1,2-diols.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 528.67px; height: 275.67px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image19.png"
-                style="width: 528.67px; height: 275.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c9 c7 c6">Nucleophilic Rearrangements to Carbon (involving carbenes and
-            carbanions)</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Favorskii Rearrangement</span></p>
-    <p class="c0"><span class="c6">Rearrangement of </span><span class="c6 c8">&alpha;</span><span
-            class="c1">-haloketones. Particularly useful for ring contraction. Labelling was useful in showing the
-            mechanism:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 486.67px; height: 141.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image26.png"
-                style="width: 486.67px; height: 141.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Ramberg-Backlund Rearrangement</span></p>
-    <p class="c0"><span class="c6">Another rearrangement via a cyclic intermediate, and refers to the base promoted
-            conversion of </span><span class="c8 c6">&alpha;</span><span class="c1">-halosulphones into alkenes.</span>
-    </p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 487.13px; height: 93.33px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image22.png"
-                style="width: 487.13px; height: 93.33px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Benzil-Benzilic Acid</span></p>
-    <p class="c11"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 553.13px; height: 228.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image24.png"
-                style="width: 553.13px; height: 228.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c3 c11"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Wolff Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 425.00px; height: 160.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image27.png"
-                style="width: 425.00px; height: 160.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">The ketene is usually attacked by an alcohol to give an ester.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Arndt-Eistert Reaction</span></p>
-    <p class="c0"><span class="c1">Modification of Wolff Rearrangement.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 451.00px; height: 36.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image29.png"
-                style="width: 451.00px; height: 36.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c9 c7 c6">Rearrangements to e-deficient N</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Beckmann</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 465.00px; height: 146.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image31.png"
-                style="width: 465.00px; height: 146.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c6">The most important point to remember here is that the R group </span><span
-            class="c9 c6">anti</span><span class="c6">&nbsp;to the oxime N-O bond is the one that migrates (i.e.
-            R</span><span class="c12">1</span><span class="c1">&nbsp;in the above), regardless of migratory
-            aptitudes.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c6">With certain substrates, particularly those in which one of the substituents on the
-            oxime is a tertiary alkyl group or possess a </span><span class="c8 c6">&beta;</span><span
-            class="c6">-heteroatom substituent, a nitrile may be formed by a fragmentation process instead of a
-            rearrangement. This is the </span><span class="c6 c7">Secondary Beckmann Reaction</span><span class="c1">,
-            and is a consequence of the enhanced stability of the carbocation produced under these circumstances.</span>
-    </p>
-    <p class="c0"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 554.00px; height: 113.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image32.png"
-                style="width: 554.00px; height: 113.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Neber Rearrangement</span></p>
-    <p class="c0"><span class="c6">Similar reagents to the Beckmann Rearrangement, except for the important distinction
-            that the Neber occurs in base, while the Beckmann is in acid. The key synthetic difference ins that there is
-            no dependence on stereochemistry of the oxime sulphonate, i.e. which substituent possesses the most acid
+<p class="c4"><span class="c7 c6 c15">Rearrangements Notes</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c9 c7 c6">Mechanistic Aspects of Rearrangements</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Nature of the Rearrangement</span></p>
+<p class="c0"><span class="c6">It can vary from being truly stepwise to migration occurring in concert with initial
+                ionisation. These two situations can be considered as intramolecular analogues of S</span><span
+                class="c12">N</span><span class="c14">1</span><span class="c6">&nbsp;and S</span><span
+                class="c12">N</span><span class="c14">2</span><span class="c1">&nbsp;respectively. Hence, it has
+                profound
+                stereochemical implications at both the migration origin and the terminus if the centres are chiral.
+                With
+                non-racemic substrates, the generation of a free carbocation at either the migration terminus or origin
+                will
+                result in loss of stereochemical integrity at that centre, whereas a concerted migration with no
+                intermediate will result in inversion of the absolute stereochemistry at the terminus.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Migratory Aptitude</span></p>
+<p class="c0"><span class="c1">This is the ease with which any particular group will undergo nucleophilic
+                1,2-shifts. It is related to electron donating capacity, but such values are not quantifiable as a
+                single
+                group will show different aptitudes for different reactions/conditions.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">Note that in some instances, for example the Beckmann Rearrangement, only one group
+                ever migrates regardless of the aptitude, simply because of stereoelectronic requirements for the
+                reaction.
+                Likewise, in for example the pinacol rearrangement, the most stable cation controls the reaction
+                pathway, as
+                opposed to the migrating group.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">A wide range of other factors, such as steric and conformational effects, play subtle
+                roles in determining whether a particular migration is favoured. Generally however, aryl groups migrate
+                more
+                readily than alkyl groups, and within the aryl series, e-donating substituents increase the propensity
+                for
+                migration. However, the position of hydrogen within this framework is highly unpredictable.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Neighbouring Group Participation (Anchimeric Assistance)</span></p>
+<p class="c0"><span class="c1">This is where a substituent is capable of stabilising an adjacent carbocation by
+                acting as an intramolecular nucleophile. More details in the Stereoelectronics Notes.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Non-classical Carbonium Ions</span></p>
+<p class="c0"><span class="c6">While alkyl groups do not usually undergo </span><span class="c8 c6">&sigma;</span><span
+                class="c6">-participation in acyclic or unstrained ring systems, there is
+                much evidence to suggest that this does occur in strained rings. The species formed contain a
+                two-electron,
+                three-centre bond and are known as &ldquo;non-classical carbonium ions&rdquo;. The most studied system
+                in
+                which </span><span class="c8 c6">&sigma;</span><span class="c1">-participation is envisaged to occur is
+                the
+                2-norbornyl system. It has been found that solvolysis of optically pure norbornyl 2-exo-brosylate in
+                acetic
+                acid gave a racemic exo-acetate as the sole product with no endo-material. Furthermore, it occurred 250
+                times faster.</span></p>
+<p class="c0"><span class="c1"><br>These results were interpreted as implying that the reaction of the exo-substrate
+                occurred solely via a non-classical carbonium ion, whilst the endo substrate reacted by initial
+                formation of
+                a classical carbenium ion which then rearranged to the non-classical carbonium ion, but not before a
+                small
+                amount had reacted with solvent, attack being sterically directed to the exo-face.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 402.93px; height: 202.73px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image11.png"
+                        style="width: 402.93px; height: 202.73px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c9 c7 c6">Carbocation Induced Alkyl and Hydride Shifts</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Wagner-Meerwein Shifts</span></p>
+<p class="c0"><span class="c1">These 1,2-alkyl shifts occur if it leads to the new carbocation being more stabilised
+                than the original. This is usually the case if the carbon adjacent to the positively charged centre is
+                secondary or tertiary. Subsequent elimination will then occur. Saytzeff&rsquo;s Rule is obeyed to give
+                the
+                most substituted alkene.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">1,2-alkyl shifts have a rigorous stereochemical requirement for the bond at the
+                migration origin to lie very close to the axis of the vacant p-orbital of the carbocationic centre.
+                Whilst
+                acyclic systems can usually adopt the correct conformation for this alignment, this option may not be
+                open
+                to cyclic systems.</span></p>
+<p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 554.00px; height: 171.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image13.png"
+                        style="width: 554.00px; height: 171.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Pinacol Rearrangement</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c6">Treatment of 1,2 diols with acid, which converts them to carbonyls. The reaction can
+                also occur on </span><span class="c8 c6">&beta;</span><span class="c1">-aminoalcohols, halohydrins,
+                epoxides
+                and allylic alcohols.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">It proceeds via a 1,2 alkyl shift, and the overall reaction is:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 339.20px; height: 54.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image12.png"
+                        style="width: 339.20px; height: 54.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">Control can be exerted by conditions, e.g.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 66.60px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image15.png"
+                        style="width: 370.00px; height: 66.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Tiffeneau-Demjanov Reaction</span></p>
+<p class="c0"><span class="c6">Similar to the pinacol rearrangement, but via a </span><span
+                class="c8 c6">&beta;</span><span class="c1">-amino alcohol derivative. This specific reaction leads to
+                one
+                carbon ring expansion, and is very useful for homologating cyclic ketones to give products containing
+                4-8
+                carbon atoms in the ring.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 366.00px; height: 68.20px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image14.png"
+                        style="width: 366.00px; height: 68.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.20px; height: 134.47px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image17.png"
+                        style="width: 352.20px; height: 134.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">This type of reaction can also occur with other suitable leaving groups, e.g.
+                bromohydrins.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Dienone-Phenol Rearrangement</span></p>
+<p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 557.00px; height: 119.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image16.png"
+                        style="width: 557.00px; height: 119.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Hydride Shifts</span></p>
+<p class="c0"><span class="c1">Less common than alkyl shifts, as the latter usually confers steric relief. 1,2-H
+                shifts are typically seen where steric requirements override this control.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">Particular examples include transannular hydride migrations, where H&rsquo;s move
+                over large distances in medium (C8-11) rings. This is possible as with these rings the H&rsquo;s can
+                actually be quite close to other parts of the ring, as shown:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 302.93px; height: 82.53px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image21.png"
+                        style="width: 302.93px; height: 82.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">Such shifts were first noted when the acid catalysed opening of medium ring epoxides
+                was found to give only small amounts of the desired trans-1,2-diols.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 528.67px; height: 275.67px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image19.png"
+                        style="width: 528.67px; height: 275.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c9 c7 c6">Nucleophilic Rearrangements to Carbon (involving carbenes and
+                carbanions)</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Favorskii Rearrangement</span></p>
+<p class="c0"><span class="c6">Rearrangement of </span><span class="c6 c8">&alpha;</span><span class="c1">-haloketones.
+                Particularly useful for ring contraction. Labelling was useful in showing the
+                mechanism:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 486.67px; height: 141.80px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image26.png"
+                        style="width: 486.67px; height: 141.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Ramberg-Backlund Rearrangement</span></p>
+<p class="c0"><span class="c6">Another rearrangement via a cyclic intermediate, and refers to the base promoted
+                conversion of </span><span class="c8 c6">&alpha;</span><span class="c1">-halosulphones into
+                alkenes.</span>
+</p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 487.13px; height: 93.33px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image22.png"
+                        style="width: 487.13px; height: 93.33px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Benzil-Benzilic Acid</span></p>
+<p class="c11"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 553.13px; height: 228.40px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image24.png"
+                        style="width: 553.13px; height: 228.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c3 c11"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Wolff Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 425.00px; height: 160.60px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image27.png"
+                        style="width: 425.00px; height: 160.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">The ketene is usually attacked by an alcohol to give an ester.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Arndt-Eistert Reaction</span></p>
+<p class="c0"><span class="c1">Modification of Wolff Rearrangement.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 451.00px; height: 36.07px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image29.png"
+                        style="width: 451.00px; height: 36.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c9 c7 c6">Rearrangements to e-deficient N</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Beckmann</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 465.00px; height: 146.93px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image31.png"
+                        style="width: 465.00px; height: 146.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c6">The most important point to remember here is that the R group </span><span
+                class="c9 c6">anti</span><span class="c6">&nbsp;to the oxime N-O bond is the one that migrates (i.e.
+                R</span><span class="c12">1</span><span class="c1">&nbsp;in the above), regardless of migratory
+                aptitudes.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c6">With certain substrates, particularly those in which one of the substituents on the
+                oxime is a tertiary alkyl group or possess a </span><span class="c8 c6">&beta;</span><span
+                class="c6">-heteroatom substituent, a nitrile may be formed by a fragmentation process instead of a
+                rearrangement. This is the </span><span class="c6 c7">Secondary Beckmann Reaction</span><span
+                class="c1">,
+                and is a consequence of the enhanced stability of the carbocation produced under these
+                circumstances.</span>
+</p>
+<p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 554.00px; height: 113.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image32.png"
+                        style="width: 554.00px; height: 113.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Neber Rearrangement</span></p>
+<p class="c0"><span class="c6">Similar reagents to the Beckmann Rearrangement, except for the important distinction
+                that the Neber occurs in base, while the Beckmann is in acid. The key synthetic difference ins that
+                there is
+                no dependence on stereochemistry of the oxime sulphonate, i.e. which substituent possesses the most acid
         </span><span class="c8 c6">&alpha;</span><span class="c1">-position migrates, not necessarily the anti
-            one.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 469.73px; height: 77.27px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image33.png"
-                style="width: 469.73px; height: 77.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Curtius Rearrangement</span></p>
-    <p class="c0"><span class="c1">Carboxylic acid to primary amine with one less carbon atom. Prepare
-            isocyanate:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 413.00px; height: 154.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image34.png"
-                style="width: 413.00px; height: 154.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">Hydrolysis:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 440.00px; height: 116.13px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image35.png"
-                style="width: 440.00px; height: 116.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Lossen Rearrangement</span></p>
-    <p class="c0"><span class="c1">Mechanistically very similar to Curtius Rearrangement. Difficult to obtain starting
-            material though, although only requires water to carry out. Base catalysed.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 475.00px; height: 59.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image36.png"
-                style="width: 475.00px; height: 59.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Schmidt Rearrangement</span></p>
-    <p class="c0"><span class="c1">Similar steps to Curtius above, although formation of acyl azide differs, being acid
-            catalysed:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 453.00px; height: 65.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image1.png"
-                style="width: 453.00px; height: 65.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Hofmann Rearrangement</span></p>
-    <p class="c0"><span class="c1">Similar net result to the above 3 rearrangements, but the formation of the isocyanate
-            again differs.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 458.00px; height: 64.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image2.png"
-                style="width: 458.00px; height: 64.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Stieglitz Rearrangement</span></p>
-    <p class="c0"><span class="c1">Nucleophilic migration from carbon to nitrogen.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 474.27px; height: 118.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image3.png"
-                style="width: 474.27px; height: 118.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c9 c7 c6">Rearrangements to e-deficient O</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Baeyer-Villiger Rearrangement</span></p>
-    <p class="c0"><span class="c1">This is a rearrangement to electron deficient oxygen. Converts ketones to esters, and
-            cyclic ketones to lactones.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 436.53px; height: 190.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image4.png"
-                style="width: 436.53px; height: 190.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Dakin Reaction</span></p>
-    <p class="c0"><span class="c1">Aromatic aldehydes and ketones possessing a hydroxyl or amino group in either the
-            ortho or para position can be converted to phenols on treatment with alkaline hydrogen peroxide.
-            Mechanistically similar to Baeyer-Villiger.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 518.93px; height: 120.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image5.png"
-                style="width: 518.93px; height: 120.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c7 c6 c9">Electrophilic Rearrangements</span></p>
-    <p class="c0 c3"><span class="c2"></span></p>
-    <p class="c0"><span class="c5">Stevens</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 444.53px; height: 168.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image6.png"
-                style="width: 444.53px; height: 168.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Sommelet-Hauser Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 471.80px; height: 183.53px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image7.png"
-                style="width: 471.80px; height: 183.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Meisenheimer Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 422.93px; height: 178.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image8.png"
-                style="width: 422.93px; height: 178.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c6">Similar to the two preceding reactions. Tertiary N-Oxide undergoes thermal
-            rearrangement, where the migrating group is usually benzylic or allylic. If any of the groups possess a
+                one.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 469.73px; height: 77.27px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image33.png"
+                        style="width: 469.73px; height: 77.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Curtius Rearrangement</span></p>
+<p class="c0"><span class="c1">Carboxylic acid to primary amine with one less carbon atom. Prepare
+                isocyanate:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 413.00px; height: 154.40px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image34.png"
+                        style="width: 413.00px; height: 154.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">Hydrolysis:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 440.00px; height: 116.13px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image35.png"
+                        style="width: 440.00px; height: 116.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Lossen Rearrangement</span></p>
+<p class="c0"><span class="c1">Mechanistically very similar to Curtius Rearrangement. Difficult to obtain starting
+                material though, although only requires water to carry out. Base catalysed.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 475.00px; height: 59.80px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image36.png"
+                        style="width: 475.00px; height: 59.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Schmidt Rearrangement</span></p>
+<p class="c0"><span class="c1">Similar steps to Curtius above, although formation of acyl azide differs, being acid
+                catalysed:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 453.00px; height: 65.20px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image1.png"
+                        style="width: 453.00px; height: 65.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Hofmann Rearrangement</span></p>
+<p class="c0"><span class="c1">Similar net result to the above 3 rearrangements, but the formation of the isocyanate
+                again differs.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 458.00px; height: 64.07px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image2.png"
+                        style="width: 458.00px; height: 64.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Stieglitz Rearrangement</span></p>
+<p class="c0"><span class="c1">Nucleophilic migration from carbon to nitrogen.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 474.27px; height: 118.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image3.png"
+                        style="width: 474.27px; height: 118.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c9 c7 c6">Rearrangements to e-deficient O</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Baeyer-Villiger Rearrangement</span></p>
+<p class="c0"><span class="c1">This is a rearrangement to electron deficient oxygen. Converts ketones to esters, and
+                cyclic ketones to lactones.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 436.53px; height: 190.93px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image4.png"
+                        style="width: 436.53px; height: 190.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Dakin Reaction</span></p>
+<p class="c0"><span class="c1">Aromatic aldehydes and ketones possessing a hydroxyl or amino group in either the
+                ortho or para position can be converted to phenols on treatment with alkaline hydrogen peroxide.
+                Mechanistically similar to Baeyer-Villiger.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 518.93px; height: 120.20px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image5.png"
+                        style="width: 518.93px; height: 120.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c7 c6 c9">Electrophilic Rearrangements</span></p>
+<p class="c0 c3"><span class="c2"></span></p>
+<p class="c0"><span class="c5">Stevens</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 444.53px; height: 168.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image6.png"
+                        style="width: 444.53px; height: 168.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Sommelet-Hauser Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 471.80px; height: 183.53px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image7.png"
+                        style="width: 471.80px; height: 183.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Meisenheimer Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 422.93px; height: 178.93px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image8.png"
+                        style="width: 422.93px; height: 178.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c6">Similar to the two preceding reactions. Tertiary N-Oxide undergoes thermal
+                rearrangement, where the migrating group is usually benzylic or allylic. If any of the groups possess a
         </span><span class="c8 c6">&beta;</span><span class="c1">-hydrogen, Cope elimination predominates, limiting the
-            synthetic utility of this rearrangement.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Wittig Rearrangement</span></p>
-    <p class="c0"><span class="c1">Analogous to the Stevens Rearrangement above, but Oxygen instead of Nitrogen. It also
-            requires stronger bases than Stevens.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 431.20px; height: 99.53px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image9.png"
-                style="width: 431.20px; height: 99.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c5">Smiles Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.93px; height: 101.87px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image10.png"
-                style="width: 373.93px; height: 101.87px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 478.07px; height: 158.47px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image18.png"
-                style="width: 478.07px; height: 158.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Carbon to Carbon Electrophilic Migration</span></p>
-    <p class="c0"><span class="c1">Note that these are far rarer than the carbocation induced nucleophilic migrations
-            encountered earlier. Requires exceptional circumstances of steric and electronic effects in
-            combination.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">It is known to occur in metallation of triaryl-2-haloalkanes, e.g.</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 401.73px; height: 148.53px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image20.png"
-                style="width: 401.73px; height: 148.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c9 c7 c6">Acid Catalysed Aromatic Rearrangements</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Jacobsen Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.20px; height: 162.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image23.png"
-                style="width: 375.20px; height: 162.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">Note that the product above can be desulphonated (by reversing the first step), such
-            that the Me groups have been rearranged. The reaction is driven to the point where the most stable arenium
-            ion is formed.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Fries Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 442.80px; height: 147.27px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image25.png"
-                style="width: 442.80px; height: 147.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">Note the temperature control of the products. The mechanism is not well understood
-            with regards to whether it is inter or intramolecular migration.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c1">Note that there are similar reactions which involve the migration of the R group from
-            an aryl ether, and similarly the R group from an alkylarylamine. Both lack stereochemical control
-            though.</span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0"><span class="c5">Benzidine Rearrangement</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 437.00px; height: 90.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image28.png"
-                style="width: 437.00px; height: 90.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c1">The mechanism for this is:</span></p>
-    <p class="c4"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 504.93px; height: 88.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image30.png"
-                style="width: 504.93px; height: 88.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
-    <p class="c0 c3"><span class="c1"></span></p>
+                synthetic utility of this rearrangement.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Wittig Rearrangement</span></p>
+<p class="c0"><span class="c1">Analogous to the Stevens Rearrangement above, but Oxygen instead of Nitrogen. It also
+                requires stronger bases than Stevens.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 431.20px; height: 99.53px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image9.png"
+                        style="width: 431.20px; height: 99.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c5">Smiles Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.93px; height: 101.87px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image10.png"
+                        style="width: 373.93px; height: 101.87px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 478.07px; height: 158.47px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image18.png"
+                        style="width: 478.07px; height: 158.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Carbon to Carbon Electrophilic Migration</span></p>
+<p class="c0"><span class="c1">Note that these are far rarer than the carbocation induced nucleophilic migrations
+                encountered earlier. Requires exceptional circumstances of steric and electronic effects in
+                combination.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">It is known to occur in metallation of triaryl-2-haloalkanes, e.g.</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 401.73px; height: 148.53px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image20.png"
+                        style="width: 401.73px; height: 148.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c9 c7 c6">Acid Catalysed Aromatic Rearrangements</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Jacobsen Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.20px; height: 162.20px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image23.png"
+                        style="width: 375.20px; height: 162.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">Note that the product above can be desulphonated (by reversing the first step), such
+                that the Me groups have been rearranged. The reaction is driven to the point where the most stable
+                arenium
+                ion is formed.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Fries Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 442.80px; height: 147.27px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image25.png"
+                        style="width: 442.80px; height: 147.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">Note the temperature control of the products. The mechanism is not well understood
+                with regards to whether it is inter or intramolecular migration.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c1">Note that there are similar reactions which involve the migration of the R group from
+                an aryl ether, and similarly the R group from an alkylarylamine. Both lack stereochemical control
+                though.</span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0"><span class="c5">Benzidine Rearrangement</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 437.00px; height: 90.00px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image28.png"
+                        style="width: 437.00px; height: 90.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0"><span class="c1">The mechanism for this is:</span></p>
+<p class="c4"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 504.93px; height: 88.07px;"><img
+                        alt=""
+                        src="https://storage.googleapis.com/alchemyst-assets/docs/organic/rearrangements/image30.png"
+                        style="width: 504.93px; height: 88.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0 c3"><span class="c1"></span></p>
+<p class="c0 c3"><span class="c1"></span></p>

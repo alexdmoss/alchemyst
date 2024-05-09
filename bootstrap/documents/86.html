@@ -1,586 +1,461 @@
-    <style type="text/css">
-        @import url(https://themes.googleusercontent.com/fonts/css?kit=SHJk2CZThnuTXOvq3WlzwLpbaDmv7z6nKiz_at3-V8U);
+<style type="text/css">
+    @import url(https://themes.googleusercontent.com/fonts/css?kit=SHJk2CZThnuTXOvq3WlzwLpbaDmv7z6nKiz_at3-V8U);
 
-        ol {
-            margin: 0;
-            padding: 0
-        }
+    ol {
+        margin: 0;
+        padding: 0
+    }
 
-        table td,
-        table th {
-            padding: 0
-        }
+    table td,
+    table th {
+        padding: 0
+    }
 
-        .c2 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            vertical-align: baseline;
-            text-decoration-skip-ink: none;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
-        }
+    .c2 {
+        -webkit-text-decoration-skip: none;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: underline;
+        vertical-align: baseline;
+        text-decoration-skip-ink: none;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
 
-        .c17 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 16pt;
-            font-family: "Arial";
-            font-style: normal
-        }
+    .c17 {
+        -webkit-text-decoration-skip: none;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-size: 16pt;
+        font-family: "Arial";
+        font-style: normal
+    }
 
-        .c6 {
-            -webkit-text-decoration-skip: none;
-            color: #000000;
-            font-weight: 400;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 11pt;
-            font-family: "Noto Sans Symbols";
-            font-style: normal
-        }
+    .c6 {
+        -webkit-text-decoration-skip: none;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-size: 11pt;
+        font-family: "Noto Sans Symbols";
+        font-style: normal
+    }
 
-        .c1 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: justify;
-            height: 11pt
-        }
+    .c1 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: justify;
+        height: 11pt
+    }
 
-        .c0 {
-            color: #000000;
-            font-weight: 400;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
-        }
+    .c0 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
 
-        .c4 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: center;
-            height: 11pt
-        }
+    .c4 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: center;
+        height: 11pt
+    }
 
-        .c5 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: justify
-        }
+    .c5 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
 
-        .c8 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: center
-        }
+    .c8 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
 
-        .c15 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
+    .c15 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
 
-        .c7 {
-            -webkit-text-decoration-skip: none;
-            font-weight: 700;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-style: italic
-        }
+    .c7 {
+        -webkit-text-decoration-skip: none;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-style: italic
+    }
 
-        .c11 {
-            -webkit-text-decoration-skip: none;
-            font-weight: 700;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            font-size: 16pt
-        }
+    .c11 {
+        -webkit-text-decoration-skip: none;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-size: 16pt
+    }
 
-        .c9 {
-            text-decoration-skip-ink: none;
-            -webkit-text-decoration-skip: none;
-            font-style: italic;
-            text-decoration: underline
-        }
+    .c9 {
+        text-decoration-skip-ink: none;
+        -webkit-text-decoration-skip: none;
+        font-style: italic;
+        text-decoration: underline
+    }
 
-        .c18 {
-            -webkit-text-decoration-skip: none;
-            text-decoration: underline;
-            text-decoration-skip-ink: none
-        }
+    .c18 {
+        -webkit-text-decoration-skip: none;
+        text-decoration: underline;
+        text-decoration-skip-ink: none
+    }
 
-        .c10 {
-            background-color: #ffffff;
-            max-width: 415.3pt;
-            padding: 72pt 90pt 72pt 90pt
-        }
+    .c10 {
+        background-color: #ffffff;
+        max-width: 415.3pt;
+        padding: 72pt 90pt 72pt 90pt
+    }
 
-        .c16 {
-            font-family: "Noto Sans Symbols";
-            font-weight: 400
-        }
+    .c16 {
+        font-family: "Noto Sans Symbols";
+        font-weight: 400
+    }
 
-        .c12 {
-            font-weight: 700
-        }
+    .c12 {
+        font-weight: 700
+    }
 
-        .c14 {
-            vertical-align: super
-        }
+    .c14 {
+        vertical-align: super
+    }
 
-        .c3 {
-            vertical-align: baseline
-        }
+    .c3 {
+        vertical-align: baseline
+    }
 
-        .c13 {
-            vertical-align: sub
-        }
+    .c13 {
+        vertical-align: sub
+    }
+</style>
 
-        .title {
-            padding-top: 24pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 36pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .subtitle {
-            padding-top: 18pt;
-            color: #666666;
-            font-size: 24pt;
-            padding-bottom: 4pt;
-            font-family: "Georgia";
-            line-height: 1.0;
-            page-break-after: avoid;
-            font-style: italic;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        li {
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        p {
-            margin: 0;
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        h1 {
-            padding-top: 24pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 24pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h2 {
-            padding-top: 18pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 18pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h3 {
-            padding-top: 14pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 14pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h4 {
-            padding-top: 12pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 12pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h5 {
-            padding-top: 11pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 11pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h6 {
-            padding-top: 10pt;
-            color: #000000;
-            font-weight: 700;
-            font-size: 10pt;
-            padding-bottom: 2pt;
-            font-family: "Arial";
-            line-height: 1.0;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-    </style>
-
-    <p class="c8"><span class="c3 c11">Reactive Intermediates Notes</span></p>
-    <p class="c1"><span class="c2"></span></p>
-    <p class="c8"><span class="c7 c3">Carbenes</span></p>
-    <p class="c1"><span class="c2"></span></p>
-    <p class="c5"><span class="c3">These are neutral, divalent, highly reactive carbon intermediates. The two
-            non-bonding electrons can be arranged parallel or spin-paired. Spin-paired show both electrons an
-            sp</span><span class="c14">2</span><span class="c3">&nbsp;orbital, leaving the p orbital vacant. This is the
-            singlet state. The triplet state shows both electrons with parallel spins and leaves one electron in an
-            sp</span><span class="c14">2</span><span class="c0">&nbsp;orbital and the other in a p orbital, and this is
-            the triplet state.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c9 c3">Structure &ndash;</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 363.47px; height: 71.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image11.png"
-                style="width: 363.47px; height: 71.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Evidence of this is provided by UV, IR, and particularly ESR.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c3 c9">Stability &ndash;</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 357.93px; height: 79.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image13.png"
-                style="width: 357.93px; height: 79.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c9 c3">Generation &ndash;</span></p>
-    <p class="c5"><span class="c0">There are several methods for generation of carbenes, which are listed below.</span>
-    </p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 343.00px; height: 491.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image12.png"
-                style="width: 343.00px; height: 491.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c3">The most common method is </span><span class="c3 c16">&alpha;</span><span
-            class="c0">-elimination. This can be modified to generate carbenoids:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 377.00px; height: 61.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image15.png"
-                style="width: 377.00px; height: 61.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Carbenes undergo many reactions.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c9 c3">Cycloaddition &ndash; </span></p>
-    <p class="c5"><span class="c0">1,2-addition of carbenes to alkenes to form cyclopropanes. This is basically addition
-            to a double bond.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">The Skell Hypothesis states that a singlet carbene can add to a double bond in a
-            single step and is stereospecific, while the triplet carbene cannot since it is spin forbidden:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 301.00px; height: 237.73px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image14.png"
-                style="width: 301.00px; height: 237.73px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">It should also be noted that in addition to allenes, the singlet carbene will add at
-            the more substituted double bond, while triplet at the less substituted.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Carbenes will also add to alkynes (although less readily, since alkynes are less
-            nucleophilic than alkenes), and to arenes. The latter generates a 7-membered ring with 3 double
-            bonds:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 289.00px; height: 47.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image17.png"
-                style="width: 289.00px; height: 47.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">A similar molecule could be attacked by carbenes itself, e.g.</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 264.00px; height: 108.87px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image16.png"
-                style="width: 264.00px; height: 108.87px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">One particular mechanism is the Riemer-Tiemann Reaction:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 50.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image21.png"
-                style="width: 372.00px; height: 50.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c9 c3">Insertion &ndash;</span></p>
-    <p class="c5"><span class="c0">Characteristic reaction of carbenes to insert into a single bond, often C-H. Again
-            two mechanisms can be conceived depending on spin:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 300.00px; height: 90.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image19.png"
-                style="width: 300.00px; height: 90.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">This is often termed hydrogen abstraction as well.</span></p>
-    <p class="c5"><span class="c0">It only occurs with very reactive carbenes, and often shows poor
-            regioselectivity.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c9 c3">Rearrangement &ndash;</span></p>
-    <p class="c5"><span class="c0">The vacant p-orbital allows for easy rearrangement to occur in a similar way to
-            Carbocations:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 246.87px; height: 35.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image26.png"
-                style="width: 246.87px; height: 35.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">This is very fast. R is usually a H (C-C is very rare).</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Wolff Rearrangement of diazoketones to ketenes is a famous mechanism, and occurs
-            as:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 283.00px; height: 79.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image22.png"
-                style="width: 283.00px; height: 79.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">The Eschenmoser Rearrangement also involves carbenes:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 256.27px; height: 55.67px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image24.png"
-                style="width: 256.27px; height: 55.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c9 c3">Reaction with Nucleophiles &ndash;</span></p>
-    <p class="c5"><span class="c0">Common since carbenes are very electron deficient.</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 299.53px; height: 201.80px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image27.png"
-                style="width: 299.53px; height: 201.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c9 c3">Carbenoids</span></p>
-    <p class="c5"><span class="c0">Similar to carbenes, but involve a metal bonded to the carbene. Some of their
-            reactions include:</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c2">Metal Catalysed Reaction of Diazo Compounds with Alkenes</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 414.27px; height: 116.13px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image28.png"
-                style="width: 414.27px; height: 116.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c1"><span class="c3 c6"></span></p>
-    <p class="c1"><span class="c6 c3"></span></p>
-    <p class="c5"><span class="c16 c3 c18">&alpha;</span><span class="c2">-halo-organometallics</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.13px; height: 81.53px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image29.png"
-                style="width: 369.13px; height: 81.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c2">Simmons-Smith Cyclopropanation</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 341.20px; height: 190.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image30.png"
-                style="width: 341.20px; height: 190.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c5"><span class="c7 c3">Nitrenes</span></p>
-    <p class="c5"><span class="c0">Six-electron, neutral, monovalent, highly reactive intermediates. The N atom has 4
-            non-bonded electrons. There are triplet and singlet states, as for carbenes.</span></p>
-    <p class="c5"><span class="c3">They are isoelectronic with carbenes, but have 6 </span><span
-            class="c16 c3">&pi;</span><span class="c0">&nbsp;electrons instead. Similar chemistry is seen, although on
-            the whole they are more reactive.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c9 c3">Structure &ndash;</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.47px; height: 76.13px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image31.png"
-                style="width: 400.47px; height: 76.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c9 c3">Generation &ndash;</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 350.53px; height: 386.93px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image32.png"
-                style="width: 350.53px; height: 386.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">They undergo the same sort of reactions as carbenes, and often with the same
-            mechanisms, although obviously generating C-N bonds instead.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c9 c3">Some reactions:</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c3 c12">Addition to C=C</span><span class="c0">&nbsp;(as for carbenes). Have to watch for
-            competing 1,3-dipolar cycloaddition with azides.</span></p>
-    <p class="c5"><span class="c12 c3">Insertion</span><span class="c0">&nbsp;(as for carbenes).</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 268.53px; height: 153.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image33.png"
-                style="width: 268.53px; height: 153.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c9 c3">Rearrangements &ndash;</span></p>
-    <p class="c5"><span class="c0">1,2-shift (as for carbenes).</span></p>
-    <p class="c5"><span class="c0">Acyl azide &ndash; concerted with nitrene formation.</span></p>
-    <p class="c5"><span class="c3">Under heat </span><span class="c3">&#129146; </span><span class="c12 c3">no
-        </span><span class="c0">acylnitrene.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 476.00px; height: 105.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image34.png"
-                style="width: 476.00px; height: 105.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 478.60px; height: 83.07px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image1.png"
-                style="width: 478.60px; height: 83.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">One other particular reaction that they are useful for is ring closure:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 365.00px; height: 127.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image2.png"
-                style="width: 365.00px; height: 127.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c2">Rearrangements Involving Nitrene Intermediates</span></p>
-    <p class="c1"><span class="c2"></span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 481.47px; height: 75.47px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image3.png"
-                style="width: 481.47px; height: 75.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c5"><span class="c2">Rearrangements Which Probably do not involve Nitrene Intermediates</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 456.47px; height: 329.60px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image4.png"
-                style="width: 456.47px; height: 329.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c1"><span class="c2"></span></p>
-    <p class="c5"><span class="c2">Other Rearrangements involving Electron Deficient Nitrogen</span></p>
-    <p class="c1"><span class="c2"></span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.47px; height: 126.00px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image5.png"
-                style="width: 400.47px; height: 126.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c3 c7">Arynes</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Ortho-benzyne can take either singlet or triplet diradical structures, but is typical
-            drawn as a simple Lewis structure:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.80px; height: 93.67px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image6.png"
-                style="width: 375.80px; height: 93.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Most of the chemistry follows the alkyne structure, as opposed to the singlet or
-            triplet diradical. It can be stabilised by complexing to transition metals.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Meta and Para benzynes are also known, although these require the diradical form. A
-            classic reaction of para-benzyne is the Bergman Cyclisation:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 214.20px; height: 158.27px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image7.png"
-                style="width: 214.20px; height: 158.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">There are a number of methods of generating Arynes. Some of these are:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 409.00px; height: 288.27px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image8.png"
-                style="width: 409.00px; height: 288.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Aryl anions typically require abstraction of a halide from the benzene ring. A strong
-            base will be present.</span></p>
-    <p class="c5"><span class="c3">Zwitterions usually involve the loss of N</span><span class="c13">2</span><span
-            class="c3">&nbsp;via attack by NH</span><span class="c13">2</span><span class="c0">&nbsp;on HONO or
-            similar:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 404.00px; height: 63.20px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image9.png"
-                style="width: 404.00px; height: 63.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c3">Fragmentation is thermodynamically favourable if the fragments are highly stable,
-            e.g. CO</span><span class="c13">2</span><span class="c3">&nbsp;or N</span><span class="c13">2</span><span
-            class="c0">&nbsp;formed. This also applies for oxidative fragmentation, as in:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.00px; height: 58.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image10.png"
-                style="width: 352.00px; height: 58.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">In terms of reactivity, Arynes are actually electron-deficient and highly
-            electrophilic as a result. They are classed as &ldquo;soft&rdquo; due to low lying LUMOs and highly
-            polarisable orbitals.</span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">They react as: </span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 328.13px; height: 86.13px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image18.png"
-                style="width: 328.13px; height: 86.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">They also react in cycloaddition reactions, although this requires the absence of any
-            nucleophiles because the reaction above is extremely facile. This reactions such as Diels-Alder can be
-            observed. They will also react with alkenes in a similar way:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 316.00px; height: 150.40px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image20.png"
-                style="width: 316.00px; height: 150.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c1"><span class="c0"></span></p>
-    <p class="c5"><span class="c0">Of further note, 1,3-dipolar cycloaddition is evident:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 252.00px; height: 189.47px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image23.png"
-                style="width: 252.00px; height: 189.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5"><span class="c0">Also the ene reaction:</span></p>
-    <p class="c8"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 236.87px; height: 48.13px;"><img
-                alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image25.png"
-                style="width: 236.87px; height: 48.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c1"><span class="c0"></span></p>
+<p class="c8"><span class="c3 c11">Reactive Intermediates Notes</span></p>
+<p class="c1"><span class="c2"></span></p>
+<p class="c8"><span class="c7 c3">Carbenes</span></p>
+<p class="c1"><span class="c2"></span></p>
+<p class="c5"><span class="c3">These are neutral, divalent, highly reactive carbon intermediates. The two
+        non-bonding electrons can be arranged parallel or spin-paired. Spin-paired show both electrons an
+        sp</span><span class="c14">2</span><span class="c3">&nbsp;orbital, leaving the p orbital vacant. This is the
+        singlet state. The triplet state shows both electrons with parallel spins and leaves one electron in an
+        sp</span><span class="c14">2</span><span class="c0">&nbsp;orbital and the other in a p orbital, and this is
+        the triplet state.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c9 c3">Structure &ndash;</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 363.47px; height: 71.07px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image11.png"
+            style="width: 363.47px; height: 71.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Evidence of this is provided by UV, IR, and particularly ESR.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c3 c9">Stability &ndash;</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 357.93px; height: 79.40px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image13.png"
+            style="width: 357.93px; height: 79.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c9 c3">Generation &ndash;</span></p>
+<p class="c5"><span class="c0">There are several methods for generation of carbenes, which are listed below.</span>
+</p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 343.00px; height: 491.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image12.png"
+            style="width: 343.00px; height: 491.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c3">The most common method is </span><span class="c3 c16">&alpha;</span><span
+        class="c0">-elimination. This can be modified to generate carbenoids:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 377.00px; height: 61.80px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image15.png"
+            style="width: 377.00px; height: 61.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Carbenes undergo many reactions.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c9 c3">Cycloaddition &ndash; </span></p>
+<p class="c5"><span class="c0">1,2-addition of carbenes to alkenes to form cyclopropanes. This is basically addition
+        to a double bond.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">The Skell Hypothesis states that a singlet carbene can add to a double bond in a
+        single step and is stereospecific, while the triplet carbene cannot since it is spin forbidden:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 301.00px; height: 237.73px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image14.png"
+            style="width: 301.00px; height: 237.73px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">It should also be noted that in addition to allenes, the singlet carbene will add at
+        the more substituted double bond, while triplet at the less substituted.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Carbenes will also add to alkynes (although less readily, since alkynes are less
+        nucleophilic than alkenes), and to arenes. The latter generates a 7-membered ring with 3 double
+        bonds:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 289.00px; height: 47.93px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image17.png"
+            style="width: 289.00px; height: 47.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">A similar molecule could be attacked by carbenes itself, e.g.</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 264.00px; height: 108.87px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image16.png"
+            style="width: 264.00px; height: 108.87px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">One particular mechanism is the Riemer-Tiemann Reaction:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 50.93px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image21.png"
+            style="width: 372.00px; height: 50.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c9 c3">Insertion &ndash;</span></p>
+<p class="c5"><span class="c0">Characteristic reaction of carbenes to insert into a single bond, often C-H. Again
+        two mechanisms can be conceived depending on spin:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 300.00px; height: 90.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image19.png"
+            style="width: 300.00px; height: 90.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">This is often termed hydrogen abstraction as well.</span></p>
+<p class="c5"><span class="c0">It only occurs with very reactive carbenes, and often shows poor
+        regioselectivity.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c9 c3">Rearrangement &ndash;</span></p>
+<p class="c5"><span class="c0">The vacant p-orbital allows for easy rearrangement to occur in a similar way to
+        Carbocations:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 246.87px; height: 35.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image26.png"
+            style="width: 246.87px; height: 35.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">This is very fast. R is usually a H (C-C is very rare).</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Wolff Rearrangement of diazoketones to ketenes is a famous mechanism, and occurs
+        as:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 283.00px; height: 79.80px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image22.png"
+            style="width: 283.00px; height: 79.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">The Eschenmoser Rearrangement also involves carbenes:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 256.27px; height: 55.67px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image24.png"
+            style="width: 256.27px; height: 55.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c9 c3">Reaction with Nucleophiles &ndash;</span></p>
+<p class="c5"><span class="c0">Common since carbenes are very electron deficient.</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 299.53px; height: 201.80px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image27.png"
+            style="width: 299.53px; height: 201.80px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c9 c3">Carbenoids</span></p>
+<p class="c5"><span class="c0">Similar to carbenes, but involve a metal bonded to the carbene. Some of their
+        reactions include:</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c2">Metal Catalysed Reaction of Diazo Compounds with Alkenes</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 414.27px; height: 116.13px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image28.png"
+            style="width: 414.27px; height: 116.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c1"><span class="c3 c6"></span></p>
+<p class="c1"><span class="c6 c3"></span></p>
+<p class="c5"><span class="c16 c3 c18">&alpha;</span><span class="c2">-halo-organometallics</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.13px; height: 81.53px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image29.png"
+            style="width: 369.13px; height: 81.53px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c2">Simmons-Smith Cyclopropanation</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 341.20px; height: 190.07px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image30.png"
+            style="width: 341.20px; height: 190.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c4"><span class="c0"></span></p>
+<p class="c5"><span class="c7 c3">Nitrenes</span></p>
+<p class="c5"><span class="c0">Six-electron, neutral, monovalent, highly reactive intermediates. The N atom has 4
+        non-bonded electrons. There are triplet and singlet states, as for carbenes.</span></p>
+<p class="c5"><span class="c3">They are isoelectronic with carbenes, but have 6 </span><span
+        class="c16 c3">&pi;</span><span class="c0">&nbsp;electrons instead. Similar chemistry is seen, although on
+        the whole they are more reactive.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c9 c3">Structure &ndash;</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.47px; height: 76.13px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image31.png"
+            style="width: 400.47px; height: 76.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c9 c3">Generation &ndash;</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 350.53px; height: 386.93px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image32.png"
+            style="width: 350.53px; height: 386.93px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">They undergo the same sort of reactions as carbenes, and often with the same
+        mechanisms, although obviously generating C-N bonds instead.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c9 c3">Some reactions:</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c3 c12">Addition to C=C</span><span class="c0">&nbsp;(as for carbenes). Have to watch for
+        competing 1,3-dipolar cycloaddition with azides.</span></p>
+<p class="c5"><span class="c12 c3">Insertion</span><span class="c0">&nbsp;(as for carbenes).</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 268.53px; height: 153.07px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image33.png"
+            style="width: 268.53px; height: 153.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c9 c3">Rearrangements &ndash;</span></p>
+<p class="c5"><span class="c0">1,2-shift (as for carbenes).</span></p>
+<p class="c5"><span class="c0">Acyl azide &ndash; concerted with nitrene formation.</span></p>
+<p class="c5"><span class="c3">Under heat </span><span class="c3">&#129146; </span><span class="c12 c3">no
+    </span><span class="c0">acylnitrene.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 476.00px; height: 105.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image34.png"
+            style="width: 476.00px; height: 105.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 478.60px; height: 83.07px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image1.png"
+            style="width: 478.60px; height: 83.07px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">One other particular reaction that they are useful for is ring closure:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 365.00px; height: 127.40px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image2.png"
+            style="width: 365.00px; height: 127.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c2">Rearrangements Involving Nitrene Intermediates</span></p>
+<p class="c1"><span class="c2"></span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 481.47px; height: 75.47px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image3.png"
+            style="width: 481.47px; height: 75.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c4"><span class="c0"></span></p>
+<p class="c4"><span class="c0"></span></p>
+<p class="c4"><span class="c0"></span></p>
+<p class="c4"><span class="c0"></span></p>
+<p class="c4"><span class="c0"></span></p>
+<p class="c5"><span class="c2">Rearrangements Which Probably do not involve Nitrene Intermediates</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 456.47px; height: 329.60px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image4.png"
+            style="width: 456.47px; height: 329.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c1"><span class="c2"></span></p>
+<p class="c5"><span class="c2">Other Rearrangements involving Electron Deficient Nitrogen</span></p>
+<p class="c1"><span class="c2"></span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 400.47px; height: 126.00px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image5.png"
+            style="width: 400.47px; height: 126.00px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c3 c7">Arynes</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Ortho-benzyne can take either singlet or triplet diradical structures, but is typical
+        drawn as a simple Lewis structure:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.80px; height: 93.67px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image6.png"
+            style="width: 375.80px; height: 93.67px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Most of the chemistry follows the alkyne structure, as opposed to the singlet or
+        triplet diradical. It can be stabilised by complexing to transition metals.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Meta and Para benzynes are also known, although these require the diradical form. A
+        classic reaction of para-benzyne is the Bergman Cyclisation:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 214.20px; height: 158.27px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image7.png"
+            style="width: 214.20px; height: 158.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">There are a number of methods of generating Arynes. Some of these are:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 409.00px; height: 288.27px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image8.png"
+            style="width: 409.00px; height: 288.27px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Aryl anions typically require abstraction of a halide from the benzene ring. A strong
+        base will be present.</span></p>
+<p class="c5"><span class="c3">Zwitterions usually involve the loss of N</span><span class="c13">2</span><span
+        class="c3">&nbsp;via attack by NH</span><span class="c13">2</span><span class="c0">&nbsp;on HONO or
+        similar:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 404.00px; height: 63.20px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image9.png"
+            style="width: 404.00px; height: 63.20px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c3">Fragmentation is thermodynamically favourable if the fragments are highly stable,
+        e.g. CO</span><span class="c13">2</span><span class="c3">&nbsp;or N</span><span class="c13">2</span><span
+        class="c0">&nbsp;formed. This also applies for oxidative fragmentation, as in:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.00px; height: 58.40px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image10.png"
+            style="width: 352.00px; height: 58.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">In terms of reactivity, Arynes are actually electron-deficient and highly
+        electrophilic as a result. They are classed as &ldquo;soft&rdquo; due to low lying LUMOs and highly
+        polarisable orbitals.</span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">They react as: </span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 328.13px; height: 86.13px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image18.png"
+            style="width: 328.13px; height: 86.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">They also react in cycloaddition reactions, although this requires the absence of any
+        nucleophiles because the reaction above is extremely facile. This reactions such as Diels-Alder can be
+        observed. They will also react with alkenes in a similar way:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 316.00px; height: 150.40px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image20.png"
+            style="width: 316.00px; height: 150.40px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c1"><span class="c0"></span></p>
+<p class="c5"><span class="c0">Of further note, 1,3-dipolar cycloaddition is evident:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 252.00px; height: 189.47px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image23.png"
+            style="width: 252.00px; height: 189.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c5"><span class="c0">Also the ene reaction:</span></p>
+<p class="c8"><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 236.87px; height: 48.13px;"><img
+            alt="" src="https://storage.googleapis.com/alchemyst-assets/docs/organic/intermediates/image25.png"
+            style="width: 236.87px; height: 48.13px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+<p class="c1"><span class="c0"></span></p>
