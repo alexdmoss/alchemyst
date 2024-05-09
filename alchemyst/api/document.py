@@ -2,6 +2,7 @@ from os import getenv
 
 from alchemyst.api.datastore import get_entity
 from alchemyst.model.document import Document
+from alchemyst import app
 
 
 def get_document(id):
@@ -15,6 +16,7 @@ def get_document(id):
     if doc.data is not None:
         return doc.data
     else:
+        app.logger.error(f"Attempt made to load document which has not been converted to HTML. Doc ID was {id}")
         return '''<div class='centered'><div class='error'>
         Sorry, but the HTML version wasn't found, or hasn't been converted yet.
         You can still download it using the above link!
