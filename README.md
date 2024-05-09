@@ -20,7 +20,6 @@ I also wanted to preserve the old URL structure which - despite being really nas
 - [ ] See if can simplify CSS / fix changes in heading
 - [ ] Can LLM summarise for me?
 - [ ] Take advantage of the fact there is nginx now - metrics + proxy/cache assets
-- [ ] 1st/2nd/3rd year note listing not working
 - [ ] Center content on wide screens
 - [ ] Pad the top menu more on wide screens
 - [ ] Something to check logs for 404s
