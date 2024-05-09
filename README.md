@@ -16,20 +16,17 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ## To Do
 
+- [ ] Some special characters not displaying properly - I think --> type arrows
+- [ ] See if can simplify CSS / fix changes in heading
+- [ ] Can LLM summarise for me?
 - [ ] Take advantage of the fact there is nginx now - metrics + proxy/cache assets
 - [ ] 1st/2nd/3rd year note listing not working
 - [ ] Center content on wide screens
 - [ ] Pad the top menu more on wide screens
-
-## Deferred
-
 - [ ] Something to check logs for 404s
-- [ ] Traefik sidecar?
 - [ ] Metrics on Datastore and GCS
 - [ ] Test coverage is shocking
 - [ ] Tags page
-- [ ] Convert existing notes into HTML and upload
-- [ ] May need to restore the recaptcha
 - [ ] Browser tests
 
 ---
@@ -45,44 +42,15 @@ gcloud auth application-default login
 
 ---
 
-## Architecture
-
-### Model
-
-#### Entry
-
-```json
-{
-    "name": <str>,
-    "title": <str>,
-    "author": <str>,
-    "category": <str>,
-    "tags": <list>,
-    "description": <str>,
-    "level": <str>,
-    "filesize": <int>,
-    "asset_link": <str>,
-    "doc_id": <int>,
-    "last_modified": <utc-date>
-}
-```
-
-#### Document
-
-```json
-{
-    "id": <generated>,
-    "document": ,
-}
-```
-
-### Redirects
+## Redirects
 
 I was originally going to run NGINX in front of it for redirects from old site, but the patterns are structured enough that this is quite easy to do with Flask's route decorators and manipulating the query parameters.
 
 Doesn't really need Cloud DataStore - this data is pretty much static - but I wanted to try it out!
 
-### Prometheus Metrics & Gunicorn Workers
+---
+
+## Prometheus Metrics & Gunicorn Workers
 
 At the moment, the app is configured with a single worker in gunicorn - it's pretty low traffic website after all, and the nodes I run it across are tiddly. This means we can get Prometheus metrics easily enough with this in `__init__.py` ...
 
