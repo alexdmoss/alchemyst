@@ -51,6 +51,22 @@ cd ../../
 
 ---
 
+## Special Character Handling
+
+Some UTF-8 characters were still not displaying okay, so were converted post-save into simpler equivalents:
+
+```txt
+&#129146;       -->     &#8594;
+&#129130;       -->     &#8594;
+&#11012;        -->     &#8652;
+&#129146;       -->     &#8594;
+&#129128;       -->     &#8592;
+&#10003;        -->     (displays ok)
+&#128500;       -->     &#10007;
+```
+
+---
+
 ## From PDF Attempts
 
 1. `pipenv run nougat ./"${input}".pdf -o ./"${input}"/` produced pretty good results

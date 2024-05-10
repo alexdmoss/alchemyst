@@ -17,6 +17,7 @@ I also wanted to preserve the old URL structure which - despite being really nas
 ## To Do
 
 - [ ] Some special characters not displaying properly - I think --> type arrows
+- [ ] Remove font colouring from Docs
 - [ ] Check all PDFs vs HTML Documents side-by-side for issues
 - [ ] Can LLM summarise for me?
 - [ ] Add summary/html notes themselves to the search
