@@ -14,10 +14,11 @@ Converting PDFs is just still too icky - even with the advent of GenAI tech - th
 4. Format the one-line mega HTML output using VScode
 5. Fix the `images/` references to `https://storage.googleapis.com/alchemyst-assets/docs/$type/$note_name/`
 6. Strip the HTML header and body tags
-7. Rename the HTML file to match the `doc_id` in this site's data store
-8. Rename the local `images/` folder to `$note_name`
-9. Use `copy.sh` below to copy Images to asset bucket and the document itself to `bootstrap` in this repo
-10. Publish using When you're ready to make available, in the alchemyst repo:
+7. Strip the `color: #000000;` and `font-family:` references to `Arial` and `Times New Roman`
+8. Rename the HTML file to match the `doc_id` in this site's data store
+9. Rename the local `images/` folder to `$note_name`
+10. Use `copy.sh` below to copy Images to asset bucket and the document itself to `bootstrap` in this repo
+11. Publish using When you're ready to make available, in the alchemyst repo:
 
     ```sh
     export DATA_STORE_NAMESPACE=Alchemyst
