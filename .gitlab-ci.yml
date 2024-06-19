@@ -3,6 +3,9 @@ stages:
 - build
 - deploy
 
+variables:
+  GOOGLE_CREDENTIALS: "${APPLICATION_CI_CREDENTIALS}"
+
 # ---------------- Templates ---------------- #
 
 .build:
