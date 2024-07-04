@@ -19,10 +19,9 @@ terraform "${action}" \
     -var gcp_project_id="${GCP_PROJECT_ID}" \
     -var region="${REGION}" \
     -var domain="${DOMAIN}" \
-    -var frontend_app_name="${FRONTEND_APP_NAME}" \
+    -var app_name="${APP_NAME}" \
     -var frontend_image_tag="${FRONTEND_IMAGE_TAG}" \
     -var frontend_port="${FRONTEND_PORT}" \
-    -var backend_app_name="${BACKEND_APP_NAME}" \
     -var backend_image_tag="${BACKEND_IMAGE_TAG}" \
     -var backend_port="${BACKEND_PORT}" \
 
