@@ -15,7 +15,8 @@ else
     BACKEND_IMAGE_TAG=${BACKEND_IMAGE_NAME}:latest
 fi
 
-terraform "${action}" \
+set -x
+terraform ${action} \
     -var gcp_project_id="${GCP_PROJECT_ID}" \
     -var region="${REGION}" \
     -var domain="${DOMAIN}" \
