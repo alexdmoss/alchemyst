@@ -1,6 +1,6 @@
 data "google_service_account" "runtime" {
   project    = var.gcp_project_id
-  account_id = "exercise-tracker"
+  account_id = "alchemyst"
 }
 
 resource "google_cloud_run_v2_service" "app" {
