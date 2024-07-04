@@ -16,7 +16,7 @@ resource "google_cloud_run_v2_service" "app" {
 
       name = "frontend"
       image = var.frontend_image_tag
-      depends_on = ["backend"]
+      # depends_on = ["backend"]
 
       ports {
         container_port = var.frontend_port
@@ -45,53 +45,53 @@ resource "google_cloud_run_v2_service" "app" {
 
     }
 
-    containers {
+    # containers {
 
-      name = "backend"
-      image = var.backend_image_tag
+    #   name = "backend"
+    #   image = var.backend_image_tag
 
-      env {
-        name = "PORT"
-        value = var.backend_port
-      }
+    #   env {
+    #     name = "PORT"
+    #     value = var.backend_port
+    #   }
 
-      env {
-        name = "DATA_STORE_NAMESPACE"
-        value = "Alchemyst"
-      }
+    #   env {
+    #     name = "DATA_STORE_NAMESPACE"
+    #     value = "Alchemyst"
+    #   }
 
-      env {
-        name = "DATA_STORE_PROJECT"
-        value = var.gcp_project_id
-      }
+    #   env {
+    #     name = "DATA_STORE_PROJECT"
+    #     value = var.gcp_project_id
+    #   }
 
-      env {
-        name = "GOOGLE_CLOUD_PROJECT"
-        value = var.gcp_project_id
-      }
+    #   env {
+    #     name = "GOOGLE_CLOUD_PROJECT"
+    #     value = var.gcp_project_id
+    #   }
 
-      resources {
-        startup_cpu_boost = true
-        cpu_idle = true
-      }
+    #   resources {
+    #     startup_cpu_boost = true
+    #     cpu_idle = true
+    #   }
 
-      startup_probe {
-        initial_delay_seconds = 20
-        timeout_seconds       = 2
-        period_seconds        = 5
-        failure_threshold     = 2
-        http_get {
-          path = "/ping"
-        }
-      }
+    #   startup_probe {
+    #     initial_delay_seconds = 20
+    #     timeout_seconds       = 2
+    #     period_seconds        = 5
+    #     failure_threshold     = 2
+    #     http_get {
+    #       path = "/ping"
+    #     }
+    #   }
 
-      liveness_probe {
-        http_get {
-          path = "/ping"
-        }
-      }
+    #   liveness_probe {
+    #     http_get {
+    #       path = "/ping"
+    #     }
+    #   }
 
-    }
+    # }
 
     timeout = "10s"
 
