@@ -5,8 +5,8 @@ from alchemyst import app, cache
 from alchemyst.api.notes import get_notes
 
 
-@app.route("/healthz")
-def healthz():
+@app.route("/health")
+def health():
     return "OK"
 
 
