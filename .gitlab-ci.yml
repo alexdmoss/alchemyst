@@ -76,8 +76,6 @@ deploy:
   image: al3xos/ci-tools:latest
   only:
   - main
-  extends:
-  - .deploy
   needs:
   - build-frontend
   - build-backend
