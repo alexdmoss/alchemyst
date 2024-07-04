@@ -26,7 +26,7 @@ variables:
     name: gcr.io/kaniko-project/executor:debug
     entrypoint: [""]
   only:
-  - main
+  - master
   needs:
   - test
   variables:
@@ -75,7 +75,7 @@ deploy:
   stage: deploy
   image: al3xos/ci-tools:latest
   only:
-  - main
+  - master
   needs:
   - build-frontend
   - build-backend
