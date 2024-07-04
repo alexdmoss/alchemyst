@@ -21,6 +21,13 @@ services:
     working_dir: /app
     ports:
       - "5000:5000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/gcp/creds.json
+      - DATA_STORE_NAMESPACE=Alchemyst
+      - DATA_STORE_PROJECT=${GCP_PROJECT_ID}
+      - GOOGLE_CLOUD_PROJECT=${GCP_PROJECT_ID}
+    volumes:
+      - $HOME/.config/gcloud/application_default_credentials.json:/gcp/creds.json
     networks:
       - app-network
 
