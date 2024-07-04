@@ -27,22 +27,22 @@ resource "google_cloud_run_v2_service" "app" {
         cpu_idle = true
       }
 
-      # startup_probe {
-      #   initial_delay_seconds = 10
-      #   timeout_seconds       = 1
-      #   period_seconds        = 3
-      #   failure_threshold     = 1
+      startup_probe {
+        initial_delay_seconds = 10
+        timeout_seconds       = 1
+        period_seconds        = 3
+        failure_threshold     = 1
 
-      #   http_get {
-      #     path = "/health"
-      #   }
-      # }
+        http_get {
+          path = "/health"
+        }
+      }
 
-      # liveness_probe {
-      #   http_get {
-      #     path = "/health"
-      #   }
-      # }
+      liveness_probe {
+        http_get {
+          path = "/health"
+        }
+      }
 
     }
 
@@ -76,22 +76,22 @@ resource "google_cloud_run_v2_service" "app" {
         cpu_idle = true
       }
 
-      # startup_probe {
-      #   initial_delay_seconds = 10
-      #   timeout_seconds       = 1
-      #   period_seconds        = 3
-      #   failure_threshold     = 1
+      startup_probe {
+        initial_delay_seconds = 20
+        timeout_seconds       = 2
+        period_seconds        = 5
+        failure_threshold     = 2
 
-      #   http_get {
-      #     path = "/health"
-      #   }
-      # }
+        http_get {
+          path = "/health"
+        }
+      }
 
-      # liveness_probe {
-      #   http_get {
-      #     path = "/health"
-      #   }
-      # }
+      liveness_probe {
+        http_get {
+          path = "/health"
+        }
+      }
 
     }
 
