@@ -28,7 +28,7 @@ resource "google_cloud_run_v2_service" "app" {
       }
 
       startup_probe {
-        initial_delay_seconds = 20
+        initial_delay_seconds = 30
         timeout_seconds       = 1
         period_seconds        = 3
         failure_threshold     = 1
@@ -76,10 +76,10 @@ resource "google_cloud_run_v2_service" "app" {
       }
 
       startup_probe {
-        initial_delay_seconds = 30
-        timeout_seconds       = 2
-        period_seconds        = 5
-        failure_threshold     = 3
+        initial_delay_seconds = 20
+        timeout_seconds       = 1
+        period_seconds        = 3
+        failure_threshold     = 1
         http_get {
           path = "/health"
         }
