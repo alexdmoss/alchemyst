@@ -12,62 +12,14 @@ resource "google_cloud_run_v2_service" "app" {
 
   template {
 
-    containers {
-
-      name = "frontend"
-      image = var.frontend_image_tag
-      # depends_on = ["backend"]
-
-      ports {
-        container_port = var.frontend_port
-      }
-
-      resources {
-        startup_cpu_boost = true
-        cpu_idle = true
-      }
-
-      startup_probe {
-        initial_delay_seconds = 10
-        timeout_seconds       = 1
-        period_seconds        = 3
-        failure_threshold     = 1
-        http_get {
-          path = "/health"
-        }
-      }
-
-      liveness_probe {
-        http_get {
-          path = "/health"
-        }
-      }
-
-    }
-
     # containers {
 
-    #   name = "backend"
-    #   image = var.backend_image_tag
+    #   name = "frontend"
+    #   image = var.frontend_image_tag
+    #   # depends_on = ["backend"]
 
-    #   env {
-    #     name = "PORT"
-    #     value = var.backend_port
-    #   }
-
-    #   env {
-    #     name = "DATA_STORE_NAMESPACE"
-    #     value = "Alchemyst"
-    #   }
-
-    #   env {
-    #     name = "DATA_STORE_PROJECT"
-    #     value = var.gcp_project_id
-    #   }
-
-    #   env {
-    #     name = "GOOGLE_CLOUD_PROJECT"
-    #     value = var.gcp_project_id
+    #   ports {
+    #     container_port = var.frontend_port
     #   }
 
     #   resources {
@@ -76,22 +28,70 @@ resource "google_cloud_run_v2_service" "app" {
     #   }
 
     #   startup_probe {
-    #     initial_delay_seconds = 20
-    #     timeout_seconds       = 2
-    #     period_seconds        = 5
-    #     failure_threshold     = 2
+    #     initial_delay_seconds = 10
+    #     timeout_seconds       = 1
+    #     period_seconds        = 3
+    #     failure_threshold     = 1
     #     http_get {
-    #       path = "/ping"
+    #       path = "/health"
     #     }
     #   }
 
     #   liveness_probe {
     #     http_get {
-    #       path = "/ping"
+    #       path = "/health"
     #     }
     #   }
 
     # }
+
+    containers {
+
+      name = "backend"
+      image = var.backend_image_tag
+
+      env {
+        name = "PORT"
+        value = var.backend_port
+      }
+
+      env {
+        name = "DATA_STORE_NAMESPACE"
+        value = "Alchemyst"
+      }
+
+      env {
+        name = "DATA_STORE_PROJECT"
+        value = var.gcp_project_id
+      }
+
+      env {
+        name = "GOOGLE_CLOUD_PROJECT"
+        value = var.gcp_project_id
+      }
+
+      resources {
+        startup_cpu_boost = true
+        cpu_idle = true
+      }
+
+      startup_probe {
+        initial_delay_seconds = 20
+        timeout_seconds       = 2
+        period_seconds        = 5
+        failure_threshold     = 2
+        http_get {
+          path = "/ping"
+        }
+      }
+
+      liveness_probe {
+        http_get {
+          path = "/ping"
+        }
+      }
+
+    }
 
     timeout = "10s"
 
