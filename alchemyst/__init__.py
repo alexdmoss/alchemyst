@@ -4,7 +4,6 @@ from flask import Flask
 # see README if setting gunicorn workers > 1
 from prometheus_flask_exporter.multiprocess import PrometheusMetrics
 from flask_compress import Compress
-from flask_caching import Cache
 
 from alchemyst.ui.note import EnhancedJSONEncoder
 from alchemyst.cache import cache
@@ -30,6 +29,7 @@ def configure_metrics(_app):
 
 def create_app():
     _app = Flask(__name__)
+    _app.logger.info('Starting Flask Application')
     _app.url_map.strict_slashes = False
     configure_cache(_app)
     configure_compression(_app)

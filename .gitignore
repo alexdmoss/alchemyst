@@ -128,3 +128,5 @@ dmypy.json
 
 # JUnit
 **junit-report.xml**
+
+.terraform/

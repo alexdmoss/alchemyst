@@ -1,11 +1,6 @@
-data "google_service_account" "runtime" {
-  project    = var.gcp_project_id
-  account_id = "alchemyst"
-}
+resource "google_cloud_run_v2_service" "frontend" {
 
-resource "google_cloud_run_v2_service" "app" {
-
-  name     = var.app_name
+  name     = "${var.app_name}-frontend"
   project  = var.gcp_project_id
   location = var.region
   ingress  = "INGRESS_TRAFFIC_ALL"
@@ -16,7 +11,7 @@ resource "google_cloud_run_v2_service" "app" {
 
       name = "frontend"
       image = var.frontend_image_tag
-      depends_on = ["backend"]
+      # depends_on = ["backend"]
 
       ports {
         container_port = var.frontend_port
@@ -45,14 +40,35 @@ resource "google_cloud_run_v2_service" "app" {
 
     }
 
+    timeout = "10s"
+
+    scaling {
+      min_instance_count = 1
+      max_instance_count = 2
+    }
+
+    service_account = data.google_service_account.runtime.email
+
+  }
+
+}
+
+resource "google_cloud_run_v2_service" "backend" {
+
+  name     = "${var.app_name}-backend"
+  project  = var.gcp_project_id
+  location = var.region
+  ingress  = "INGRESS_TRAFFIC_ALL"
+
+  template {
+
     containers {
 
       name = "backend"
       image = var.backend_image_tag
 
-      env {
-        name = "PORT"
-        value = var.backend_port
+      ports {
+        container_port = var.backend_port
       }
 
       env {
@@ -79,7 +95,7 @@ resource "google_cloud_run_v2_service" "app" {
         initial_delay_seconds = 60
         timeout_seconds       = 10
         period_seconds        = 30
-        failure_threshold     = 1
+        failure_threshold     = 5
         http_get {
           path = "/health"
         }
@@ -93,7 +109,7 @@ resource "google_cloud_run_v2_service" "app" {
 
     }
 
-    timeout = "30s"
+    timeout = "10s"
 
     scaling {
       min_instance_count = 1
@@ -106,9 +122,9 @@ resource "google_cloud_run_v2_service" "app" {
 
 }
 
-resource "google_cloud_run_v2_service_iam_member" "allow-public-access" {
-  location = google_cloud_run_v2_service.app.location
-  name     = google_cloud_run_v2_service.app.name
+resource "google_cloud_run_v2_service_iam_member" "allow-public-access-frontend" {
+  location = google_cloud_run_v2_service.frontend.location
+  name     = google_cloud_run_v2_service.frontend.name
   role     = "roles/run.invoker"
   member   = "allUsers"
 }

@@ -10,9 +10,9 @@ if [[ ${CI_SERVER:-} == "yes" ]]; then
     FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_NAME}:${CI_COMMIT_SHA}-$(echo "${CI_COMMIT_TIMESTAMP}" | sed 's/[:+]/./g')
     BACKEND_IMAGE_TAG=${BACKEND_IMAGE_NAME}:${CI_COMMIT_SHA}-$(echo "${CI_COMMIT_TIMESTAMP}" | sed 's/[:+]/./g')
 else
-    action="plan"
-    FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_NAME}:latest
-    BACKEND_IMAGE_TAG=${BACKEND_IMAGE_NAME}:latest
+    action="apply -auto-approve"
+    FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_NAME}
+    BACKEND_IMAGE_TAG=${BACKEND_IMAGE_NAME}
 fi
 
 set -x
