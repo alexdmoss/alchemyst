@@ -50,8 +50,9 @@ resource "google_cloud_run_v2_service" "app" {
       name = "backend"
       image = var.backend_image_tag
 
-      ports {
-        container_port = var.backend_port
+      env {
+        name = "PORT"
+        value = var.backend_port
       }
 
       env {
