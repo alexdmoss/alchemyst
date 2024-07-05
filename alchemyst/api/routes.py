@@ -5,7 +5,7 @@ from alchemyst import app, cache
 from alchemyst.api.notes import get_notes
 
 
-@app.route("/ping")
+@app.route("/health")
 def ping():
     return "OK"
 
