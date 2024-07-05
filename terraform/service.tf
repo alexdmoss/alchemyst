@@ -12,38 +12,38 @@ resource "google_cloud_run_v2_service" "app" {
 
   template {
 
-    # containers {
+    containers {
 
-    #   name = "frontend"
-    #   image = var.frontend_image_tag
-    #   # depends_on = ["backend"]
+      name = "frontend"
+      image = var.frontend_image_tag
+      depends_on = ["backend"]
 
-    #   ports {
-    #     container_port = var.frontend_port
-    #   }
+      ports {
+        container_port = var.frontend_port
+      }
 
-    #   resources {
-    #     startup_cpu_boost = true
-    #     cpu_idle = true
-    #   }
+      resources {
+        startup_cpu_boost = true
+        cpu_idle = true
+      }
 
-    #   startup_probe {
-    #     initial_delay_seconds = 10
-    #     timeout_seconds       = 1
-    #     period_seconds        = 3
-    #     failure_threshold     = 1
-    #     http_get {
-    #       path = "/health"
-    #     }
-    #   }
+      startup_probe {
+        initial_delay_seconds = 20
+        timeout_seconds       = 1
+        period_seconds        = 3
+        failure_threshold     = 1
+        http_get {
+          path = "/health"
+        }
+      }
 
-    #   liveness_probe {
-    #     http_get {
-    #       path = "/health"
-    #     }
-    #   }
+      liveness_probe {
+        http_get {
+          path = "/health"
+        }
+      }
 
-    # }
+    }
 
     containers {
 
@@ -95,8 +95,8 @@ resource "google_cloud_run_v2_service" "app" {
     timeout = "10s"
 
     scaling {
-      min_instance_count = 0
-      max_instance_count = 1
+      min_instance_count = 1
+      max_instance_count = 2
     }
 
     service_account = data.google_service_account.runtime.email
