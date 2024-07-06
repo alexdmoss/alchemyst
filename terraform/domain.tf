@@ -14,18 +14,18 @@ resource "google_cloud_run_domain_mapping" "apex-domain" {
 
 }
 
-# resource "google_cloud_run_domain_mapping" "www-domain" {
+resource "google_cloud_run_domain_mapping" "www-domain" {
 
-#   name     = "www.${var.domain}"
-#   location = google_cloud_run_v2_service.app.location
+  name     = "www.${var.domain}"
+  location = google_cloud_run_v2_service.app.location
 
-#   metadata {
-#     namespace = var.gcp_project_id
-#   }
+  metadata {
+    namespace = var.gcp_project_id
+  }
 
-#   spec {
-#     route_name     = google_cloud_run_v2_service.app.name
-#     force_override = true
-#   }
+  spec {
+    route_name     = google_cloud_run_v2_service.app.name
+    force_override = true
+  }
 
-# }
+}
