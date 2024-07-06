@@ -4,7 +4,7 @@ from gunicorn.app.wsgiapp import run
 # fake the command-line arguments for Gunicorn (easier with distroless)
 sys.argv = [
     'gunicorn',
-    'main:app',
+    'alchemyst:app',
     '--bind', '0.0.0.0:5000',
     '--workers', '1',
     '--threads', '3',

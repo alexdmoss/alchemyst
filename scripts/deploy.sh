@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#shellcheck disable=SC2001
 set -euoE pipefail
 
 pushd "$(dirname "${BASH_SOURCE[0]}")/../terraform/" >/dev/null
@@ -10,12 +11,17 @@ if [[ ${CI_SERVER:-} == "yes" ]]; then
     FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_NAME}:${CI_COMMIT_SHA}-$(echo "${CI_COMMIT_TIMESTAMP}" | sed 's/[:+]/./g')
     BACKEND_IMAGE_TAG=${BACKEND_IMAGE_NAME}:${CI_COMMIT_SHA}-$(echo "${CI_COMMIT_TIMESTAMP}" | sed 's/[:+]/./g')
 else
-    action="apply -auto-approve"
+    if [[ "${1:-}" == "apply" ]]; then
+        action="apply -auto-approve"
+    else
+        action="plan"
+    fi
     FRONTEND_IMAGE_TAG=${FRONTEND_IMAGE_NAME}
     BACKEND_IMAGE_TAG=${BACKEND_IMAGE_NAME}
 fi
 
 set -x
+#shellcheck disable=SC2086
 terraform ${action} \
     -var gcp_project_id="${GCP_PROJECT_ID}" \
     -var region="${REGION}" \
