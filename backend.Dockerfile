@@ -6,12 +6,12 @@ RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
 # ---------------------------------------------------------------------
 
-FROM al3xos/python-distroless:3.12-debian12-debug
+FROM al3xos/python-distroless:3.12-debian12
 
 COPY alchemyst/ /app/alchemyst
-COPY logging.conf run.py app-config.yaml /app/
+COPY logging.conf run.py app-config.yaml gunicorn_config.py /app/
 COPY --from=builder /home/monty/.venv /home/monty/.venv
 
 WORKDIR /app
 
-ENTRYPOINT ["/home/monty/.venv/bin/python", "run.py"]
+ENTRYPOINT ["/home/monty/.venv/bin/python", "run.py", "--log-config=logging.conf",  "--config=gunicorn_config.py", "alchemyst:app"]

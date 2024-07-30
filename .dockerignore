@@ -24,11 +24,3 @@ coverage.xml
 *,cover
 *.log
 .git
-
-banners/
-bootstrap/
-docs/
-k8s/
-pdf/
-scripts/
-terraform/
