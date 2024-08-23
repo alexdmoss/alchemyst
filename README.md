@@ -33,8 +33,7 @@ I also wanted to preserve the old URL structure which - despite being really nas
 ```sh
 pipenv install --dev
 gcloud auth application-default login
-./go run
-# or ./go run-wsgi if want to run in gunicorn
+./run-local.sh [--wsgi]   # supply that arg if want to run in gunicorn
 ```
 
 ---

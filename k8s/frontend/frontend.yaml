@@ -50,6 +50,7 @@ spec:
         emptyDir: {}
       - name: pid-volume
         emptyDir: {}
+      serviceAccountName: alchemyst
       restartPolicy: Always
       nodeSelector:
         cloud.google.com/gke-spot: "true"
