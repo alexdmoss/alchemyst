@@ -26,6 +26,7 @@ include:
   - component: gitlab.com/alexos-dev/gitlab-ci-components/deploy-k8s@~latest
     inputs:
       job-stage: deploy
+      job-suffix: frontend
       job-needs: ["kaniko-build-frontend"]
       app-name: alchemyst-frontend
       namespace: alchemyst
@@ -34,6 +35,7 @@ include:
   - component: gitlab.com/alexos-dev/gitlab-ci-components/deploy-k8s@~latest
     inputs:
       job-stage: deploy
+      job-suffix: backend
       job-needs: ["kaniko-build-backend"]
       app-name: alchemyst-backend
       namespace: alchemyst
