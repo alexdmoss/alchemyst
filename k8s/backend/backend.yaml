@@ -53,7 +53,6 @@ spec:
               cpu: 100m
               memory: 200Mi
             limits:
-              cpu: 200m
               memory: 200Mi
       serviceAccountName: alchemyst
       restartPolicy: Always
