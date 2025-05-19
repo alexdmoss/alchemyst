@@ -30,17 +30,12 @@ include:
       job-stage: scan
       job-suffix: frontend
       job-needs: ["kaniko-build-frontend"]
-      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
-      dockerfile: frontend.Dockerfile
-      snyk-language: python
-      snyk-library: python
-  - component: gitlab.com/alexos-dev/gitlab-ci-components/security-scan@~latest
-    inputs:
-      job-stage: scan
-      job-suffix: backend
-      job-needs: ["kaniko-build-backend"]
-      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
-      dockerfile: backend.Dockerfile
+      image-names: |
+        europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
+        europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
+      dockerfiles: |
+        frontend.Dockerfile
+        backend.Dockerfile
       snyk-language: python
       snyk-library: python
 

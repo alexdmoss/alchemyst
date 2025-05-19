@@ -130,3 +130,5 @@ dmypy.json
 **junit-report.xml**
 **coverage_out_report.xml
 **test_out_report.xml
+
+.dccache
