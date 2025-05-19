@@ -35,6 +35,13 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
             timeoutSeconds: 1
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 1
           workingDir: /app
           volumeMounts:
           - mountPath: /tmp
@@ -54,6 +61,7 @@ spec:
               memory: 200Mi
             limits:
               memory: 200Mi
+          imagePullPolicy: Always
       serviceAccountName: alchemyst
       restartPolicy: Always
       nodeSelector:

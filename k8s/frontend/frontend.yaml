@@ -39,11 +39,26 @@ spec:
             memory: 10Mi
           limits:
             memory: 50Mi
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 1
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 15
+          timeoutSeconds: 1
         volumeMounts:
         - mountPath: /var/cache/nginx
           name: cache-volume
         - mountPath: /var/run/nginx
           name: pid-volume
+        imagePullPolicy: Always
       volumes:
       - name: cache-volume
         emptyDir: {}
