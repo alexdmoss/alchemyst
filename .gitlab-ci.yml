@@ -67,14 +67,12 @@ include:
 
 test:
   stage: test
-  image: python:3.12-slim-bookworm
+  image: al3xos/python-builder:3.12-debian12 AS builder
   before_script:
-    - pip install --upgrade pip
-    - pip install pipenv --no-cache-dir
-    - pipenv install --dev
+    - uv sync --locked
   script:
-    - pipenv run flake8 ./alchemyst  --format junit-xml --output-file=./flake_out_report.xml
-    - pipenv run pytest --cov --cov-report term-missing --cov-report xml:./coverage_out_report.xml --junitxml=./test_out_report.xml
+    - uv run flake8 ./alchemyst  --format junit-xml --output-file=./flake_out_report.xml
+    - uv run pytest --cov --cov-report term-missing --cov-report xml:./coverage_out_report.xml --junitxml=./test_out_report.xml
   coverage: '/TOTAL.*\s+(\d+%)$/'
   artifacts:
     when: always

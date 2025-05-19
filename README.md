@@ -31,7 +31,7 @@ I also wanted to preserve the old URL structure which - despite being really nas
 ## Running Locally
 
 ```sh
-pipenv install --dev
+uv sync --locked install --dev
 gcloud auth application-default login
 ./run-local.sh [--wsgi]   # supply that arg if want to run in gunicorn
 ```

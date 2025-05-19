@@ -29,7 +29,7 @@ function run-wsgi() {
   # export prometheus_multiproc_dir=/tmp
   # export METRICS_PORT=9120
 
-  pipenv run gunicorn --log-config=logging.conf --config=gunicorn_config.py alchemyst:app
+  uv run gunicorn --log-config=logging.conf --config=gunicorn_config.py alchemyst:app
 
 }
 

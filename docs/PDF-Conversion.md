@@ -23,7 +23,7 @@ Converting PDFs is just still too icky - even with the advent of GenAI tech - th
     ```sh
     export DATA_STORE_NAMESPACE=Alchemyst
     export DATA_STORE_PROJECT=$GCP_PROJECT_ID
-    pipenv run python bootstrap/documents/load_document.py
+    uv run python bootstrap/documents/load_document.py
     ```
 
 The app needs restarting to pick up the new content.
@@ -70,7 +70,7 @@ Some UTF-8 characters were still not displaying okay, so were converted post-sav
 
 ## From PDF Attempts
 
-1. `pipenv run nougat ./"${input}".pdf -o ./"${input}"/` produced pretty good results
+1. `uv run nougat ./"${input}".pdf -o ./"${input}"/` produced pretty good results
 2. `pandoc ./"${input}"/"${input}".tex -s -o ./"${input}"/"${input}"-tex.html --katex` on the output (afte renaming the output file to `.tex`) worked okay.
    - The `.mmd` can be converted to HTML with `multimarkdown ./"${input}"/"${input}".mmd -t html -o ./"${input}"/"${input}"-mmd.html` but this left the equations unformatted and I felt it was easier to fix bold/italics/headings in markdown than latex equations
 3. Images can be extracted using `pdftohtml -c ./"${input}".pdf ./"${input}"/"${input}"-pdf.html`

@@ -12,10 +12,10 @@ pushd "$(dirname "${BASH_SOURCE[0]}")/../" > /dev/null || exit
 
 echo "-> [INFO] Loading JSON into Datastore ..."  
 
-pipenv install --dev
+uv sync --locked
 
-pipenv run python3 ./bootstrap/load_notes.py
-pipenv run python3 ./bootstrap/documents/load_document.py
+uv run python3 ./bootstrap/load_notes.py
+uv run python3 ./bootstrap/documents/load_document.py
 
 popd > /dev/null || exit
 
