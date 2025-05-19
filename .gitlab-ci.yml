@@ -67,7 +67,7 @@ include:
 
 test:
   stage: test
-  image: al3xos/python-builder:3.12-debian12 AS builder
+  image: al3xos/python-builder:3.12-debian12
   before_script:
     - uv sync --locked
   script:
