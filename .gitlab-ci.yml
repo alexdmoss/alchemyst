@@ -28,8 +28,7 @@ include:
   - component: gitlab.com/alexos-dev/gitlab-ci-components/security-scan@~latest
     inputs:
       job-stage: scan
-      job-suffix: frontend
-      job-needs: ["kaniko-build-frontend"]
+      job-needs: ["kaniko-build-frontend", "kaniko-build-backend"]
       image-names: |
         europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
         europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend

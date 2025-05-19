@@ -28,6 +28,13 @@ I also wanted to preserve the old URL structure which - despite being really nas
 
 ---
 
+## Updating Packages
+
+```sh
+uv sync
+uv pip compile pyproject.toml -o requirements.txt       # this is because snyk doesn't support uv
+```
+
 ## Running Locally
 
 ```sh
