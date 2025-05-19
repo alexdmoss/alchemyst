@@ -3,17 +3,20 @@ This set of routes is in place to handle migration from the old PHP-based websit
 Once requests to any old URLs dry up, it can be safely removed.
 '''
 
-from flask import redirect, url_for, request
+import re
+
+from flask import redirect, url_for, request, abort
 from alchemyst import app
 
 from alchemyst.ui.note import note_view
+from alchemyst.ui.safe import sanitise_path
 from alchemyst.api.routes import note
 from alchemyst.api.notes import note_from_dict
 
 
 @app.route('/alchemystry/<path:filename>', methods=['GET'])
 def redir_alchemystry(filename):
-    new_path = request.path.replace("/alchemystry", "")
+    new_path = sanitise_path(filename)
     return redirect(new_path, code=301)
 
 

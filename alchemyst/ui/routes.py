@@ -2,10 +2,11 @@ import yaml
 import requests
 from datetime import datetime
 
-from flask import render_template, request, Response, send_from_directory
+from flask import render_template, request, Response, send_from_directory, abort
 from alchemyst import app, cache
 
 from alchemyst.ui.note import note_view
+from alchemyst.ui.safe import sanitise_path
 from alchemyst.api.routes import note, notes, notes_by_category
 from alchemyst.api.notes import note_from_dict, notes_from_dicts
 from alchemyst.api.document import get_document
@@ -91,19 +92,28 @@ def display_note(note_name):
 @app.route('/pdf/<category>/<pdf_file>', methods=['GET'])
 @cache.cached()
 def download_pdf(category, pdf_file):
+
+    if not pdf_file.lower().endswith('.pdf'):
+        abort(400, description="Invalid file type")
+
+    safe_path = sanitise_path(f"{category}/{pdf_file}")
+    target_url = f"https://storage.googleapis.com/{bucket}/{safe_path}"
     resp = requests.request(
         method=request.method,
-        url=request.url.replace(request.host_url, f'https://storage.googleapis.com/{bucket}/'),
+        url=target_url,
         headers={key: value for (key, value) in request.headers if key != 'Host'},
         data=request.get_data(),
         cookies=request.cookies,
+        stream=True,
         allow_redirects=False)
 
-    excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
-    headers = [(name, value) for (name, value) in resp.raw.headers.items()
-               if name.lower() not in excluded_headers]
+    if resp.status_code != 200:
+        abort(resp.status_code, description="File not found")
 
-    return Response(resp.content, resp.status_code, headers)
+    excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
+    headers = [(name, value) for (name, value) in resp.raw.headers.items() if name.lower() not in excluded_headers]
+
+    return Response(resp.content, resp.status_code, headers, content_type='application/pdf')
 
 
 @app.route('/robots.txt')
