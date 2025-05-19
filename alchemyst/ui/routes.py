@@ -97,7 +97,7 @@ def download_pdf(category, pdf_file):
         abort(400, description="Invalid file type")
 
     safe_path = sanitise_path(f"{category}/{pdf_file}")
-    target_url = f"https://storage.googleapis.com/{bucket}/{safe_path}"
+    target_url = f"https://storage.googleapis.com/{bucket}/pdf{safe_path}"
     resp = requests.request(
         method=request.method,
         url=target_url,
