@@ -14,7 +14,7 @@ function run() {
   export FLASK_DEBUG=1
   export USE_MOCKS=False
 
-  pipenv run flask run
+  uv run flask run
 
 }
 

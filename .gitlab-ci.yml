@@ -1,6 +1,7 @@
 stages:
 - test
 - build
+- scan
 - deploy
 
 variables:
@@ -23,6 +24,26 @@ include:
       job-needs: ["test"]
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
       dockerfile: backend.Dockerfile
+
+  - component: gitlab.com/alexos-dev/gitlab-ci-components/security-scan@~latest
+    inputs:
+      job-stage: scan
+      job-suffix: frontend
+      job-needs: ["kaniko-build-frontend"]
+      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
+      dockerfile: frontend.Dockerfile
+      snyk-language: python
+      snyk-library: python
+  - component: gitlab.com/alexos-dev/gitlab-ci-components/security-scan@~latest
+    inputs:
+      job-stage: scan
+      job-suffix: backend
+      job-needs: ["kaniko-build-backend"]
+      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
+      dockerfile: backend.Dockerfile
+      snyk-language: python
+      snyk-library: python
+
   - component: gitlab.com/alexos-dev/gitlab-ci-components/deploy-k8s@~latest
     inputs:
       job-stage: deploy
