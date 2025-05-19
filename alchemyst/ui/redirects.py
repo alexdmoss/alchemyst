@@ -3,9 +3,7 @@ This set of routes is in place to handle migration from the old PHP-based websit
 Once requests to any old URLs dry up, it can be safely removed.
 '''
 
-import re
-
-from flask import redirect, url_for, request, abort
+from flask import redirect, url_for, request
 from alchemyst import app
 
 from alchemyst.ui.note import note_view

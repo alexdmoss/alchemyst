@@ -11,5 +11,4 @@ def sanitise_path(filename):
         abort(400, description="Invalid filename")
     # Always redirect to a relative path within the app
     new_path = f"/{filename.lstrip('/')}"
-    # new_path = request.path.replace("/alchemystry", "")
     return new_path
