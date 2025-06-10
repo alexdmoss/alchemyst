@@ -101,7 +101,7 @@ pyasn1-modules==0.4.2
     # via google-auth
 pyyaml==6.0.2
     # via alchemyst (pyproject.toml)
-requests==2.32.3
+requests==2.32.4
     # via
     #   alchemyst (pyproject.toml)
     #   google-api-core
