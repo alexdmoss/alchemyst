@@ -10,14 +10,14 @@ variables:
 # ------------------ Catalog ----------------- #
 
 include:
-  - component: gitlab.com/alexos-dev/gitlab-ci-components/kaniko@~latest
+  - component: gitlab.com/alexos-public/gitlab-ci-components/buildkit@~latest
     inputs:
       job-stage: build
       job-suffix: frontend
       job-needs: ["test"]
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
       dockerfile: frontend.Dockerfile
-  - component: gitlab.com/alexos-dev/gitlab-ci-components/kaniko@~latest
+  - component: gitlab.com/alexos-public/gitlab-ci-components/buildkit@~latest
     inputs:
       job-stage: build
       job-suffix: backend
@@ -25,10 +25,10 @@ include:
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
       dockerfile: backend.Dockerfile
 
-  - component: gitlab.com/alexos-dev/gitlab-ci-components/security-scan@~latest
+  - component: gitlab.com/alexos-public/gitlab-ci-components/security-scan@~latest
     inputs:
       job-stage: scan
-      job-needs: ["kaniko-build-frontend", "kaniko-build-backend"]
+      job-needs: ["buildkit-build-frontend", "buildkit-build-backend"]
       image-names: |
         europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
         europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
@@ -38,20 +38,20 @@ include:
       snyk-language: python
       snyk-library: python
 
-  - component: gitlab.com/alexos-dev/gitlab-ci-components/deploy-k8s@~latest
+  - component: gitlab.com/alexos-public/gitlab-ci-components/deploy-k8s@~latest
     inputs:
       job-stage: deploy
       job-suffix: frontend
-      job-needs: ["kaniko-build-frontend"]
+      job-needs: ["buildkit-build-frontend"]
       app-name: alchemyst-frontend
       namespace: alchemyst
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
       manifest-dir: k8s/frontend
-  - component: gitlab.com/alexos-dev/gitlab-ci-components/deploy-k8s@~latest
+  - component: gitlab.com/alexos-public/gitlab-ci-components/deploy-k8s@~latest
     inputs:
       job-stage: deploy
       job-suffix: backend
-      job-needs: ["kaniko-build-backend"]
+      job-needs: ["buildkit-build-backend"]
       app-name: alchemyst-backend
       namespace: alchemyst
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
