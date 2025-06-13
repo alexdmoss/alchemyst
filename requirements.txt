@@ -12,7 +12,7 @@ certifi==2025.4.26
     # via requests
 charset-normalizer==3.4.2
     # via requests
-click==8.2.0
+click==8.2.1
     # via flask
 dacite==1.9.2
     # via alchemyst (pyproject.toml)
@@ -26,12 +26,12 @@ flask-caching==2.3.1
     # via alchemyst (pyproject.toml)
 flask-compress==1.17
     # via alchemyst (pyproject.toml)
-google-api-core==2.24.2
+google-api-core==2.25.1
     # via
     #   google-cloud-core
     #   google-cloud-datastore
     #   google-cloud-storage
-google-auth==2.40.1
+google-auth==2.40.3
     # via
     #   google-api-core
     #   google-cloud-core
@@ -57,11 +57,11 @@ googleapis-common-protos==1.70.0
     # via
     #   google-api-core
     #   grpcio-status
-grpcio==1.71.0
+grpcio==1.73.0
     # via
     #   google-api-core
     #   grpcio-status
-grpcio-status==1.71.0
+grpcio-status==1.73.0
     # via google-api-core
 gunicorn==23.0.0
     # via alchemyst (pyproject.toml)
@@ -78,7 +78,7 @@ markupsafe==3.0.2
     #   werkzeug
 packaging==25.0
     # via gunicorn
-prometheus-client==0.22.0
+prometheus-client==0.22.1
     # via prometheus-flask-exporter
 prometheus-flask-exporter==0.23.2
     # via alchemyst (pyproject.toml)
@@ -86,7 +86,7 @@ proto-plus==1.26.1
     # via
     #   google-api-core
     #   google-cloud-datastore
-protobuf==5.29.4
+protobuf==6.31.1
     # via
     #   google-api-core
     #   google-cloud-datastore
@@ -101,7 +101,7 @@ pyasn1-modules==0.4.2
     # via google-auth
 pyyaml==6.0.2
     # via alchemyst (pyproject.toml)
-requests==2.32.3
+requests==2.32.4
     # via
     #   alchemyst (pyproject.toml)
     #   google-api-core
