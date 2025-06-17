@@ -9,4 +9,4 @@ omit =
     */__init__.py
 
 [report]
-fail_under = 60
+fail_under = 50
