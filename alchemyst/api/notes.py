@@ -17,12 +17,14 @@ def get_notes(translation=""):
         results = _get_query_notes(translation)
     return [note_from_query(data) for data in results]
 
+
 def _get_mock_notes(translation):
     with open('./tests/mocks/full-dataset.json', 'r') as f:
         data = json.load(f)
     if translation:
         return _filter_mock_notes(data['entities'], translation)
     return data["entities"]
+
 
 def _filter_mock_notes(entities, translation):
     results = []
@@ -32,6 +34,7 @@ def _filter_mock_notes(entities, translation):
                 results.append(note)
                 break
     return results
+
 
 def _get_query_notes(translation):
     if translation:
@@ -70,12 +73,14 @@ def get_int(key, raw):
         data = 0
     return data
 
+
 def get_string(key, raw):
     try:
         data = raw[key]
     except KeyError:
         data = ""
     return data
+
 
 def get_list(key, raw):
     try:
@@ -84,12 +89,14 @@ def get_list(key, raw):
         data = []
     return data
 
+
 def get_date(key, raw):
     try:
         data = raw[key]
     except KeyError:
         data = datetime.now()
     return data
+
 
 def note_from_dict(note):
     return from_dict(data_class=Note, data=note, config=_isoformat_config())
