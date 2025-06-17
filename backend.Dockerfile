@@ -11,6 +11,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 FROM al3xos/python-distroless:3.12-debian12
 
+USER monty
+
 COPY alchemyst/ /app/alchemyst
 COPY logging.conf run.py app-config.yaml gunicorn_config.py /app/
 COPY --chown=1000:1000 --from=builder /app/.venv /app/.venv

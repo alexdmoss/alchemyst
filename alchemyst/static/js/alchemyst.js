@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
 }
 
 function hamburger() {
-    var x = document.getElementById("top-nav");
+    let x = document.getElementById("top-nav");
     if (x.className === "nav-menu") {
         x.className += " responsive";
     } else {

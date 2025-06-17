@@ -1,4 +1,4 @@
-var lunrIndex,
+let lunrIndex,
     $resultsMain,
     $resultsMenu,
     documents;
@@ -31,12 +31,14 @@ function initLunr() {
                 documents.forEach(function (doc) {
                     try {
                         this.add(doc)
-                    } catch (e) { }
+                    } catch (e) { 
+                        console.error('Error adding document to index:', e);
+                    }
                 }, this)
             })
         })
         .fail(function (jqxhr, textStatus, error) {
-            var err = textStatus + ", " + error;
+            let err = textStatus + ", " + error;
             console.error("Error getting Lunr index file:", err);
         });
 }
@@ -65,12 +67,12 @@ function initUI() {
         $resultsMenu.empty();
 
         // trigger search when at least two chars provided.
-        var query = $(this).val();
+        let query = $(this).val();
         if (query.length < 2) {
             return;
         }
 
-        var resultsMenu = search(query);
+        let resultsMenu = search(query);
 
         renderMenuResults(resultsMenu);
     });
@@ -86,7 +88,7 @@ function renderMenuResults(resultsMenu) {
 
     // resultsMenu.slice(0, 10).forEach to limit to 10 results
     resultsMenu.forEach(function (result) {
-        var $result = $("<li class='popup-result'>");
+        let $result = $("<li class='popup-result'>");
 
         // console.log(JSON.stringify(result))
         $result.append($("<a>", {
@@ -101,7 +103,6 @@ function renderMenuResults(resultsMenu) {
             class: "popup-result-description",
             text: result.description
         }));
-        // $result.append($("<hr />"));
 
         $resultsMenu.append($result);
 
@@ -120,12 +121,12 @@ function searchForm() {
         $resultsMain.empty();
 
         // trigger search when at least two chars provided.
-        var query = $(this).val();
+        let query = $(this).val();
         if (query.length < 2) {
             return;
         }
 
-        var resultsMain = search(query);
+        let resultsMain = search(query);
 
         renderMainResults(resultsMain);
     });
@@ -141,7 +142,7 @@ function renderMainResults(resultsMain) {
 
     // results.slice(0, 10).forEach to limit to 10 results
     resultsMain.forEach(function (result) {
-        var $result = $("<li class='search-result'>");
+        let $result = $("<li class='search-result'>");
 
         // console.log(JSON.stringify(result))
         $result.append($("<a>", {

@@ -37,8 +37,10 @@ spec:
           requests:
             cpu: 10m
             memory: 10Mi
+            ephemeral-storage: 100Mi
           limits:
             memory: 50Mi
+            ephemeral-storage: 100Mi
         readinessProbe:
           httpGet:
             path: /healthz
@@ -65,6 +67,7 @@ spec:
       - name: pid-volume
         emptyDir: {}
       serviceAccountName: alchemyst
+      automountServiceAccountToken: false
       restartPolicy: Always
       nodeSelector:
         cloud.google.com/gke-spot: "true"

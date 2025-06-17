@@ -9,57 +9,87 @@ from alchemyst.model.note import Note
 from alchemyst import app
 
 
-def get_notes(filter=""):
-    filter = _translate_filter(filter)
+def get_notes(translation=""):
+    translation = _translate_filter(translation)
     if getenv('USE_MOCKS') == 'True':
-        results = []
-        with open('./tests/mocks/full-dataset.json', 'r') as f:
-            data = json.load(f)
-        if filter:
-            for note in data['entities']:
-                for field in note:
-                    if note[field] == filter:
-                        results.append(note)
-        else:
-            results = data["entities"]
+        results = _get_mock_notes(translation)
     else:
-        if filter:
-            filter_type = _identify_filter_type(filter)
-            if filter_type == "category":
-                query = query_by_kind(kind="Note", category=filter)
-            elif filter_type == "level":
-                query = query_by_kind(kind="Note", level=filter)
-            else:
-                query = query_by_kind(kind="Note")
+        results = _get_query_notes(translation)
+    return [note_from_query(data) for data in results]
+
+def _get_mock_notes(translation):
+    with open('./tests/mocks/full-dataset.json', 'r') as f:
+        data = json.load(f)
+    if translation:
+        return _filter_mock_notes(data['entities'], translation)
+    return data["entities"]
+
+def _filter_mock_notes(entities, translation):
+    results = []
+    for note in entities:
+        for field in note:
+            if note[field] == translation:
+                results.append(note)
+                break
+    return results
+
+def _get_query_notes(translation):
+    if translation:
+        filter_type = _identify_filter_type(translation)
+        if filter_type == "category":
+            query = query_by_kind(kind="Note", category=translation)
+        elif filter_type == "level":
+            query = query_by_kind(kind="Note", level=translation)
         else:
             query = query_by_kind(kind="Note")
-        results = list(query.fetch())
-    return [note_from_query(data) for data in results]
+    else:
+        query = query_by_kind(kind="Note")
+    return list(query.fetch())
 
 
 def note_from_query(raw_data):
     return Note(
-        name=get_key('name', raw_data),
-        title=get_key('title', raw_data),
-        author=get_key('author', raw_data),
-        category=get_key('category', raw_data),
-        tags=get_key('tags', raw_data),
-        description=get_key('description', raw_data),
-        level=get_key('level', raw_data),
-        filesize=get_key('filesize', raw_data),
-        asset_link=get_key('asset_link', raw_data),
-        doc_id=get_key('doc_id', raw_data),
-        last_modified=get_key('last_modified', raw_data),
+        name=get_string('name', raw_data),
+        title=get_string('title', raw_data),
+        author=get_string('author', raw_data),
+        category=get_string('category', raw_data),
+        tags=get_list('tags', raw_data),
+        description=get_string('description', raw_data),
+        level=get_string('level', raw_data),
+        filesize=get_int('filesize', raw_data),
+        asset_link=get_string('asset_link', raw_data),
+        doc_id=get_int('doc_id', raw_data),
+        last_modified=get_date('last_modified', raw_data),
     )
 
 
-def get_key(key, raw_data):
+def get_int(key, raw):
     try:
-        data = raw_data[key]
+        data = raw[key]
     except KeyError:
-        data = None
+        data = 0
     return data
 
+def get_string(key, raw):
+    try:
+        data = raw[key]
+    except KeyError:
+        data = ""
+    return data
+
+def get_list(key, raw):
+    try:
+        data = raw[key]
+    except KeyError:
+        data = []
+    return data
+
+def get_date(key, raw):
+    try:
+        data = raw[key]
+    except KeyError:
+        data = datetime.now()
+    return data
 
 def note_from_dict(note):
     return from_dict(data_class=Note, data=note, config=_isoformat_config())
