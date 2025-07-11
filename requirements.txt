@@ -6,9 +6,9 @@ brotli==1.1.0
     # via flask-compress
 cachelib==0.13.0
     # via flask-caching
-cachetools==5.5.2
+cachetools==6.1.0
     # via google-auth
-certifi==2025.6.15
+certifi==2025.7.9
     # via requests
 charset-normalizer==3.4.2
     # via requests
@@ -25,7 +25,7 @@ flask==3.1.1
     #   prometheus-flask-exporter
 flask-caching==2.3.1
     # via alchemyst (pyproject.toml)
-flask-compress==1.17
+flask-compress==1.18
     # via alchemyst (pyproject.toml)
 flask-wtf==1.2.2
     # via alchemyst (pyproject.toml)
@@ -48,7 +48,7 @@ google-cloud-core==2.4.3
     #   google-cloud-storage
 google-cloud-datastore==2.21.0
     # via alchemyst (pyproject.toml)
-google-cloud-storage==3.1.1
+google-cloud-storage==3.2.0
     # via alchemyst (pyproject.toml)
 google-crc32c==1.7.1
     # via
