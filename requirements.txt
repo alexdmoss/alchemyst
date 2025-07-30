@@ -6,7 +6,7 @@ brotli==1.1.0
     # via flask-compress
 cachelib==0.13.0
     # via flask-caching
-cachetools==6.1.0
+cachetools==5.5.2
     # via google-auth
 certifi==2025.7.14
     # via requests
