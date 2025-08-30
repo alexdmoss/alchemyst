@@ -37,7 +37,7 @@
     <!-- MathJax for equations -->
     <script id="MathJax-script" async src="{{ url_for('static', filename='js/tex-mml-chtml.js') }}"></script>
 
-    <script defer data-domain="alchemyst.co.uk" data-api="/api/event" src="/js/visits.js"></script>
+    <script defer src="https://visits.alexos.dev/alexos" data-website-id="a0ed7cab-a210-430e-aed1-ea0181b05e35"></script>
 
 </head>
 
@@ -73,6 +73,18 @@
   </div>
 
   <script src="{{ url_for('static', filename='js/backToTop.js') }}" async defer></script>
+
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
 
 </body>
 
