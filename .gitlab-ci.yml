@@ -72,18 +72,3 @@ test:
     when: always
     reports:
       junit: ./*_out_report.xml
-
-sonarcloud-check:
-  stage: scan
-  image:
-    name: sonarsource/sonar-scanner-cli:latest
-    entrypoint: [""]
-  cache:
-    key: "${CI_JOB_NAME}"
-    paths:
-      - .sonar/cache
-  script:
-    - sonar-scanner
-  only:
-    - main
-  allow_failure: true
