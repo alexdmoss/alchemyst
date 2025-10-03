@@ -29,7 +29,7 @@ flask-compress==1.18
     # via alchemyst (pyproject.toml)
 flask-wtf==1.2.2
     # via alchemyst (pyproject.toml)
-google-api-core==2.25.1
+google-api-core==2.25.2
     # via
     #   google-cloud-core
     #   google-cloud-datastore
