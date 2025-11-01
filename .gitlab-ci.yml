@@ -4,9 +4,6 @@ stages:
 - scan
 - deploy
 
-variables:
-  GOOGLE_CREDENTIALS: "${APP_CI_CREDENTIALS}"
-
 # ------------------ Catalog ----------------- #
 
 include:
