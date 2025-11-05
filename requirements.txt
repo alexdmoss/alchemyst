@@ -27,7 +27,7 @@ flask==3.1.2
     #   prometheus-flask-exporter
 flask-caching==2.3.1
     # via alchemyst (pyproject.toml)
-flask-compress==1.20
+flask-compress==1.22
     # via alchemyst (pyproject.toml)
 flask-wtf==1.2.2
     # via alchemyst (pyproject.toml)
