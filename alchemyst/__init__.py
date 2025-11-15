@@ -30,10 +30,23 @@ def configure_metrics(_app):
 
 def create_app():
     _app = Flask(__name__)
-    # Set SECRET_KEY for CSRF protection (use env var in production)
-    _app.config['SECRET_KEY'] = getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
+    
+    # Set SECRET_KEY for CSRF protection
+    # Prefer file-based secret (k8s), fallback to env var, then dev key
+    secret_key_file = getenv('SECRET_KEY_FILE')
+    if secret_key_file:
+        try:
+            with open(secret_key_file, 'r') as f:
+                _app.config['SECRET_KEY'] = f.read().strip()
+        except Exception as e:
+            _app.logger.error(f'Failed to read SECRET_KEY from file: {e}')
+            raise
+    else:
+        _app.config['SECRET_KEY'] = getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
+    
     csrf = CSRFProtect()
     csrf.init_app(_app)
+
     _app.url_map.strict_slashes = False
     configure_cache(_app)
     configure_compression(_app)

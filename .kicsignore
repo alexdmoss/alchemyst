@@ -1,2 +1,3 @@
 exclude-queries:
-- b7652612-de4e-4466-a0bf-1cd81f0c6063      # legit use of temporary storage
+- b7652612-de4e-4466-a0bf-1cd81f0c6063    # legit use of temporary storage
+- a62a99d1-8196-432f-8f80-3c100b05d62a    # legit use of temporary storage
