@@ -74,11 +74,16 @@ configure:
   image: al3xos/ci-tools:latest
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
-  script: |
-    if ! kubectl get secret alchemyst-secrets &> /dev/null; then
-      SECRET_KEY=$(python -c 'import secrets; print(secrets.token_hex(32))')
-      kubectl create secret generic alchemyst-secrets -n=alchemyst --from-literal=secret-key="$SECRET_KEY"
-      echo "✓ Created new secret"
-    else
-      echo "✓ Secret already exists, skipping"
-    fi
+  before_script:
+    - |
+      region=$(gcloud container clusters list --project=${GCP_PROJECT_ID} --filter "NAME=${CLUSTER_NAME}" --format "value(zone)")
+      gcloud container clusters get-credentials ${CLUSTER_NAME} --project=${GCP_PROJECT_ID} --region=${region}
+  script:
+    - |
+      if ! kubectl get secret alchemyst-secrets -n=alchemyst &> /dev/null; then
+        SECRET_KEY=$(python -c 'import secrets; print(secrets.token_hex(32))')
+        kubectl create secret generic alchemyst-secrets -n=alchemyst --from-literal=secret-key="$SECRET_KEY"
+        echo "✓ Created new secret"
+      else
+        echo "✓ Secret already exists, skipping"
+      fi
