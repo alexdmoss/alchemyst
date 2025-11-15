@@ -38,7 +38,7 @@ include:
     inputs:
       job-stage: deploy
       job-suffix: frontend
-      job-needs: ["buildkit-build-frontend", "configure"]
+      job-needs: ["buildkit-build-frontend"]
       app-name: alchemyst-frontend
       namespace: alchemyst
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
@@ -47,7 +47,7 @@ include:
     inputs:
       job-stage: deploy
       job-suffix: backend
-      job-needs: ["buildkit-build-backend"]
+      job-needs: ["buildkit-build-backend", "configure"]
       app-name: alchemyst-backend
       namespace: alchemyst
       image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
@@ -73,7 +73,7 @@ configure:
   stage: deploy
   image: al3xos/ci-tools:latest
   rules:
-    - if: '$CI_COMMIT_BRANCH == "$CI_DEFAULT_BRANCH"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script: |
     if ! kubectl get secret alchemyst-secrets &> /dev/null; then
       SECRET_KEY=$(python -c 'import secrets; print(secrets.token_hex(32))')
