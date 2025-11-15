@@ -33,6 +33,7 @@ include:
         frontend.Dockerfile
         backend.Dockerfile
       language-scan: "true"
+      include-kics-ignore: "true"
 
   - component: gitlab.com/alexos-public/gitlab-ci-components/deploy-k8s@~latest
     inputs:

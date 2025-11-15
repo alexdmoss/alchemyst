@@ -85,7 +85,7 @@ spec:
       - name: secrets
         secret:
           secretName: alchemyst-secrets
-          defaultMode: 0400
+          defaultMode: 0444
 ---
 apiVersion: policy/v1
 kind: PodDisruptionBudget
