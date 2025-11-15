@@ -32,8 +32,7 @@ include:
       dockerfiles: |
         frontend.Dockerfile
         backend.Dockerfile
-      snyk-language: python
-      snyk-library: python
+      language-scan: "true"
 
   - component: gitlab.com/alexos-public/gitlab-ci-components/deploy-k8s@~latest
     inputs:
