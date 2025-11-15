@@ -1,0 +1,2 @@
+exclude-queries:
+- b7652612-de4e-4466-a0bf-1cd81f0c6063      # legit use of temporary storage

@@ -11,7 +11,10 @@ var autoComplete = (function(){
         if (!document.querySelector) return;
 
         // helpers
-        function hasClass(el, className){ return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className); }
+        function hasClass(el, className){ 
+            // Use classList.contains (supported in all modern browsers)
+            return el.classList && el.classList.contains(className); 
+        }
 
         function addEvent(el, type, handler){
             if (el.attachEvent) el.attachEvent('on'+type, handler); else el.addEventListener(type, handler);
@@ -40,6 +43,8 @@ var autoComplete = (function(){
             renderItem: function (item, search){
                 // escape special characters
                 search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                // Limit search term length to prevent ReDoS
+                if (search.length > 100) search = search.substring(0, 100);
                 var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
                 return '<div class="autocomplete-suggestion" data-val="' + item + '">' + item.replace(re, "<b>$1</b>") + '</div>';
             },

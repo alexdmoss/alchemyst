@@ -11,6 +11,7 @@
 
     <section class="contact-form">
         <form name="contacts" id="contacts" action="#" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
             <p class="form-label">Your Name:</p>
             <p class="form-field"><input type="text" name="name" placeholder="What is your name?" required
                     data-validation-required-message="Please fill in your name" /></p>

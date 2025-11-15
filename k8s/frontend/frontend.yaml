@@ -30,6 +30,8 @@ spec:
           runAsGroup: 101
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
+          seccompProfile:
+            type: RuntimeDefault
           capabilities:
             drop:
             - ALL
@@ -72,3 +74,13 @@ spec:
       nodeSelector:
         cloud.google.com/gke-spot: "true"
       terminationGracePeriodSeconds: 25
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: alchemyst-frontend
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: alchemyst-frontend

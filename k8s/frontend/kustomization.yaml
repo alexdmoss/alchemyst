@@ -7,7 +7,6 @@ namespace: alchemyst
 resources:
 - frontend.yaml
 - ingress.yaml
-- pdb.yaml
 - service.yaml
 
 labels:

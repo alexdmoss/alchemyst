@@ -6,7 +6,6 @@ namespace: alchemyst
 
 resources:
 - backend.yaml
-- pdb.yaml
 - service.yaml
 
 labels:
