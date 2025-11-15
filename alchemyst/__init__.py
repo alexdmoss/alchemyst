@@ -30,6 +30,8 @@ def configure_metrics(_app):
 
 def create_app():
     _app = Flask(__name__)
+    # Set SECRET_KEY for CSRF protection (use env var in production)
+    _app.config['SECRET_KEY'] = getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
     csrf = CSRFProtect()
     csrf.init_app(_app)
     _app.url_map.strict_slashes = False
