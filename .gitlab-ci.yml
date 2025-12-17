@@ -1,69 +1,20 @@
 stages:
-- test
-- build
+- release
 - scan
-- deploy
 
-# ------------------ Catalog ----------------- #
+variables:
+  BACKEND_IMAGE_NAME: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
+  FRONTEND_IMAGE_NAME: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
+  NAMESPACE: alchemyst
 
-include:
-  - component: gitlab.com/alexos-public/gitlab-ci-components/buildkit@~latest
-    inputs:
-      job-stage: build
-      job-suffix: frontend
-      job-needs: ["test"]
-      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
-      dockerfile: frontend.Dockerfile
-  - component: gitlab.com/alexos-public/gitlab-ci-components/buildkit@~latest
-    inputs:
-      job-stage: build
-      job-suffix: backend
-      job-needs: ["test"]
-      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
-      dockerfile: backend.Dockerfile
-
-  - component: gitlab.com/alexos-public/gitlab-ci-components/security-scan@~latest
-    inputs:
-      job-stage: scan
-      job-needs: ["buildkit-build-frontend", "buildkit-build-backend"]
-      image-names: |
-        europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
-        europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
-      dockerfiles: |
-        frontend.Dockerfile
-        backend.Dockerfile
-      language-scan: "true"
-      include-kics-ignore: "true"
-
-  - component: gitlab.com/alexos-public/gitlab-ci-components/deploy-k8s@~latest
-    inputs:
-      job-stage: deploy
-      job-suffix: frontend
-      job-needs: ["buildkit-build-frontend"]
-      app-name: alchemyst-frontend
-      namespace: alchemyst
-      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
-      manifest-dir: k8s/frontend
-  - component: gitlab.com/alexos-public/gitlab-ci-components/deploy-k8s@~latest
-    inputs:
-      job-stage: deploy
-      job-suffix: backend
-      job-needs: ["buildkit-build-backend", "configure"]
-      app-name: alchemyst-backend
-      namespace: alchemyst
-      image-name: europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
-      manifest-dir: k8s/backend
-
-# ------------------ Stages ----------------- #
-
-test:
-  stage: test
-  image: al3xos/python-builder:3.13-debian12
-  before_script:
-    - uv sync --locked
+# to validate renovations
+test-only:
+  stage: release
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+  image: al3xos/ci-tools:latest
   script:
-    - uv run flake8 ./alchemyst  --format junit-xml --output-file=./flake_out_report.xml
-    - uv run pytest --cov --cov-report term-missing --cov-report xml:./coverage_out_report.xml --junitxml=./test_out_report.xml
+    - alexos-cli test --include-coverage
   coverage: '/TOTAL.*\s+(\d+%)$/'
   artifacts:
     when: always
@@ -71,7 +22,7 @@ test:
       junit: ./*_out_report.xml
 
 configure:
-  stage: deploy
+  stage: release
   image: al3xos/ci-tools:latest
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
@@ -88,3 +39,45 @@ configure:
       else
         echo "✓ Secret already exists, skipping"
       fi
+
+frontend-test-build-deploy:
+  stage: release
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  image: al3xos/ci-tools:latest
+  script:
+    - alexos-cli build --image-name=$FRONTEND_IMAGE_NAME --gcr-login --dockerfile=frontend.Dockerfile
+    - alexos-cli deploy kubernetes --image-name=$FRONTEND_IMAGE_NAME --namespace=$NAMESPACE --manifests=k8s/frontend
+
+backend-test-build-deploy:
+  stage: release
+  needs:
+  - configure
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  image: al3xos/ci-tools:latest
+  script:
+    - alexos-cli test --include-coverage
+    - alexos-cli build --image-name=$BACKEND_IMAGE_NAME --gcr-login --dockerfile=backend.Dockerfile
+    - alexos-cli deploy kubernetes --image-name=$BACKEND_IMAGE_NAME --namespace=$NAMESPACE --manifests=k8s/backend
+  coverage: '/TOTAL.*\s+(\d+%)$/'
+  artifacts:
+    when: always
+    reports:
+      junit: ./*_out_report.xml
+
+include:
+  - component: gitlab.com/alexos-public/gitlab-ci-components/security-scan@~latest
+    rules:
+      - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    inputs:
+      job-stage: scan
+      job-needs: ["frontend-test-build-deploy", "backend-test-build-deploy"]
+      image-names: |
+        europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-frontend
+        europe-docker.pkg.dev/${GCP_PROJECT_ID}/alexos/alchemyst-backend
+      dockerfiles: |
+        frontend.Dockerfile
+        backend.Dockerfile
+      language-scan: "true"
+      include-kics-ignore: "true"
