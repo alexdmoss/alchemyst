@@ -135,3 +135,6 @@ dmypy.json
 **flake_out_report.xml
 
 .dccache
+
+tmp/
+*-report.json
