@@ -59,7 +59,7 @@ backend-test-build-deploy:
   script:
     - alexos-cli test --include-coverage
     - alexos-cli build --image-name=$BACKEND_IMAGE_NAME --gcr-login --dockerfile=backend.Dockerfile
-    - alexos-cli deploy kubernetes --image-name=$BACKEND_IMAGE_NAME --namespace=$NAMESPACE --manifests=k8s/backend --envvars=GCP_PROJECT_I
+    - alexos-cli deploy kubernetes --image-name=$BACKEND_IMAGE_NAME --namespace=$NAMESPACE --manifests=k8s/backend --envvars=GCP_PROJECT_ID
   coverage: '/TOTAL.*\s+(\d+%)$/'
   artifacts:
     when: always
