@@ -5,6 +5,7 @@ description = "My university chemistry notes, on the internet"
 readme = "README.md"
 requires-python = "~=3.14.0"
 dependencies = [
+    "cryptography>=46.0.5",
     "dacite>=1.9.2",
     "flask>=3.1.1",
     "flask-caching>=2.3.1",
