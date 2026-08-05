@@ -1,21 +1,20 @@
-import yaml
+from datetime import UTC, datetime
+
 import requests
-from datetime import datetime
+import yaml
+from flask import Response, abort, render_template, request, send_from_directory
 
-from flask import render_template, request, Response, send_from_directory, abort
 from alchemyst import app, cache
-
+from alchemyst.api.document import get_document
+from alchemyst.api.notes import note_from_dict, notes_from_dicts
+from alchemyst.api.routes import note, notes, notes_by_category
 from alchemyst.ui.note import note_view
 from alchemyst.ui.safe import sanitise_path
-from alchemyst.api.routes import note, notes, notes_by_category
-from alchemyst.api.notes import note_from_dict, notes_from_dicts
-from alchemyst.api.document import get_document
-
 
 with open('app-config.yaml') as app_cfg_file:
     app_cfg = yaml.load(app_cfg_file, Loader=yaml.FullLoader)
     layout = app_cfg['layout']
-    layout['year'] = datetime.now().year
+    layout['year'] = datetime.now(UTC).year
     bucket = app_cfg['bucket']
 
 

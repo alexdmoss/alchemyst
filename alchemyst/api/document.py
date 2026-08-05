@@ -1,8 +1,8 @@
 from os import getenv
 
+from alchemyst import app
 from alchemyst.api.datastore import get_entity
 from alchemyst.model.document import Document
-from alchemyst import app
 
 
 def get_document(id):

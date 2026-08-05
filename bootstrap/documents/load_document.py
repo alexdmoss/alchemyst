@@ -1,8 +1,9 @@
-from google.cloud import datastore
-from dataclasses import asdict, dataclass
+import glob
 import os
 import sys
-import glob
+from dataclasses import asdict, dataclass
+
+from google.cloud import datastore
 
 
 def main():

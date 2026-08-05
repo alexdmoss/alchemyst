@@ -1,4 +1,4 @@
-from alchemyst.api.clients.datastore_client import query, get
+from alchemyst.api.clients.datastore_client import get, query
 
 
 def query_by_kind(kind, category="", level=""):

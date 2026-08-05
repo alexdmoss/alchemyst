@@ -1,6 +1,6 @@
 import yaml
-from alchemyst.api.clients.storage_client import get
 
+from alchemyst.api.clients.storage_client import get
 
 with open('app-config.yaml') as app_cfg_file:
     app_cfg = yaml.load(app_cfg_file, Loader=yaml.FullLoader)

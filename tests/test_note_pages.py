@@ -1,5 +1,6 @@
+from fakes.fake_note import FakeInorganicNote, FakeOrganicNote, FakePhysicalNote
+
 from alchemyst import app
-from fakes.fake_note import FakeOrganicNote, FakeInorganicNote, FakePhysicalNote
 
 
 def test_notes_page(mocker):

@@ -1,12 +1,13 @@
+import json
+from datetime import UTC, datetime
+from os import getenv
+
 from dacite import from_dict
 from dacite.config import Config
-from datetime import datetime
-from os import getenv
-import json
 
+from alchemyst import app
 from alchemyst.api.datastore import query_by_kind
 from alchemyst.model.note import Note
-from alchemyst import app
 
 
 def get_notes(translation=""):
@@ -94,7 +95,7 @@ def get_date(key, raw):
     try:
         data = raw[key]
     except KeyError:
-        data = datetime.now()
+        data = datetime.now(UTC)
     return data
 
 

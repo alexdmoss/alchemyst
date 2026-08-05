@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import List
 from datetime import datetime
 
 
@@ -9,7 +8,7 @@ class Note:
     title: str
     author: str
     category: str
-    tags: List
+    tags: list
     description: str
     level: str
     filesize: int

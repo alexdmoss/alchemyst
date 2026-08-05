@@ -5,7 +5,7 @@ def get(bucket_name="", file=""):
     bucket = _storage_client().get_bucket(bucket_name)
     try:
         return bucket.get_blob(file).download_as_string().decode("utf8")
-    except Exception:
+    except Exception:  # noqa: BLE001
         return None
 
 

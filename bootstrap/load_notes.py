@@ -1,8 +1,10 @@
-from google.cloud import datastore
-from dataclasses import asdict
-import os
 import json
+import os
 import sys
+from dataclasses import asdict
+
+from google.cloud import datastore
+
 # import datetime
 from alchemyst.model.note import Note
 

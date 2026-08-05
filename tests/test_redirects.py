@@ -1,6 +1,7 @@
+from fakes.fake_note import FakePhysicalNote
+
 from alchemyst import app
 from alchemyst.ui.redirects import _get_note_name_from_id
-from fakes.fake_note import FakePhysicalNote
 
 urls = {
     '/contact.php': '/contact',

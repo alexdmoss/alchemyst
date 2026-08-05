@@ -1,5 +1,4 @@
-from flask import abort
-from flask import jsonify
+from flask import abort, jsonify
 
 from alchemyst import app, cache
 from alchemyst.api.notes import get_notes

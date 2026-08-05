@@ -1,5 +1,6 @@
-from google.cloud import datastore
 from os import getenv
+
+from google.cloud import datastore
 
 
 def query(kind, filter_key="", filter_val=""):

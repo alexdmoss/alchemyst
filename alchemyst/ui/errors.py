@@ -1,14 +1,14 @@
+from datetime import UTC, datetime
+
 import yaml
-from datetime import datetime
 from flask import render_template
 
 from alchemyst import app
 
-
 with open('app-config.yaml') as app_cfg_file:
     app_cfg = yaml.load(app_cfg_file, Loader=yaml.FullLoader)
     layout = app_cfg['layout']
-    layout['year'] = datetime.now().year
+    layout['year'] = datetime.now(UTC).year
 
 
 @app.errorhandler(404)
