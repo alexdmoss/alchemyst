@@ -13,9 +13,7 @@ def healthz():
 @cache.cached()
 def notes():
     app.logger.info("Fetching list of notes")
-    notes = {
-        "notes": get_notes()
-    }
+    notes = {"notes": get_notes()}
     return jsonify(notes)
 
 
@@ -23,9 +21,7 @@ def notes():
 @cache.cached()
 def notes_by_category(category):
     app.logger.info(f"Fetching list of notes with category: {category}")
-    notes = {
-        "notes": get_notes(category)
-    }
+    notes = {"notes": get_notes(category)}
     return jsonify(notes)
 
 

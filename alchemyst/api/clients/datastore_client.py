@@ -6,7 +6,7 @@ from google.cloud import datastore
 def query(kind, filter_key="", filter_val=""):
     query = _datastore_client().query(kind=kind)
     if filter_key and filter_val:
-        query.add_filter(filter_key, '=', filter_val)
+        query.add_filter(filter_key, "=", filter_val)
     return query
 
 

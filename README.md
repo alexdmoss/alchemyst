@@ -59,7 +59,8 @@ At the moment, the app is configured with a single worker in gunicorn - it's pre
 
 ```python
 from prometheus_flask_exporter.multiprocess import PrometheusMetrics
-metrics = PrometheusMetrics(app, static_labels={'app': 'alchemyst'})
+
+metrics = PrometheusMetrics(app, static_labels={"app": "alchemyst"})
 ```
 
 ... and still get `python_*` metrics from the Prometheus client. Groovy. However, when `gunicorn` spawns more than one process (worker), we need to switch the above to import `GunicornPrometheusMetrics` instead, which will amalgamate the http stats that are being collected. Also awesome - but it can't do this for the base python metrics so they are switched off. Sad times.
@@ -70,8 +71,12 @@ metrics = PrometheusMetrics(app, static_labels={'app': 'alchemyst'})
 import os
 from prometheus_flask_exporter.multiprocess import GunicornPrometheusMetrics
 
+
 def when_ready(server):
-    GunicornPrometheusMetrics.start_http_server_when_ready(int(os.getenv('METRICS_PORT')))
+    GunicornPrometheusMetrics.start_http_server_when_ready(
+        int(os.getenv("METRICS_PORT"))
+    )
+
 
 def child_exit(server, worker):
     GunicornPrometheusMetrics.mark_process_dead_on_child_exit(worker.pid)

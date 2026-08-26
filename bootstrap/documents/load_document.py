@@ -13,11 +13,10 @@ def main():
     documents = glob.glob("./bootstrap/documents/*.html")
 
     for document in documents:
-
         filename = os.path.basename(document)
         doc_id = os.path.splitext(filename)[0]
 
-        with open(document, 'r') as f:
+        with open(document, "r") as f:
             file_contents = f.read()
             doc = Document(
                 name=doc_id,
@@ -47,16 +46,14 @@ def _datastore_client():
 
 def upsert_document(client, document):
     print(document.name)
-    entity = get(client, kind='Document', id=document.name)
+    entity = get(client, kind="Document", id=document.name)
     send_put = False
     if entity is None:
-        key = create_key(client, 'Document', document.name)
-        entity = datastore.Entity(key=key, exclude_from_indexes=['data'])
+        key = create_key(client, "Document", document.name)
+        entity = datastore.Entity(key=key, exclude_from_indexes=["data"])
         send_put = True
     for key, value in asdict(document).items():
-        entity.update({
-            key: value
-        })
+        entity.update({key: value})
         send_put = True
     if send_put:
         put(client, entity)

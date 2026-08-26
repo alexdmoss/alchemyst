@@ -1,6 +1,7 @@
 # flake8: noqa
 from os import getenv
 from flask import Flask
+
 # see README if setting gunicorn workers > 1
 from prometheus_flask_exporter.multiprocess import PrometheusMetrics
 from flask_compress import Compress
@@ -15,35 +16,44 @@ def configure_cache(_app):
 
 
 def configure_compression(_app):
-    _app.config['COMPRESS_MIMETYPES'] = ['text/html', 'text/css', 'text/xml', 'application/json', 'application/javascript', 'application/pdf']
+    _app.config["COMPRESS_MIMETYPES"] = [
+        "text/html",
+        "text/css",
+        "text/xml",
+        "application/json",
+        "application/javascript",
+        "application/pdf",
+    ]
     Compress(_app)
 
 
 def configure_json(_app):
     _app.json_encoder = EnhancedJSONEncoder
-    _app.config['JSON_SORT_KEYS'] = False
+    _app.config["JSON_SORT_KEYS"] = False
 
 
 def configure_metrics(_app):
-    PrometheusMetrics(_app, static_labels={'app': 'alchemyst'})
+    PrometheusMetrics(_app, static_labels={"app": "alchemyst"})
 
 
 def create_app():
     _app = Flask(__name__)
-    
+
     # Set SECRET_KEY for CSRF protection
     # Prefer file-based secret (k8s), fallback to env var, then dev key
-    secret_key_file = getenv('SECRET_KEY_FILE')
+    secret_key_file = getenv("SECRET_KEY_FILE")
     if secret_key_file:
         try:
-            with open(secret_key_file, 'r') as f:
-                _app.config['SECRET_KEY'] = f.read().strip()
+            with open(secret_key_file, "r") as f:
+                _app.config["SECRET_KEY"] = f.read().strip()
         except Exception as e:
-            _app.logger.error(f'Failed to read SECRET_KEY from file: {e}')
+            _app.logger.error(f"Failed to read SECRET_KEY from file: {e}")
             raise
     else:
-        _app.config['SECRET_KEY'] = getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
-    
+        _app.config["SECRET_KEY"] = getenv(
+            "SECRET_KEY", "dev-secret-key-change-in-production"
+        )
+
     csrf = CSRFProtect()
     csrf.init_app(_app)
 
@@ -52,8 +62,8 @@ def create_app():
     configure_compression(_app)
     configure_json(_app)
     configure_metrics(_app)
-    if getenv('USE_MOCKS') == 'True':
-        _app.logger.info('Exporting USE_MOCKS - Mock Data ENABLED')
+    if getenv("USE_MOCKS") == "True":
+        _app.logger.info("Exporting USE_MOCKS - Mock Data ENABLED")
     return _app
 
 

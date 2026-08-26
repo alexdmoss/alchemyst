@@ -12,7 +12,7 @@ from alchemyst.model.note import Note
 
 def get_notes(translation=""):
     translation = _translate_filter(translation)
-    if getenv('USE_MOCKS') == 'True':
+    if getenv("USE_MOCKS") == "True":
         results = _get_mock_notes(translation)
     else:
         results = _get_query_notes(translation)
@@ -20,10 +20,10 @@ def get_notes(translation=""):
 
 
 def _get_mock_notes(translation):
-    with open('./tests/mocks/full-dataset.json', 'r') as f:
+    with open("./tests/mocks/full-dataset.json", "r") as f:
         data = json.load(f)
     if translation:
-        return _filter_mock_notes(data['entities'], translation)
+        return _filter_mock_notes(data["entities"], translation)
     return data["entities"]
 
 
@@ -53,17 +53,17 @@ def _get_query_notes(translation):
 
 def note_from_query(raw_data):
     return Note(
-        name=get_string('name', raw_data),
-        title=get_string('title', raw_data),
-        author=get_string('author', raw_data),
-        category=get_string('category', raw_data),
-        tags=get_list('tags', raw_data),
-        description=get_string('description', raw_data),
-        level=get_string('level', raw_data),
-        filesize=get_int('filesize', raw_data),
-        asset_link=get_string('asset_link', raw_data),
-        doc_id=get_int('doc_id', raw_data),
-        last_modified=get_date('last_modified', raw_data),
+        name=get_string("name", raw_data),
+        title=get_string("title", raw_data),
+        author=get_string("author", raw_data),
+        category=get_string("category", raw_data),
+        tags=get_list("tags", raw_data),
+        description=get_string("description", raw_data),
+        level=get_string("level", raw_data),
+        filesize=get_int("filesize", raw_data),
+        asset_link=get_string("asset_link", raw_data),
+        doc_id=get_int("doc_id", raw_data),
+        last_modified=get_date("last_modified", raw_data),
     )
 
 
@@ -104,8 +104,10 @@ def note_from_dict(note):
 
 
 def notes_from_dicts(notes):
-    return [from_dict(data_class=Note, data=note, config=_isoformat_config())
-            for note in notes]
+    return [
+        from_dict(data_class=Note, data=note, config=_isoformat_config())
+        for note in notes
+    ]
 
 
 def _isoformat_config():
@@ -115,17 +117,23 @@ def _isoformat_config():
 def _identify_filter_type(f):
     if f in ["organic", "inorganic", "physical"]:
         return "category"
-    if f in ["1st Year Undergraduate", "2nd Year Undergraduate", "3rd Year Undergraduate"]:
+    if f in [
+        "1st Year Undergraduate",
+        "2nd Year Undergraduate",
+        "3rd Year Undergraduate",
+    ]:
         return "level"
-    app.logger.error(f"Failed to identify filter type - {f} does not appear to be a category or a level")
+    app.logger.error(
+        f"Failed to identify filter type - {f} does not appear to be a category or a level"
+    )
     return None
 
 
 def _translate_filter(v):
-    if v == 'first-year':
-        v = '1st Year Undergraduate'
-    elif v == 'second-year':
-        v = '2nd Year Undergraduate'
-    elif v == 'third-year':
-        v = '3rd Year Undergraduate'
+    if v == "first-year":
+        v = "1st Year Undergraduate"
+    elif v == "second-year":
+        v = "2nd Year Undergraduate"
+    elif v == "third-year":
+        v = "3rd Year Undergraduate"
     return v

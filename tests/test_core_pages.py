@@ -2,7 +2,7 @@ from alchemyst import app
 
 
 def test_header_footer_nav():
-    with app.test_request_context('/', method='GET'):
+    with app.test_request_context("/", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -12,7 +12,7 @@ def test_header_footer_nav():
 
 
 def test_home_page():
-    with app.test_request_context('/', method='GET'):
+    with app.test_request_context("/", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -20,7 +20,7 @@ def test_home_page():
 
 
 def test_contact_page():
-    with app.test_request_context('/contact', method='GET'):
+    with app.test_request_context("/contact", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -28,7 +28,7 @@ def test_contact_page():
 
 
 def test_links_page():
-    with app.test_request_context('/links', method='GET'):
+    with app.test_request_context("/links", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -36,7 +36,7 @@ def test_links_page():
 
 
 def test_about_page():
-    with app.test_request_context('/about', method='GET'):
+    with app.test_request_context("/about", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -44,7 +44,7 @@ def test_about_page():
 
 
 def test_privacy_page():
-    with app.test_request_context('/privacy', method='GET'):
+    with app.test_request_context("/privacy", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -52,7 +52,7 @@ def test_privacy_page():
 
 
 def test_tags_page():
-    with app.test_request_context('/tags', method='GET'):
+    with app.test_request_context("/tags", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
@@ -60,7 +60,7 @@ def test_tags_page():
 
 
 def test_search_page():
-    with app.test_request_context('/search', method='GET'):
+    with app.test_request_context("/search", method="GET"):
         request = app.dispatch_request()
         response = app.make_response(request)
         assert response.status_code == 200
