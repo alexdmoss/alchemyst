@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = "==3.14.*"
 
 [options]
@@ -40,31 +40,31 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "cryptography", specifier = ">=50.0.1" },
-    { name = "dacite", specifier = ">=1.9.2" },
-    { name = "flask", specifier = ">=3.1.3" },
-    { name = "flask-caching", specifier = ">=2.5.1" },
-    { name = "flask-compress", specifier = ">=1.25" },
-    { name = "flask-wtf", specifier = ">=1.3.0" },
-    { name = "google-cloud", specifier = ">=0.34.0" },
-    { name = "google-cloud-datastore", specifier = ">=2.26.1" },
-    { name = "google-cloud-storage", specifier = ">=3.14.1" },
-    { name = "gunicorn", specifier = ">=26.2.0" },
-    { name = "prometheus-flask-exporter", specifier = ">=0.23.2" },
-    { name = "pyyaml", specifier = ">=6.0.3" },
-    { name = "requests", specifier = ">=2.34.2" },
+    { name = "cryptography", specifier = "==50.0.1" },
+    { name = "dacite", specifier = "==1.9.2" },
+    { name = "flask", specifier = "==3.1.3" },
+    { name = "flask-caching", specifier = "==2.5.1" },
+    { name = "flask-compress", specifier = "==1.25" },
+    { name = "flask-wtf", specifier = "==1.3.0" },
+    { name = "google-cloud", specifier = "==0.34.0" },
+    { name = "google-cloud-datastore", specifier = "==2.26.1" },
+    { name = "google-cloud-storage", specifier = "==3.14.1" },
+    { name = "gunicorn", specifier = "==26.2.0" },
+    { name = "prometheus-flask-exporter", specifier = "==0.23.2" },
+    { name = "pyyaml", specifier = "==6.0.3" },
+    { name = "requests", specifier = "==2.34.2" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "beautifulsoup4", specifier = ">=4.15.0" },
-    { name = "pytest", specifier = ">=9.1.1" },
-    { name = "pytest-cov", specifier = ">=7.1.0" },
-    { name = "pytest-mock", specifier = ">=3.15.1" },
-    { name = "pytest-socket", specifier = ">=0.8.1" },
-    { name = "pytest-timeout", specifier = ">=2.4.0" },
-    { name = "pytest-watch", specifier = ">=4.2.0" },
-    { name = "ruff", specifier = ">=0.16.8" },
+    { name = "beautifulsoup4", specifier = "==4.15.0" },
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-cov", specifier = "==7.1.0" },
+    { name = "pytest-mock", specifier = "==3.15.1" },
+    { name = "pytest-socket", specifier = "==0.8.1" },
+    { name = "pytest-timeout", specifier = "==2.4.0" },
+    { name = "pytest-watch", specifier = "==4.2.0" },
+    { name = "ruff", specifier = "==0.16.8" },
 ]
 
 [[package]]
