@@ -25,7 +25,7 @@ def notes_by_category(category):
     return jsonify(notes)
 
 
-@app.route("/api/note/<note>")
+@app.route("/api/note/<note_id>")
 @cache.cached()
 def note(note_id):
     app.logger.info(f"Fetching note {note_id}")
