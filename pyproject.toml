@@ -16,7 +16,7 @@ dependencies = [
     "google-cloud-storage==3.17.1",
     "gunicorn==26.2.0",
     "prometheus-flask-exporter==0.23.2",
-    "pyyaml==6.0.3",
+    "pyyaml==6.0.4",
     "requests==2.34.2",
 ]
 
